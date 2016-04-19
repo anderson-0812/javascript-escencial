@@ -1,0 +1,39 @@
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<h1>Javascript Poo</h1>
+	<p id="saludar1"></p>
+	<p id="saludar2"></p>
+	<button onclick="mufuncion1()">saludar 1</button>
+	<button onclick="mufuncion2()">saludar 2</button>
+
+</body>
+</html>
+
+<script type="text/javascript">
+//defino la clase
+function Persona(nombre, edad, ciudad, email){
+	// setiamos los atributos de la edad con los parametros recibidos (seria como un constructor en oto lenguaje)
+	this.nombre = nombre;
+	this.edad = edad;
+	this.ciudad = ciudad;
+	this.email = email;
+	// Metodo saludar propio de la calse persona 
+	this.saludar = function(){
+		document.getElementById("saludar1").innerHTML = "Hola mi nombre es "+this.nombre+" y mi edad es "+this.edad;
+	} 
+}
+
+// creo el obj de la clase persona e inicializo los atributos por medio de los parametros enviados a la clase 
+var persona = new Persona("Anderson Jimenez", 24, "Loja", "andersonmurdog@gmail.com");
+
+function mufuncion1(argument){
+	persona.saludar();// invoco al metodo saludar por medio del obj persona
+}
+
+function mufuncion2(argument){
+	document.getElementById("saludar2").innerHTML = "Soy de "+persona.ciudad +" y mi email es "+persona.email;
+}
+</script>

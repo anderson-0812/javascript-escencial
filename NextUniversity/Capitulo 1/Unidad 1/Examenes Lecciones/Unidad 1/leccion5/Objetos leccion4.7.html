@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+<h1>Objetos leccion 4.7</h1>
+<h1>Funcion de resta</h1>
+<p id="operacion"></p>
+<p id="respuesta"></p>
+
+</body>
+</html>
+<script type="text/javascript">
+
+	function resta(num1,num2){
+		return num1 - num2;
+	}
+	var num1 = 12;
+	var num2 = 5;
+
+	var respuesta = resta(num1,num2);
+
+	document.getElementById('operacion').innerHTML = "Restar: "+num1+" + "+num2;
+	document.getElementById('respuesta').innerHTML = respuesta;
+
+</script>

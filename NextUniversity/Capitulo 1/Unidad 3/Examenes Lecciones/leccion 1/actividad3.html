@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+<h1>Switch</h1>
+
+<p id="nota"></p>
+<button onclick="verificar_nota()">VER NOTA</button>
+</body>
+</html>
+<script type="text/javascript">
+var nota = 4.5;
+	function verificar_nota(){
+
+		if(nota > 3 && nota < 4){
+			document.getElementById('nota').innerHTML = 'Eres de nivel intermedio';
+		}else if(nota > 4 && nota < 5){
+			document.getElementById('nota').innerHTML = 'Eres de nivel alto';
+		}else{
+			document.getElementById('nota').innerHTML = 'Eres de nivel bajo';
+		}
+	}
+</script>

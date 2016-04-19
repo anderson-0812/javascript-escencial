@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+<h1>Global Object</h1>
+
+<p id="g1"></p>
+<p id="g2"></p>
+
+<h1>Metodos</h1>
+<p id="g3"></p>
+<p id="g4"></p>
+<p id="g5"></p>
+<p id="g6"></p>
+<p id="g7"></p>
+<p id="g8"></p>
+<p id="g9"></p>
+<p id="g10"></p>
+
+</body>
+</html>
+
+<script type="text/javascript">
+	// Global Object
+	var a;// Undefine
+	var b = a+2;
+	document.getElementById('g1').innerHTML = a;
+	document.getElementById('g3').innerHTML = b;
+
+	// metodos 
+
+	// parseInt
+	var c = parseInt("2.25");
+	var d = parseInt("1 Next University"); //1
+	var e = parseInt("Next University 10"); // NaN
+
+	// parseFloat
+	var f = parseFloat("3.1416");
+	var g = parseFloat("2.2332 Hola a  todos"); //2.2332
+	var h = parseFloat("I love JS 3.1416"); // NaN
+
+	var uri = "https://learn.nextu.com/mod/lesson/view.php?id=601&pageid=826/hola a toso";
+	var uriEncode = encodeURIComponent(uri); // encodeURIComponent codifica urls
+	var uriDeco = decodeURIComponent(uriEncode); // Decodifica la url codificada
+
+	document.getElementById('g3').innerHTML =  c;
+	document.getElementById('g4').innerHTML =  d;
+	document.getElementById('g5').innerHTML =  e;
+	document.getElementById('g6').innerHTML =  f;
+	document.getElementById('g7').innerHTML =  g;
+	document.getElementById('g8').innerHTML =  h;
+	document.getElementById('g9').innerHTML = uriEncode;
+	document.getElementById('g10').innerHTML = uriDeco;
+
+
+
+</script>

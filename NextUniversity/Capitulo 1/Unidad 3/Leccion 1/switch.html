@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+<h1>Switch</h1>
+
+<p id="mes"></p>
+<button onclick="verificar_mes()">VER MES</button>
+</body>
+</html>
+<script type="text/javascript">
+var opc = 10;
+	function verificar_mes(){
+
+		switch(opc){
+			case 1: 
+				document.getElementById('mes').innerHTML = 'ENERO';
+				break;
+			case 2:
+				document.getElementById('mes').innerHTML = 'FEBRERO';
+				break;
+			case 3:
+				document.getElementById('mes').innerHTML = 'MARZO';
+				break;
+			case 4:
+				document.getElementById('mes').innerHTML = 'ABRIL';
+				break;
+			case 5:
+				document.getElementById('mes').innerHTML = 'MAYO';
+				break;
+			case 6:
+				document.getElementById('mes').innerHTML = 'JUNIO';
+				break;
+			case 7:
+				document.getElementById('mes').innerHTML = 'JULIO';
+				break;
+			case 8:
+				document.getElementById('mes').innerHTML = 'AGOSTO';
+				break;
+			case 9:
+				document.getElementById('mes').innerHTML = 'SEPTIEMBRE';
+				break;
+			case 10:
+				document.getElementById('mes').innerHTML = 'OCTUBRE';
+				break;
+			case 11:
+				document.getElementById('mes').innerHTML = 'NOVIEMBRE';
+				break;
+			case 12:
+				document.getElementById('mes').innerHTML = 'DICIEMBRE';
+				break;
+
+		}
+	}
+</script>

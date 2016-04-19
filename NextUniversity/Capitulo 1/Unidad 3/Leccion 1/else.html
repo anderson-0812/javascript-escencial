@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+</head>
+<body>
+<p>Edad 25</p>
+<p id="edad"></p>
+
+<button onclick="verificaredad()">Descuento</button>
+
+
+</body>
+</html>
+<script type="text/javascript">
+    var edad = 15;
+
+function verificaredad(){
+    
+    if(edad > 25){
+        document.getElementById("edad").innerHTML = "eres mayor de edad";
+    }else{
+    	document.getElementById('edad').innerHTML = "eres menor de edad"; 
+    }
+}
+</script>

@@ -1,0 +1,38 @@
+https://developer.mozilla.org/es/docs/Web/JavaScript/Referencia/Objetos_globales/Array
+
+
+* charAt() => devuelve caracter de una posicion de un indice en especifico 
+	ejem: 
+	var str = "HELLO WORLD";
+	var res = str.charAt(0); => H
+
+* concat() => une dos o mas cadenas hacendo una sola cadena 
+
+* replace() => remplaza uncaracter o una cadena especifica 
+	ejem:
+	var str = "Visit Microsoft!";
+	var res = str.replace("Microsoft", "W3Schools");
+	res => Visit W3Schools!
+
+* search() => busca en una cadena un caracter especifico y devuelve la posicion
+	ejem:
+	var str = "Visit W3Schools!";
+	var n = str.search("W3Schools");
+	res => 6 (posicion de W)
+
+* toLowerCase() => convierte la cadena a minusculas
+
+* toString() => convierte un tipo de dato numerico en string 
+
+*substring() => permite traer una sub cadena de una cadena de a cuerdo a un rango de indices
+	ejem:
+	var mensaje3 ="Luchar reir y vivir, Esa esla clave";
+	 document.getElementById('s9').innerHTML = mensaje3.substring(8,20); 
+	res => eir y vivir,
+
+* reverse() => revierte el orden del arreglo los ultimos son primero y los primeros 
+	son  ultimos 
+	var futbol = new array('a','b','c');
+	futbol.reverse(); => ['c','b','a']
+
+* sort() =? ordena alfabeticamente una matriz 

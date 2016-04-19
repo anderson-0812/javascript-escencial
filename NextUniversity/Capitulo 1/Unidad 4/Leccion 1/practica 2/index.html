@@ -1,0 +1,40 @@
+<html>
+<head>
+	<title>Mi primer JS </title>
+</head>
+<body>
+<p id ="empresas" > </p>
+</body>
+</html>
+
+<script type="text/javascript">
+	var json_text = '{"empresas": ['+
+	'{"nit":"123123-3", "nombre":"TCC", "telefono":"24231231", "email":"tcc@hotmail.es"},'+
+	'{"nit":"23647236-34", "nombre":"Movistar", "telefono":"99876", "email":"movistar@hotmail.es"},'+
+	'{"nit":"02938-5", "nombre":"Claro", "telefono":"777777777", "email":"tcc@yahoo.es"},'+
+	'{"nit":"3835856-64", "nombre":"Intel", "telefono":"6478234238", "email":"Intel@hotmail.es"},'+
+	'{"nit":"50543-6", "nombre":"IBM", "telefono":"67865", "email":"ibm@gmail.com"},'+
+	'{"nit":"23423-8", "nombre":"silicon", "telefono":"222222", "email":"silicon@hotmail.es"},'+
+	'{"nit":"93934-4", "nombre":"Master", "telefono":"782346823", "email":"master@jasha.com"},'+
+	'{"nit":"6234723-84", "nombre":"Excelnet", "telefono":"89797", "email":"excelnet@hotmail.es"},'+
+	'{"nit":"23423-43", "nombre":"Google", "telefono":"73473864", "email":"google@outblock.com"},'+
+	'{"nit":"234234-2", "nombre":"Spotify", "telefono":"234324", "email":"spoti@hotmail.es"},'+
+	'{"nit":"234-543", "nombre":"Thoworks", "telefono":"fsdf", "email":"thow@yahoo.es"}'+
+	']}';
+
+	var jsobj = JSON.parse(json_text);
+
+	leerJSON(jsobj);
+
+	function leerJSON(json){
+		var out =  "------------------------ empresas ------------------------<br>";
+
+		var i;
+console.table(json.empresas);
+		for(i=0 ; i < json.empresas.length;  i++){
+			out += "NIT: "+json.empresas[i].nit+"-"+"Nombre: "+json.empresas[i].nombre+"-"+"Telefono: "+json.empresas[i].telefono+"-"+"Email: "+json.empresas[i].email+"<br>";
+		}
+
+		document.getElementById("empresas").innerHTML = out;
+	}
+</script>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+
+<h1>Do while</h1>
+<div id="equipo"></div>
+
+</body>
+</html>
+<script type="text/javascript">
+	var equipos = ["Milan","Liverpool","Barcelona","Chelsea","bayer"];
+	var lim = equipos.length-1;
+	var cont = 0;
+	do{
+		//alert(equipos[cont]);
+		var nodo = document.createElement("p");
+		var nodoText = document.createTextNode(equipos[cont]);
+		nodo.appendChild(nodoText);
+
+		document.getElementById('equipo').appendChild(nodo);
+		cont ++;
+
+
+	}while(cont < lim);
+</script>

@@ -1,0 +1,38 @@
+<html>
+<head>
+	<meta charset="utf8" />
+	<title></title>
+</head>
+<body>
+	<h3>Crear un HTML que contenga un script donde se defina una clase llamada Producto con las siguientes propiedades:
+
+codigo (cadena)
+nombre(cadena)
+cantidad(numerico)
+precio(numerico)
+Definir dentro de la clase un método que se llame mostrar, que muestre las propiedades del objeto. Luego crear un objeto de clase Producto. Por último, invocar el método mostrar del objeto creado en una función que se llame miFuncion, la cual se invocará en un botón con el texto “Mostrar Propiedades”.</h3>
+
+<p id="mostrar_datos"></p>
+<button onclick = "miFuncion()">Mostrar</button>
+</body>
+</html>
+<script type="text/javascript">
+
+function Producto(codigo, nombre, cantidad, precio){
+	this.codigo = codigo;
+	this.nombre = nombre;
+	this.cantidad = cantidad;
+	this.precio = precio;
+
+	 this.mostrar = function(){
+		document.getElementById("mostrar_datos").innerHTML = "Codigo del producto es "+this.codigo+" su nombre es "+this.nombre+
+		" Te cuesta "+this.precio+" y aprovecha xq ya solo tenemos "+this.cantidad;
+	}
+}
+
+var obj_producto = new Producto("12346","muñeca sistem ",2,1000);
+
+function miFuncion(argument){
+	obj_producto.mostrar();
+}
+</script>

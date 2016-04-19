@@ -1,0 +1,43 @@
+<p>
+<!DOCTYPE html>
+<html>
+<head>
+
+</head>
+<body>
+<h1>Objetos </h1>
+
+<h1>Funciones </h1>
+<p id="resultado1"></p>
+<p id="resultado2"></p>
+<p id="resultado3"></p>
+
+
+
+
+</body>
+</html>
+</p>
+<script type="text/javascript">
+	// Llamado a una funcion desde el codigo con dos parametros
+	function division(p,q){
+		return p / q;
+	}
+
+	var resultado = division(10,2);
+
+	document.getElementById("resultado1").innerHTML = resultado;
+
+	// funcion que se llame a si misma
+	(function(){
+		document.getElementById('resultado2').innerHTML="Funcion que se llama a si misma ";
+	})();
+
+	// asignacion a una variable  una funcion 
+	var z = function(x,y){
+		return x- y;
+	}
+	var w = z(15,6);
+	document.getElementById('resultado3').innerHTML=w;
+
+</script>

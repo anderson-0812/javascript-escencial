@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta content="text/html"; charset="UTF-8"/>
+	<title>Registro de usuarios</title>
+	<script type="text/javascript">
+		
+		function evento_onload(){
+			alert('Bienvenido a nuestro form de registro de usuarios');
+		}
+
+		function evento_onclick(){
+			alert('Los datos se han enviado correctamente');
+		}
+
+		function evento_onfocus(elemnt){
+			elemnt.style.background = '#CCCCCC';
+		}
+
+		function evento_oncopy(){
+			alert('texto copiado');
+		}
+	</script>
+
+</head>
+<body onload="evento_onload();">
+<h4>Formulario de Registro  de usuario</h4>
+
+<fieldset>
+	<legend>Datos</legend>
+	<dl>
+	<table>
+		<form>
+		<!-- NOMBRES -->
+			<tr>
+				<td>
+					<dd><label for="nombres">Nombre: </label></dd>
+				</td>
+				<td>
+					<dd><input type="text" name="nombres" id="nombres" onfocus="evento_onfocus(this);"></input></dd>
+				</td>
+			</tr>
+		<!-- APELLIDOS-->
+
+			<tr>
+				<td>
+					<dd><label for="apellidos">Apellidos: </label></dd>
+				</td>
+				<td>
+					<dd><input type="text" name="apellidos" id="apellidos" onfocus="evento_onfocus(this);"></input></dd>
+				</td>
+			</tr>
+		<!-- IDENTIFICACION -->
+			<tr>
+				<td>
+					<dd><label for="identificacion">Identificacion: </label></dd>
+				</td>
+				<td>
+					<dd><input type="text" name="identificacion" id="identificacion" onfocus="evento_onfocus(this);" oncopy="evento_oncopy();"></input></dd>
+				</td>
+			</tr>
+			<!-- SEXO -->
+			<tr>
+				<td>
+					<dd><label for="sexo">Sexo: </label></dd>
+				</td>
+				<td>
+					<dd>
+						<select id="sexo" name="sexo">
+							<option value="">--</option>
+							<option value="masculino">Masculino</option>
+							<option value="masculino">Femenino</option>
+						</select>
+					</dd>
+				</td>
+			</tr>
+			<!-- EMAIL -->
+			<tr>
+				<td>
+					<dd><label for="email">Email: </label></dd>
+				</td>
+				<td>
+					<dd><input type="text" name="email" id="email" onfocus="evento_onfocus(this);"></input></dd>
+				</td>
+			</tr>
+			<!-- TELEFONO -->
+			<tr>
+				<td>
+					<dd><label for="telefono">Telefono: </label></dd>
+				</td>
+				<td>
+					<dd><input type="text"  class="positive" name="telefono" id="telefono" onfocus="evento_onfocus(this);"></input></dd>
+				</td>
+			</tr>
+		<!-- DIRECCION -->
+			<tr>
+				<td>
+					<dd><label for="direccion">Direccion: </label></dd>
+				</td>
+				<td>
+					<dd><input type="text" name="direccion" id="direccion" onfocus="evento_onfocus(this);"></input></dd>
+				</td>
+			</tr>
+			<!-- Enviar -->
+			<tr>
+				<td>
+					<dd><input type="submit" name="enviar" id="enviar" onclick="evento_onclick();"></input></dd>
+				</td>
+			</tr>
+		</form>
+	</table>
+	</dl>
+</fieldset>
+</body>
+</html>

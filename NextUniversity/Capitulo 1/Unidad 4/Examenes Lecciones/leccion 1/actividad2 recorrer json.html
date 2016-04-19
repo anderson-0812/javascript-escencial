@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+<p id="personas"></p>
+<button onclick="mostrar_personas();">Mostrar Personas</button>
+<button onclick="mayores_edad();">Mostrar Personas Mayores de edad</button>
+
+</body>
+</html>
+<script type="text/javascript">
+	var json_text = '{"personas": ['+
+		'{"nombre":"Anderson", "edad": 25},'+
+		'{"nombre":"Jose", "edad": 23},'+
+		'{"nombre":"Zeta", "edad": 28},'+
+		'{"nombre":"Andres", "edad": 30},'+
+		'{"nombre":"Roberto", "edad": 11},'+
+		'{"nombre":"Jennifer", "edad": 4},'+
+		'{"nombre":"Jakeline", "edad": 5},'+
+		'{"nombre":"Oswaldo", "edad": 19},'+
+		'{"nombre":"Enma", "edad": 25},'+
+		'{"nombre":"Asley", "edad": 3}'+
+
+		']}';
+
+		var json_obj = JSON.parse(json_text);
+	function mostrar_personas(){
+		 leerJson(json_obj);
+
+	}
+
+ function leerJson(json){
+ 	out = "--------------------- Personas ---------------------<br>";
+ 	var x;
+ 	
+ 	for(x in json.personas){
+ 		out += "Nombre: "+json.personas[x].nombre+" - "+"Edad: "+json.personas[x].edad+"<br>";
+ 	}
+
+ 	document.getElementById("personas").innerHTML = out;
+ }
+
+ function mayores_edad(){
+ 	json = json_obj;
+
+ 	out = "--------------------- Personas Mayores de Edad ---------------------<br>";
+ 	var x;
+ 	
+ 	for(x in json.personas){
+ 		if(json.personas[x].edad >= 18){
+ 			out += "Nombre: "+json.personas[x].nombre+" - "+"Edad: "+json.personas[x].edad+"<br>";
+ 		}
+ 	}
+
+ 	document.getElementById("personas").innerHTML = out;
+ }
+
+
+</script>

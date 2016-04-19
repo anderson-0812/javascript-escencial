@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf8"/>
+	<title></title>
+</head>
+<body>
+<h1>Crear un HTML con un script donde se definan 6 arreglos utilizando el método constructor Array() con los siguientes valores: 
+
+"Rosa", "Margarita", "Tulipan"
+"Nike", "Puma", "Adidas"
+"Aguila", "Canario", "Paloma"
+"Tiburon", "Ballena", "Salmon"
+"Uva", "Manzana", "Fresa"
+"Rojo", "Azul", "Verde"</h1>
+
+<p id="s1"></p>
+<p id="s2"></p>
+<p id="s3"></p>
+<p id="s4"></p>
+<p id="s5"></p>
+<p id="s6"></p>
+
+</body>
+</html>
+
+<script type="text/javascript">
+	var array1 = new Array('Rosa','Margarita','Tulipan');
+	var array2 = new Array();
+	array2[0]='Nike';
+	array2[1]='Puma';
+	array2[2]='Adidas';
+	var array3 = new Array();
+	array3[2]='Paloma';
+	array3[1]='Canario';
+	array3[0]='Aguila';
+
+	var array4 =new Array();
+	array4[0] = "Tiburon";
+	array4[1] = "Ballena";
+	array4[2] = "Salmon";
+
+	var array5 =  new Array(3);
+	array5[0] = "Uva";
+	array5[1] = "Manzana";
+	array5[2] = "Fresa";
+
+	var array6 = new Array("Rojo","Azul","Verde");
+
+	// Muestro los elementos 
+
+	mostrar_arrays('s1',array1);
+	mostrar_arrays('s2',array2);
+	mostrar_arrays('s3',array3);
+	mostrar_arrays('s4',array4);
+	mostrar_arrays('s5',array5);
+	mostrar_arrays('s6',array6);
+
+
+	function mostrar_arrays(id_p,array){
+		var lim = array.length;
+		var s= '';
+		for (var i = 0; i <= lim-1; i++) {
+			s += array[i]+', ';
+		};
+		document.getElementById(id_p).innerHTML = s;
+	}
+
+	
+</script>

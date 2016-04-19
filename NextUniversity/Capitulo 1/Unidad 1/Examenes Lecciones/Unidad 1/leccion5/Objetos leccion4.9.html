@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+<h1>Objetos leccion 4.7</h1>
+<h1>Funcion de dividir</h1>
+<p id="operacion"></p>
+<p id="respuesta"></p>
+
+</body>
+</html>
+<script type="text/javascript">
+
+	function dividir(num1,num2){
+		return num1 / num2;
+	}
+	var num1 = 144;
+	var num2 = 12;
+
+	var respuesta = dividir(num1,num2);
+
+	document.getElementById('operacion').innerHTML = "dividir: "+num1+" + "+num2;
+	document.getElementById('respuesta').innerHTML = respuesta;
+
+</script>

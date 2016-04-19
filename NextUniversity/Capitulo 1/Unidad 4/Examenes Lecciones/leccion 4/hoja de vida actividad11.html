@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<script type="text/javascript">
+		function bienvenida(){
+			alert("Bienvenido a su formato de Hoja de Vida");
+		}
+
+		function enviar_hoja_vida(){
+			alert("Su Hoja de Vida a sido guardada correctamente");
+		}
+
+		function mostrar_msj() {
+			alert("A seleccionado el campo textarea de observaciones");
+		}
+
+		function cambiartomayus(obj){
+			var x = obj.value;
+			x = x.toUpperCase();
+			obj.value = x;
+		}
+
+		function restablecer(){
+			alert('Campos restablecidos');
+		}
+	</script>
+</head>
+<body onload="bienvenida();">
+<form onreset="restablecer();">
+	<fieldset>
+		<legend>Informacion Personal</legend>
+		<dl>
+			<div>
+				<dd><label for="nombre">Nombre:</label></dd>
+				<dd><input id="nombre" type="text" onchange="cambiartomayus(this);"></input></dd>
+			</div>
+
+			<div>
+				<dd><label for="apellido">Apellido:</label></dd>
+				<dd><input type="text" id="apellido" onchange="cambiartomayus(this);"></input></dd>
+			</div>
+
+			<div>
+				<dd><label for="direccion">Direccion:</label></dd>
+				<dd><input type="text" id="direccion"></input></dd>
+			</div>
+
+			<div>
+				<dd><label for="edad">Edad:</label></dd>
+				<dd><input class="positive" type="text" id="edad"></input></dd>
+			</div>
+
+			<div>
+				<dd><label for="fecha_nac">Fecha de Nacimiento:</label></dd>
+				<dd><input type="date" id="fecha_nac"></input></dd>
+			</div>
+
+			<div>
+				<dd><label for="lugar_nac">Lugar de Nacimiento:</label></dd>
+				<dd><input type="text" id="lugar_nac"></input></dd>
+			</div>
+
+			<div>
+				<dd><label for="estado_civil">Estado Civil::</label></dd>
+				<dd><input type="text" id="estado_civil"></input></dd>
+			</div>
+
+		</dl>
+	</fieldset>
+	<fieldset>
+		<legend>Informacion Academica</legend>
+		<dl>
+			<div>
+				<dd><label for="universidad">Universidad:</label></dd>
+				<dd><input id="universidad" type="text"></input></dd>
+			</div>
+
+			<div>
+				<dd><label for="profesion">Profesion:</label></dd>
+				<dd><input id="profesion" type="text"></input></dd>
+			</div>
+
+			<div>
+				<dd><label for="observaciones">Observaciones:</label></dd>
+				<dd><textarea id="observaciones" onselect="mostrar_msj();"></textarea></dd>
+			</div>
+		</dl>
+	</fieldset>
+
+	<input type="submit"  onclick="enviar_hoja_vida();"></input>
+	<input type="reset"></input>
+</form>
+
+</body>
+</html>

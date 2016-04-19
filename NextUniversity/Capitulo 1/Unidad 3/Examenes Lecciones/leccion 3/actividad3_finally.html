@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><style type="text/css"></style></head>
+</head>
+<body>
+<button onclick="myFunction()">ejecutar</button>
+</body>
+</html>
+<script type="text/javascript">
+	function myFunction(){
+
+		try{
+			var estudiante =null;
+			alert(estudiante.nombre);
+		}catch(e){
+			alert("Hay un error "+e.message);
+			//alert(error);
+		}finally{
+			alert("estamos en lasentencia finally");
+		}
+	}
+</script>

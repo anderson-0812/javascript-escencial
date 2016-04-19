@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+<h1>Crear un HTML con un script donde se definan 3 arreglos bidimensionales de 3x3. El primero se llamará alturas con los siguientes valores:
+
+Primera fila: 1.70, 1.50, 1.48
+Segunda fila: 1.34, 1.90, 2.0
+Tercera fila: 1.55, 1.84, 1.28
+El segundo arreglo se llamará colores con los siguientes valores:
+
+Primera fila: "Rojo", "Azul", "Verde"
+Segunda fila: "Amarrillo", "Naranja", "Marron"
+Tercera fila: "Rosado", "Violeta", "Gris"
+El tercer arreglo se llamará meses con los siguientes valores:
+
+Primera fila: "Enero", "Febrero", "Mayo"
+Segunda fila: "Junio", "Julio", "Agosto"
+Tercera fila: "Septiembre", "Octubre", "Noviembre"
+La idea es mostrar los tres arreglos en la consola web del navegador utilizando el método console.table()</h1>
+</body>
+</html>
+<script type="text/javascript">
+// ALTURAS
+	var arraybidimencional1 = [
+		{
+			fila_uno:1.70,
+			fila_dos:1.34,
+			fila_tres:1.55
+
+
+		},
+		{
+			fila_uno:1.50,
+			fila_dos:1.90,
+			fila_tres:1.84
+
+		},
+		{
+			fila_uno:1.48,
+			fila_dos:2.0,
+			fila_tres:1.28
+		}
+
+	];
+// COLORES
+	var arraybidimencional2 = [["Rojo","Azul","Verde"],["Amarrillo","Naranja","Marron"],["Rosado","Violeta","Gris"]];
+
+// MESES
+	var arraybidimencional3 = [["Enero","Febrero","Mayo"],["Junio","Julio","Agosto"],["Septiembre","Octubre","Noviembre"]];
+	console.table(arraybidimencional1);
+	console.table(arraybidimencional2);
+	console.table(arraybidimencional3);
+
+</script>

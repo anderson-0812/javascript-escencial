@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<div id="miDIv"></div>
+
+	<!-- solo funciona en safari -->
+<p>permite la comunicacion entre su navegador y servidor, permite a los webapp guardar  informacion como: historial, claves y usario, </p>
+	<button onclick="cookies();">get cookie</button>
+
+</body>
+</html>
+
+<script type="text/javascript">
+function cookies(){
+	document.cookie = 'clave=1234';
+	alert(document.cookie);
+	document.getElementById('miDIv').innerHTML = 'Cookie: '+document.cookie;
+}
+</script>

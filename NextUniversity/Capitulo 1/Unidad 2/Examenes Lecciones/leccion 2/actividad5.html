@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf8"/>
+	<title></title>
+</head>
+<body>
+<h1>Crear un HTML con un script donde se definan 6 arreglos utilizando la estructura de corchetes [] con los siguientes valores: 
+
+"Mango","Kiwi","Toronja" (crear el arreglo con nombre frutas)
+"Negro","Violeta","Verde" (crear el arreglo con nombre colores)
+"Leopardo", "Vaca", "Cerdo" (crear el arreglo con nombre animales)
+"River Plate", "America De Cali", "Gremio" (crear el arreglo con nombre equipos)
+"Jupiter", "Urano", "Saturno" (crear el arreglo con nombre planetas)
+"Hortensia", "Margarita", "Azucena" (crear el arreglo con nombre flores)
+Concatenar los valores de cada uno de los arreglos utilizando el método concat() de acuerdo con las siguientes parejas de arreglos:
+
+frutas con colores
+animales con equipos
+planetas con flores
+Luego mostrar en pantalla cada uno de los arreglos concatenados.</h1>
+
+<p id="s1"></p>
+<p id="s2"></p>
+<p id="s3"></p>
+<p id="s4"></p>
+<p id="s5"></p>
+<p id="s6"></p>
+<h3>Array concatenado</h3>
+<p id="s7"></p>
+<p id="s8"></p>
+<p id="s9"></p>
+
+</body>
+</html>
+
+<script type="text/javascript">
+	var array1 = ["Mango","Kiwi","Toronja" ]; // Frutas
+	var array2 = ["Negro","Violeta","Verde"];// colores
+	var array3 = ["Leopardo", "Vaca", "Cerdo"]; // Animales
+	var array4 = ["River Plate", "America De Cali", "Gremio" ]; // Equipos
+	var array5 = ["Jupiter", "Urano", "Saturno" ]; // Planetas
+	var array6 = ["Hortensia", "Margarita", "Azucena"]; //Flores
+
+	// Muestro los elementos 
+
+	mostrar_arrays('s1',array1);
+	mostrar_arrays('s2',array2);
+	mostrar_arrays('s3',array3);
+	mostrar_arrays('s4',array4);
+	mostrar_arrays('s5',array5.sort());//ordeno el array
+	mostrar_arrays('s6',array6.reverse()); //revierte elorden original del array es decir de atras hacia adelante 
+
+	// Muestro los elementos concatenados 
+	var array1_array2 = array1.concat(array2);
+	mostrar_arrays('s7',array1_array2);
+
+	var array3_array4 = array3.concat(array4);
+	mostrar_arrays('s8',array3_array4);
+
+	var array5_array6 = array5.concat(array6);
+	mostrar_arrays('s9',array5_array6);
+
+
+	function mostrar_arrays(id_p,array){
+		var lim = array.length;
+		var s= '';
+		for (var i = 0; i <= lim-1; i++) {
+			s += array[i]+', ';
+		};
+		document.getElementById(id_p).innerHTML = s;
+	}
+
+	
+</script>

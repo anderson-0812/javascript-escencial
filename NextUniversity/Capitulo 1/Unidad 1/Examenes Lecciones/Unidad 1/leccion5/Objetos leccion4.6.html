@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+<h1>Objetos leccion 4.6</h1>
+<h1>Funcion de suma</h1>
+<p id="operacion"></p>
+<p id="respuesta"></p>
+
+</body>
+</html>
+<script type="text/javascript">
+
+	function suma(num1,num2){
+		return num1 + num2;
+	}
+	var num1 = 10;
+	var num2 = 2;
+
+	var respuesta = suma(num1,num2);
+
+	document.getElementById('operacion').innerHTML = "Sumar: "+num1+" + "+num2;
+	document.getElementById('respuesta').innerHTML = respuesta;
+
+</script>

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+
+<h1>Number</h1>
+<p id="n1"></p>
+<p id="n2"></p>
+
+<h1>Number Propiedades</h1>
+<p id="n3"></p>
+<p id="n4"></p>
+<p id="n5"></p>
+<p id="n6"></p>
+<p id="n7"></p>
+<p id="n8"></p>
+<p id="n9"></p>
+
+<h1>Number Metodos</h1>
+<p id="n10"></p>
+<p id="n11"></p>
+<p id="n12"></p>
+<p id="n13"></p>
+<p id="n14"></p>
+
+</body>
+</html>
+<script type="text/javascript">
+	// definicion de number 
+	var num1 =2500; // entero
+	var num2 = 34.290;// decimal
+
+	document.getElementById('n1').innerHTML = num1;
+	document.getElementById('n2').innerHTML = num2;
+
+	// Pripiedades de los number 
+	var num3 = 23434;
+	document.getElementById('n3').innerHTML = num3.constructor; // La propiedad constructor retorna la funcion nativa que crea un numero
+	document.getElementById('n4').innerHTML = Number.MAX_VALUE; // retorna el numero maximo que se puede usar en Javascript 
+
+	document.getElementById('n5').innerHTML = Number.MIN_VALUE; // RETORNA el vaor minimo que se puede usar en Javascript 
+
+	document.getElementById('n6').innerHTML = Number.NEGATIVE_INFINITY; // retorna un negativo infinito 
+
+	document.getElementById('n7').innerHTML = Number.NaN; // retorna un numero ilegal
+
+	document.getElementById('n8').innerHTML = Number.POSITIVE_INFINITY; // retorna un POSITIVO  infinito 
+
+	Number.prototype.metodoNumerico = function(){
+		// La propiedad prototype permitecrear un nuevo metodo paramanipular numeros 
+		return this*4/2;
+	}
+
+	var num4 = 25;
+	document.getElementById('n9').innerHTML = num4.metodoNumerico();
+
+	// Metodos de number
+	var num5 = 26.57;
+	document.getElementById('n10').innerHTML = num5.toExponential();// convierte un numero aexpresion exponencial 
+
+	var num6 = 14.7854243;
+	document.getElementById('n11').innerHTML = num6.toFixed(3);// recorta os decimales a 3 y lo convierte en String
+	
+
+
+</script>

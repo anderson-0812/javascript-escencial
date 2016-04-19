@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+<h1>Objetos leccion 4.5</h1>
+<h1>Computador 1</h1>
+<p id="cod1"></p>
+<p id="ram1"></p>
+<p id="dis1"></p>
+
+<h1>Computador 2</h1>
+<p id="cod2"></p>
+<p id="ram2"></p>
+<p id="dis2"></p>
+
+<h1>Computador 3</h1>
+<p id="cod3"></p>
+<p id="ram3"></p>
+<p id="dis3"></p>
+
+</body>
+</html>
+
+<script type="text/javascript">
+	var comp1 = {
+		codigo:"006",
+		ram:"8gb",
+		disco:"1tb",
+	};
+
+	var comp2 = new Object();
+	comp2.codigo = "008";
+	comp2.ram = "18gb";
+	comp2.disco = "2tb";
+
+	function comp3(codigo,ram,disco){
+		this.codigo = codigo;
+		this.ram = ram;
+		this.disco = disco;
+	}
+	var comp3 =  new comp3("0087","15gb","500gb");
+
+
+	document.getElementById("cod1").innerHTML = comp1.codigo;
+	document.getElementById("ram1").innerHTML = comp1.ram;
+	document.getElementById("dis1").innerHTML = comp1.disco;
+
+	document.getElementById("cod2").innerHTML = comp2.codigo;
+	document.getElementById("ram2").innerHTML = comp2.ram;
+	document.getElementById("dis2").innerHTML = comp2.disco;
+
+	document.getElementById("cod3").innerHTML = comp3.codigo;
+	document.getElementById("ram3").innerHTML = comp3.ram;
+	document.getElementById("dis3").innerHTML = comp3.disco;
+
+
+</script>

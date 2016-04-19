@@ -1,0 +1,61 @@
+<!DOCTUPE html>
+<html>
+<head>
+</head>
+
+<body>
+<h1>Objetos leccion 4.3 </h1>
+
+<h2>Vehiculo 1</h2>
+<p id="placa1"></p>
+<p id="marca1"></p>
+<p id="modelo1"></p>
+
+<h2>Vehiculo 2</h2>
+<p id="placa2"></p>
+<p id="marca2"></p>
+<p id="modelo2"></p>
+
+<h2>Vehiculo 3</h2>
+<p id="placa3"></p>
+<p id="marca3"></p>
+<p id="modelo3"></p>
+
+
+</body>
+</html>
+
+<script type="text/javascript">
+	var vehiculo1 = {
+		placa:"c-k-001",
+		marca:"Chevrolet",
+		modelo:"Camaro",
+
+	};
+
+	var vehiculo2 = new Object();
+	vehiculo2.placa = "j-l-002";
+	vehiculo2.marca = "Hyundai"
+	vehiculo2.modelo = "suprise";
+
+	function vehiculo3(placa,marca,modelo){
+		this.placa = placa;
+		this.marca = marca;
+		this.modelo = modelo;
+	}
+	 var vehiculo3 =  new vehiculo3("BJ-KL-005","Peugeot","2016");
+
+	 document.getElementById("placa1").innerHTML = vehiculo1.placa;
+	 document.getElementById("marca1").innerHTML = vehiculo1.marca;
+	 document.getElementById("modelo1").innerHTML = vehiculo1.modelo;
+
+	 document.getElementById("placa2").innerHTML = vehiculo2.placa;
+	 document.getElementById("marca2").innerHTML = vehiculo2.marca;
+	 document.getElementById("modelo2").innerHTML = vehiculo2.modelo;
+
+	 document.getElementById("placa3").innerHTML = vehiculo3.placa;
+	 document.getElementById("marca3").innerHTML = vehiculo3.marca;
+	 document.getElementById("modelo3").innerHTML = vehiculo3.modelo;
+
+
+</script>

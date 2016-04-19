@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset = "utf8"/>
+	<title></title>
+</head>
+<body>
+<h4>
+Crear un HTML que contenga un script en el cual se definirá un método llamado metodoDivision a través de la propiedad Number.prototype, y tendrá como función dividir entre 2 a una variable numérica. Invocar el metodoDivision y aplicarlo sobre una variable numérica y mostrar su resultado en pantalla.
+</h4>
+<p id="n1"></p>
+
+
+</body>
+</html>
+
+<script type="text/javascript">
+	var num1 = 50;
+
+	Number.prototype.metodoDivision =  function(){
+		return this /2;
+	}
+
+	document.getElementById('n1').innerHTML = num1.metodoDivision();
+	
+
+</script>

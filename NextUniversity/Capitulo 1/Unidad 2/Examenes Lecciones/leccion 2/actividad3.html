@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf8"/>
+	<title></title>
+</head>
+<body>
+<h1>Crear un HTML con un script donde se definan 6 arreglos utilizando la estructura de corchetes [] con los siguientes valores: 
+
+"Maria", "Pedro", "Juan"
+4.5, 3.9, 2.9
+"Matematicas", "Sociales", "Castellano"
+"Sida", "Cancer", "Gastritis"
+"Vallenato", "Salsa", "Pop"
+"Lunes", "Martes", "Miercoles"</h1>
+
+<p id="s1"></p>
+<p id="s2"></p>
+<p id="s3"></p>
+<p id="s4"></p>
+<p id="s5"></p>
+<p id="s6"></p>
+
+</body>
+</html>
+
+<script type="text/javascript">
+	var array1 = ["Maria", "Pedro", "Juan"];
+	var array2 = [4.5, 3.9, 2.9];
+	var array3 = ["Matematicas", "Sociales", "Castellano"];
+
+	var array4 = ["Sida", "Cancer", "Gastritis"];
+
+	var array5 = ["Vallenato", "Salsa", "Pop"];
+
+	var array6 = ["Lunes", "Martes", "Miercoles"];
+
+	// Muestro los elementos 
+
+	mostrar_arrays('s1',array1);
+	mostrar_arrays('s2',array2);
+	mostrar_arrays('s3',array3);
+	mostrar_arrays('s4',array4);
+	mostrar_arrays('s5',array5);
+	mostrar_arrays('s6',array6.reverse());
+
+
+	function mostrar_arrays(id_p,array){
+		var lim = array.length;
+		var s= '';
+		for (var i = 0; i <= lim-1; i++) {
+			s += array[i]+', ';
+		};
+		document.getElementById(id_p).innerHTML = s;
+	}
+
+	
+</script>

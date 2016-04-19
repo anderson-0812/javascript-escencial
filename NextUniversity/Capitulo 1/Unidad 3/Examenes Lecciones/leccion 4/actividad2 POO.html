@@ -1,0 +1,39 @@
+<html>
+<head>
+	<meta charset="utf8"/>
+	<title></title>
+</head>
+<body>
+<h3>Crear un HTML que contenga un script donde se defina una clase llamada Estudiante con las siguientes propiedades:
+
+codigo(cadena)
+nombre(cadena)
+nota1(numerico)
+nota2(numerico)
+Definir dentro de la clase un método que se llame promedio, que calcule el promedio de las notas y muestre el nombre y el promedio en pantalla. Luego crear un objeto de clase Estudiante. Por último, invocar el método promedio del objeto creado en una función que se llame miFuncion, la cual se invocará en un botón con el texto  “Mostrar Promedio”.</h3>
+
+<p id="motrar_estudiante"></p>
+<button onclick="miFuncion()">Mostrar Proedio</button>
+
+</body>
+</html>
+
+<script type="text/javascript">
+function Estudiante(codigo, nombre, nota1, nota2){
+	this.codigo = codigo;
+	this.nombre = nombre;
+	this.nota1 = nota1;
+	this.nota2 = nota2;
+
+	this.promedio= function(){
+		var resultado = parseInt(this.nota1) + parseInt(this.nota2)/2;
+		return resultado;
+	}
+}
+
+var ob_promedio = new Estudiante("6539","Anderson",17,18);
+
+function miFuncion(argument){
+	document.getElementById("motrar_estudiante").innerHTML = "El estudiante "+ob_promedio.nombre +" con codigo "+ob_promedio.codigo+" tiene de promedio enrte los dos bimestres sobre 20 un total de "+ob_promedio.promedio();
+}
+</script>

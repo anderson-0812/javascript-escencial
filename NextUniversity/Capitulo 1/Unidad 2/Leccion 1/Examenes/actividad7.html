@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+<h1>Objeto Math</h1>
+<h1>Crear un HTML que contenga un script en el cual se concatene a través del operador + las siguientes cadenas y mostrarlas en pantalla:
+
+"Hola como " y "estan ustedes?"
+"Feliz " y "como " y "una lombriz!!"
+"Pienso" y " luego existo.. "
+"Vivir es " y "nacer " y "a cada instante"
+"La moda es" y " lo que" y " pasa de moda"
+"La vida " y "es un " y "juego de" y " azar"</h1>
+<p id="m1"></p>
+<p id="m2"></p>
+<p id="m3"></p>
+<p id="m4"></p>
+<p id="m5"></p>
+<p id="m6"></p>
+
+
+
+
+
+
+</body>
+</html>
+
+<script type="text/javascript">
+// Objeto Math 
+
+	var a = "Hola como ";
+	var cad_a = "estan ustedes?"
+	a += cad_a;
+
+
+	var b = "Feliz ";
+	var cad_b = "Como ";
+	var cad_b2 = "Una lombriz ";
+	b += cad_b + cad_b2; 
+
+	var c = "Pienso ";
+	var cad_c = "luego existo "; 
+	c = c + cad_c;
+
+	var d = "Vivir es ";
+	var cad_d = "nacer ";
+	var cad_d2 = "a cada instante "; 
+	d = d + cad_d + cad_d2;
+
+
+	var e = "La moda es ";
+	var cad_e = "lo que "; 
+	var cad_e2 = "pasa de moda"; 
+	e += cad_e + cad_e2;
+
+	var f = "la vida ";
+	var cad_f = "es un ";
+	var cad_f2 = "azar ";
+	f += cad_f + cad_f2;
+
+
+	
+	
+	document.getElementById('m1').innerHTML = a;
+	document.getElementById('m2').innerHTML = b;
+	document.getElementById('m3').innerHTML = c;
+	document.getElementById('m4').innerHTML = d;
+	document.getElementById('m5').innerHTML = e;
+	document.getElementById('m6').innerHTML = f;
+
+
+
+
+
+
+
+</script>

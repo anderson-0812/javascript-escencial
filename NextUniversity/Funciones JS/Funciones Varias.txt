@@ -1,0 +1,1 @@
+consolo.table(); // organina los datos de un obj o array en formato de tabla para 

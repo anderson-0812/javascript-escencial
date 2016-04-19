@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+
+<fieldset>
+	<legend>form de etiquetas</legend>
+	<dl>
+		<form>
+			<dd><label for="nombre">Nombres:</label></dd>
+			<dd><input id="nombre" type="text"></input></dd>
+
+			<dd><label for="apellidos">Apellidos:</label></dd>
+			<dd><input id="apellidos" type="text"></input></dd>
+
+			<dd><label for="email">Email:</label></dd>
+			<dd><input id="nombre" type="text"></input></dd>
+
+			<dd><label for="comenatrio">Comentarios:</label></dd>
+			<dd><textarea id="comenatrio"></textarea></dd>
+
+			<input type="submit" value="Gaurdar" onclick="contar_etiquetas();"></input>
+		</form>
+	</dl>
+</fieldset>
+</body>
+</html>
+
+<script type="text/javascript">
+	function contar_etiquetas(){
+		var etiquetas1 = document.getElementsByTagName('p');
+		var etiquetas3= document.getElementsByTagName('input');
+		var etiquetas4 = document.getElementsByTagName('label');
+
+		alert('tenemos etiquetas p la cantidad de '+etiquetas1.length+' etiquetas input '+etiquetas3.length+' etiquetas label: '+etiquetas4.length);
+
+	} 
+</script>

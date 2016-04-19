@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta content="text/html"; charset="UTF-8"/>
+	<link rel="stylesheet" type="text/css" href="estilos.css">
+	<title>Registro de usuarios</title>
+
+	<script type="text/javascript">
+		
+		function evento_onload(){
+			alert('Bienvenido a nuestro form de registro de usuarios');
+		}
+
+		function evento_onclick(){
+			alert('Los datos se han enviado correctamente');
+		}
+
+		function evento_onfocus(elemnt){
+			elemnt.style.background = '#CCCCCC';
+		}
+
+		function evento_oncopy(){
+			alert('texto copiado');
+		}
+
+		// eventos mios
+		function evento_onchange(elemnt){
+			elemnt.style.color = 'red';
+		}
+
+		function evento_onmouseover(elemnt){
+			elemnt.setAttribute('title','Ingrese el nombre');
+		}
+
+		function evento_onselect(){
+			alert('estas seleccionando el texto ');
+		}
+
+		function evento_mouseover_btn(obj){
+			obj.style.background = '#0033cc';
+		}
+
+		function evento_onmouseout_pierde_foco(obj){
+			obj.style.background = '#4dff4d';
+		}
+	</script>
+
+</head>
+<body onload="evento_onload();">
+<h4>Formulario de Registro  de Estudiante</h4>
+
+<fieldset id="fieldset_content">
+	<legend>Datos</legend>
+	<dl>
+	<table>
+		<form>
+		<!-- CODIGO -->
+			<tr>
+				<td>
+					<dd><label for="codigo">Codigo: </label></dd>
+				</td>
+				<td>
+					<dd><input type="text" name="codigo" id="codigo" onchange="evento_onchange(this);" onfocus="evento_onfocus(this);"></input></dd>
+				</td>
+			</tr>
+			<!-- NOMBRES -->
+			<tr>
+				<td>
+					<dd><label for="nombres">Nombre: </label></dd>
+				</td>
+				<td>
+					<dd><input type="text" name="nombres" id="nombres"  onmouseover="evento_onmouseover(this);" onfocus="evento_onfocus(this);"></input></dd>
+				</td>
+			</tr>
+		<!-- APELLIDOS-->
+
+			<tr>
+				<td>
+					<dd><label for="apellidos">Apellidos: </label></dd>
+				</td>
+				<td>
+					<dd><input type="text" name="apellidos" id="apellidos" onselect="evento_onselect();" onfocus="evento_onfocus(this);"></input></dd>
+				</td>
+			</tr>
+		<!-- IDENTIFICACION -->
+			<tr>
+				<td>
+					<dd><label for="identificacion">Identificacion: </label></dd>
+				</td>
+				<td>
+					<dd><input type="text" name="identificacion" id="identificacion" onfocus="evento_onfocus(this);" oncopy="evento_oncopy();"></input></dd>
+				</td>
+			</tr>
+			<!-- SEXO -->
+			<tr>
+				<td>
+					<dd><label for="sexo">Sexo: </label></dd>
+				</td>
+				<td>
+					<dd>
+						<select id="sexo" name="sexo">
+							<option value="">--</option>
+							<option value="masculino">Masculino</option>
+							<option value="masculino">Femenino</option>
+						</select>
+					</dd>
+				</td>
+			</tr>
+			<!-- FECHA DE NACIMIENTO -->
+			<tr>
+				<td>
+					<dd><label for="fecha_nac">Fecha de Nacimiento: </label></dd>
+				</td>
+				<td>
+					<dd><input type="text" name="fecha_nac" id="fecha_nac" onfocus="evento_onfocus(this);"></input></dd>
+				</td>
+			</tr>
+			<!-- EMAIL -->
+			<tr>
+				<td>
+					<dd><label for="email">Email: </label></dd>
+				</td>
+				<td>
+					<dd><input type="text" name="email" id="email" onfocus="evento_onfocus(this);"></input></dd>
+				</td>
+			</tr>
+			<!-- TELEFONO -->
+			<tr>
+				<td>
+					<dd><label for="telefono">Telefono: </label></dd>
+				</td>
+				<td>
+					<dd><input type="text"  class="positive" name="telefono" id="telefono" onfocus="evento_onfocus(this);"></input></dd>
+				</td>
+			</tr>
+		<!-- DIRECCION -->
+			<tr>
+				<td>
+					<dd><label for="direccion">Direccion: </label></dd>
+				</td>
+				<td>
+					<dd><input type="text" name="direccion" id="direccion" onfocus="evento_onfocus(this);"></input></dd>
+				</td>
+			</tr>
+			<!-- OBSERVACIONES -->
+			<tr>
+				<td>
+					<dd><label for="observaciones">Observaciones: </label></dd>
+				</td>
+				<td>
+					<dd><input type="text" name="observaciones" id="observaciones" onfocus="evento_onfocus(this);"></input></dd>
+				</td>
+			</tr>
+			<!-- Enviar -->
+			<tr>
+				<td>
+					<dd><input type="submit" name="enviar" id="enviar" onmouseover="evento_mouseover_btn(this);" onmouseout="evento_onmouseout_pierde_foco(this);" onclick="evento_onclick();"></input></dd>
+				</td>
+			</tr>
+		</form>
+	</table>
+	</dl>
+</fieldset>
+</body>
+</html>

@@ -1,0 +1,53 @@
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<h3>Crear un HTML que contenga un script donde se conviertan los siguientes valores a cadena de texto usando el método constructor String():
+
+15
+3 + 4
+true
+false
+Date()
+30
+40*8
+4>5
+6< 9
+Mostrar los valores convertidos en pantalla.</h3>
+
+<p  id="dato1"></p>
+<p  id="dato2"></p>
+<p  id="dato3"></p>
+<p  id="dato4"></p>
+<p  id="dato5"></p>
+<p  id="dato6"></p>
+<p  id="dato7"></p>
+<p  id="dato8"></p>
+<p  id="dato9"></p>
+
+</body>
+</html>
+<script type="text/javascript">
+var dato1 = 15;
+var dato2 = 3 + 4; 
+var dato3 = true; 
+var dato4 = false; 
+var dato5 = Date(); 
+var dato6 = 30; 
+var dato7 = 40 * 8 ; 
+var dato8 = 4 > 5; 
+var dato9 = 6 < 9;
+
+document.getElementById("dato1").innerHTML = String(dato1);
+document.getElementById("dato2").innerHTML = String(dato2);
+document.getElementById("dato3").innerHTML = dato3.toString();
+document.getElementById("dato4").innerHTML = String(dato4);
+document.getElementById("dato5").innerHTML = String(dato5);
+document.getElementById("dato6").innerHTML = dato6.toString();
+document.getElementById("dato7").innerHTML = String(dato7);
+document.getElementById("dato8").innerHTML = String(dato8);
+document.getElementById("dato9").innerHTML = String(dato9);
+
+
+</script>

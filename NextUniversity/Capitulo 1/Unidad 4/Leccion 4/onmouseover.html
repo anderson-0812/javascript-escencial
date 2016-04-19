@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<script type="text/javascript">
+
+	function entrada(obj){
+		var nodo = document.createElement('p');
+		var text_nodo = document.createTextNode("onmouseover University");
+		nodo.appendChild(text_nodo);
+		obj.appendChild(nodo);
+	}
+		
+
+	</script>
+</head>
+<body>
+	<fieldset onmouseover="entrada(this)">
+		<legend>datos del paciente</legend>
+		<dl>
+			<div>
+				<dd><label >Pase el mouse por aqui: </label></dd>
+			</div>
+		</dl>
+	</fieldset>
+
+</body>
+</html>
+

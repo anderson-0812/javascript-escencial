@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<a name="google" target="_blank" href="https://www.google.com">google</a>
+	<br/>
+	<a name="youtube" target="_blank" href="https://www.youtube.com">youtube</a>
+	<br/>
+	<a name="facebook" target="_blank" href="https://www.facebook.com">facebook</a>
+	<br/>
+	<a name="instagram" target="_blank" href="https://www.instagram.com">instagram</a>
+	<br/>
+
+	<p id="numero"></p>
+	<button onclick="numerAnchors();">numero de anclas</button>
+
+</body>
+</html>
+
+<script type="text/javascript">
+function numerAnchors(){
+	var x = document.anchors.length;
+	console.log(x);
+	document.getElementById('numero').innerHTML = 'numero de etiquetas a es: '+x;
+}
+</script>

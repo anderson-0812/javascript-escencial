@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+
+<h1>Cliclo for in con un objeto</h1>
+<div id="personas"></div>
+
+</body>
+</html>
+<script type="text/javascript">
+	var persona = {
+		id: 1,
+		nombre: "Anderson",
+		telefono: "0994625237"
+	};
+
+	var x;
+	for(x in persona){
+		var nodo = document.createElement("p");
+		var nodoTex = document.createTextNode(persona[x]);
+		nodo.appendChild(nodoTex);
+
+		document.getElementById("personas").appendChild(nodo);
+	}
+</script>

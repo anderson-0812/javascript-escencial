@@ -1,0 +1,38 @@
+* toExponential(x) => convierte un num en una expresion exponencial 
+	ejem:
+	var num = 5.56789;
+	var n = num.toExponential();
+	res => 5.56789e+0
+
+* toPrecision(x) => da formato aa un numero con uan longitd de 
+			digitos n, si el numero tiene decimales mas de los q seva a kostrar redondea
+	ejem:
+	var num = 13.3714;
+	var n = num.toPrecision(3);
+	res => 13.4
+
+* valueOf() => returna elvalor primitivo de un numero
+	ejem:
+	var str = 4.5;
+	var res = str.valueOf();
+	res => 4.5;
+
+* Number.MAX_VALUE; => retorna el numero maximo que se 
+			puede usar en Javascript 
+
+* Number.MIN_VALUE; => RETORNA el vaor minimo que se puede 
+			usar en Javascript 
+
+* Number.NEGATIVE_INFINITY; => retorna un negativo infinito 
+
+* Number.POSITIVE_INFINITY; => retorna un POSITIVO  infinito 
+
+* Number.prototype.metodoNumerico = function(){
+	// La propiedad prototype permitecrear un nuevo metodo paramanipular numeros 
+	return this*4/2;
+}
+
+var num4 = 25;
+document.getElementById('n9').innerHTML = num4.metodoNumerico();
+
+*

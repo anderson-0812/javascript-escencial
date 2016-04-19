@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<div id="miDIv"></div>
+	<div id="miDIv"></div>
+	<div id="miDIv"></div>
+	<div id="miDIv"></div>
+	<div id="miDIv"></div>
+	<div id="miDIv"></div>
+	<div id="miDIv"></div>
+	<div id="miDIv"></div>
+	<div id="miDIv"></div>
+
+	<button onclick="objetoBody();">Poner texto al primer elemento del body</button>
+
+</body>
+</html>
+
+<script type="text/javascript">
+function objetoBody(){
+	// obtenemos el elemento de de posicion cero de todos los elementos html que esten en el body
+	var div = document.body.children[0];
+	var text = document.createTextNode('Mi nuevo texto'); 
+	div.appendChild(text);
+}
+</script>

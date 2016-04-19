@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+<p id="ventas"></p>
+<button onclick="mostrar_ventas();">Mostrar Ventas</button>
+<button onclick="total_ventas();">Mostrar Total Ventas</button>
+
+</body>
+</html>
+<script type="text/javascript">
+	var json_text = '{"ventas": ['+
+		'{"codigo":"001", "valor": 25},'+
+		'{"codigo":"002", "valor": 10},'+
+		'{"codigo":"003", "valor": 76},'+
+		'{"codigo":"004", "valor": 55},'+
+		'{"codigo":"005", "valor": 24},'+
+		'{"codigo":"006", "valor": 53},'+
+		'{"codigo":"007", "valor": 125},'+
+		'{"codigo":"008", "valor": 5},'+
+		'{"codigo":"009", "valor": 2},'+
+		'{"codigo":"010", "valor": 20}'+
+
+		']}';
+
+		var json_obj = JSON.parse(json_text);
+	function mostrar_ventas(){
+		 leerJson(json_obj);
+
+	}
+
+ function leerJson(json){
+ 	out = "--------------------- Ventas ---------------------<br>";
+ 	var x;
+ 	
+ 	for(x in json.ventas){
+ 		out += "Codigo: "+json.ventas[x].codigo+" - "+"Edad: "+json.ventas[x].valor+"<br>";
+ 	}
+
+ 	document.getElementById("ventas").innerHTML = out;
+ }
+
+ function total_ventas(){
+ 	json = json_obj;
+
+ 	out = "--------------------- Total de ventas ---------------------<br>";
+ 	var x;
+ 	 var total=0;
+ 	for(x in json.ventas){
+ 			total += parseFloat(json.ventas[x].valor);
+ 	}
+ 	out += "Total: "+total;
+
+ 	document.getElementById("ventas").innerHTML = out;
+ }
+
+
+</script>

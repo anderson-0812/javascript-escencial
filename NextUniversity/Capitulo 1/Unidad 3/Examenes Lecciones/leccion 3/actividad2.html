@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+<h1>Calcular raiz cuadrada </h1>
+<button onclick="mifuncion()">Ejecutar</button>
+</body>
+</html>
+<script type="text/javascript">
+	function mifuncion(){
+		try{
+			var num = -40;
+
+			var resultado = Math.sqrt(num);
+			if(isNaN(resultado)){
+				throw "No se puede sacar la raiz de valores negativos";
+			}
+		}catch(e){
+			alert("Error "+e);
+		}
+	}
+</script>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<script type="text/javascript">
+
+	function restablecer(){
+		alert("Se a restablecido mas el texto");
+	}
+		
+
+	</script>
+</head>
+<body>
+<form id="prueba" onreset="restablecer();">
+	<fieldset>
+		<legend>datos del paciente</legend>
+		<dl>
+			<div>
+				<dd><label for="nombre">Nombre: </label></dd>
+				<dd><input id="nombre" type="text"></input></dd>
+			</div>
+
+			<div>
+				<dd><label for="cedula">Cedula</label></dd>
+				<dd><input id="cedula" type="text"></input></dd>
+			</div>
+
+			<div>
+				<dd><label for="email">email</label></dd>
+				<dd><input id="email" type="text"></input></dd>
+			</div>
+
+			<div>
+				<dd><input type="reset"></input></dd>
+			</div>
+		</dl>
+	</fieldset>
+</form>
+
+</body>
+</html>
+
