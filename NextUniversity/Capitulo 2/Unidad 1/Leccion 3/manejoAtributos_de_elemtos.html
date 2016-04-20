@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+<div id="miDiv" name='miDiv' style="background-color: yellow;">
+	Mi div..!
+</div>
+<p id="p1"></p>
+
+<button onclick="obtenerAtributos();">Cambiar Parrafo</button>
+</body>
+</html>
+<script type="text/javascript">
+	function obtenerAtributos(){
+		var atributo ='';
+		var miDiv = document.getElementById('miDiv');
+		for(var i=0; i < miDiv.attributes.length; i++){
+			atributo += miDiv.attributes[i].name + ':' + miDiv.attributes[i].value + '<br/>'; 
+		}
+
+		document.getElementById('p1').innerHTML = atributo;
+	}
+</script>

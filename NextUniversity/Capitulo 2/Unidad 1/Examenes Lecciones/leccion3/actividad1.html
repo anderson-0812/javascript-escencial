@@ -1,0 +1,87 @@
+<!-- Realizar en un archivo HTML un formulario que contenga los siguientes elementos:
+
+Nombres
+
+Apellidos
+
+Dirección
+
+Edad
+
+Fecha de Nacimiento
+
+Lugar de Nacimiento
+
+Estado Civil
+
+Además de esto debe haber un título centrado que diga “Registro de Estudiantes”.
+
+Este formulario debe permitir lo siguiente:
+
+El input de Fecha de Nacimiento debe ser tipo date.
+Tener un botón que permita mostrar un mensaje que diga que un alumno ha sido registrado.
+Tener un botón que permita cambiar el color de los nombres o letras del formulario a rojo.
+Un botón que permita cambiar el título del formulario, es decir que cambie el contenido y muestre Registro de Docentes, para que sea disponible tanto como alumnos y docentes.   -->
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+	<title></title>
+</head>
+<body>
+	<fieldset id="form_registro">
+		<legend><h1 id="titulo">Registro de Estudiantes</h1></legend>
+		<dl>
+			<dd><label for="nombres"> Nombres:</label></dd>
+			<dd><input type="text" id='nombres' ></input></dd>
+
+			<dd><label for="apellidos"> Apellidos:</label></dd>
+			<dd><input type="text" id='apellidos' ></input></dd>
+
+			<dd><label for="direccion"> Dirección:</label></dd>
+			<dd><input type="text" id='direccion' ></input></dd>
+
+			<dd><label for="edad"> Edad:</label></dd>
+			<dd><input type="text" id='edad' ></input></dd>
+
+			<dd><label for="fech_nac"> Fecha de nacimiento:</label></dd>
+			<dd><input type="date" id='fech_nac' ></input></dd>
+
+			<dd><label for="lugar_nac"> Lugar de nacimiento:</label></dd>
+			<dd><input type="text" id='lugar_nac' ></input></dd>
+
+			<dd><label for="est_civil"> Estado civil:</label></dd>
+			<dd><input type="text" id='est_civil' ></input></dd>
+
+			<div>
+				<button onclick="registrar();">Registrar Alumno</button>
+				<button onclick="cambiar_titulo();">Cambiar Titulo</button>
+				<button onclick="cambiar_color();">Cambiar Color</button>
+
+			</div>
+		</dl>
+	</fieldset>
+</body>
+</html>
+
+<script type="text/javascript">
+	function registrar(){
+		alert('Alumno registrado');
+		return false;
+
+	}
+
+	function cambiar_titulo(){
+		var tit = document.getElementById('titulo').innerHTML = 'Registro de Docentes';
+
+		tit.innerHTML = 'Registro de Docentes';
+		return false;
+	}
+
+	function cambiar_color(){
+		var form = document.getElementById('form_registro');
+		form_registro.style.color ='red';
+		return false;
+		
+	}
+</script>

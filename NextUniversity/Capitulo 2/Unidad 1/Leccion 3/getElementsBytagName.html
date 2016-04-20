@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+<div name="div"> mi div 1</div>
+<div name="div"> mi div 2</div>
+<div name="div"> mi div 3</div>
+<div name="div"> mi div 4</div>
+<div name="div"> mi div 5</div>
+
+<button onclick="cambairDiv();">Cambair Color div</button>
+</body>
+</html>
+<script type="text/javascript">
+	
+	function cambairDiv(){
+		var divs = document.getElementsByTagName('div');
+		for(var i=0; i < divs.length; i++){
+			divs[i].style.color = 'orange';
+		}
+	}
+</script>
