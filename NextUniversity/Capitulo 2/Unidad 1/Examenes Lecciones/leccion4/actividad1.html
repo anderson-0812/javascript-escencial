@@ -1,0 +1,32 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+
+<!-- Crear un documento HTML que contenga dos etiquetas párrafo <p>; la primera etiqueta que tenga un id llamando texto1 y un texto “Mi primer texto!” y la segunda etiqueta que tenga un id llamado texto2 y un texto “Mi segundo texto!”. Después de crear las dos etiquetas párrafos, crear dos botones; el primer botón tiene como acción cambiar el tipo de fuente del primer texto a Courier New y la del segundo texto a Verdana. Y la acción del segundo botón será cambiar el color de fondo del primer párrafo a amarrillo y el segundo a azul. -->
+
+<p id="texto1"> mi texto1 </p>
+<p id="texto2">mi texto2 </p>
+
+<button onclick="cambiarFuentes();">cambiar fuentes</button>
+<button onclick="cambiarColores();">cambiar colores</button>
+
+</body>
+</html>
+
+<script type="text/javascript">
+function cambiarFuentes(){
+	document.getElementById('texto1').style.fontFamily = "Courier New";
+	document.getElementById('texto2').style.fontFamily = "Verdana";
+
+}
+
+function cambiarColores(){
+	document.getElementById('texto1').style.color = "yellow";
+	document.getElementById('texto2').style.color = "blue";
+
+}
+</script>

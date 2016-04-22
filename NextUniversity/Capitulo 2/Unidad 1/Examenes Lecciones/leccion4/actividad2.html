@@ -1,0 +1,37 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+
+<!-- Crear un documento HTML que contenga un div id “miDiv” y con el texto “Mi div !!!”. Luego crear un botón con el texto “Cambiar”. La idea es que cuando se haga clic sobre el botón, se cambie las siguientes propiedades css del div:
+
+backgroundColor con el valor blue
+color con el valor yellow
+width con el valor 500px
+height con el valor 500px
+fontSize con el valor xx-large -->
+
+<div id="miDiv">
+	mi Div
+</div>
+
+<button onclick="cambiar();">cambiar </button>
+
+</body>
+</html>
+
+<script type="text/javascript">
+function cambiar(){
+	document.getElementById('miDiv').style.backgroundColor = "#0000e6";
+	document.getElementById('miDiv').style.color = "yellow";
+	document.getElementById('miDiv').style.width = "500px";
+	document.getElementById('miDiv').style.height = "500px";
+	document.getElementById('miDiv').style.fontSize = "xx-large";
+
+
+}
+
+</script>

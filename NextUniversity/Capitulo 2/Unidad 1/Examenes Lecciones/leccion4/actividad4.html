@@ -1,0 +1,73 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+
+<!-- 
+Crear un documento HTML que contenga un input con id “miInput”, un div con id “miDiv” y texto “Mi div!!!”, un párrafo con id “miParrafo” y con el texto “Pienso, luego existo..”. Luego crear 3 botones, el primer botón realizará la acción de cambiar las siguientes propiedades del input:
+
+backgroundColor con el valor blue
+color con el valor yellow
+width con el valor 200px
+height con el valor 80px
+El segundo botón cambiará las siguientes propiedades del div:
+
+backgroundColor con el valor orange
+color con el valor white
+width con el valor 800px
+height con el valor 800px
+fontSize con el valor x-large
+El tercer botón cambiará las siguientes propiedades del párrafo:
+
+backgroundColor con el valor green
+color con el valor red
+fontSize con el valor x-large
+-->
+<input id="miInput" ></input>
+
+<div id="miDiv">Mi DIv</div>
+
+<p id="miParrafo"> Mi parrafo</p>
+
+
+<button onclick="cambiarInput();">cambiar Input</button>
+<button onclick="cambiarDiv();">cambiar Div</button>
+<button onclick="cambiarParrafo();">cambiar Parrafo</button>
+
+</body>
+</html>
+
+<script type="text/javascript">
+
+function cambiarInput(){
+	var input = document.getElementById('miInput');
+	input.style.backgroundColor = "blue";
+	input.style.color= "yellow";
+	input.style.width= "200px";
+	input.style.height= "80px";
+
+}
+
+function cambiarDiv(){
+	var div= document.getElementById('miDiv');
+	div.style.backgroundColor = "orange";
+	div.style.color = 'white';
+	div.style.width = '800px';
+	div.style.height= '800px';
+	div.style.fontSize= 'x-large';
+
+}
+
+function cambiarParrafo(){
+	var p = document.getElementById('miParrafo');
+	p.style.backgroundColor = "green";
+	p.style.color= "red";
+	p.style.fontSize= "x-large";
+
+
+}
+
+</script>

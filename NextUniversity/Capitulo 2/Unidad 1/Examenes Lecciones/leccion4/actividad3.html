@@ -1,0 +1,86 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+
+<!-- Crear un documento HTML que contenga una tabla con dos columnas, una con título “Jugadores” y otra con título “goles”. Construir la tabla con los siguientes datos:
+
+James Rodriguez - goles: 6
+Thomas Mueller- goles: 5
+Neymar – goles: 4
+Lionel Messi - goles: 4
+Luego crear un botón con el texto “Cambiar”. La idea es que cuando se haga clic sobre el botón, haga los siguientes cambios CSS:
+
+Para la fila de títulos cambiar el backgroundColor a red.
+Para las filas con los nombres de jugador y sus goles cambiar el backgroundColor a blue.
+Para las filas con los nombres de jugador y sus goles cambiar el fontStyle a italic.
+Para las filas con los nombres de jugador y sus goles cambiar el fontWeight a bold.-->
+
+<table id="tab_jugador">
+	<thead>
+		<tr class="fil">
+			<th>Jugadores</th>
+			<th>Titulo (Goles)</th>
+		</tr>
+	</thead>
+
+	<tbody>
+		<tr class="fil_body">
+			<td>James Rodriguez</td>
+
+			<td>6</td>
+		</tr>
+
+		<tr class="fil_body">
+			<td>Thomas Mueller</td>
+
+			<td>5</td>
+		</tr>
+
+		<tr class="fil_body">
+			<td>Neymar </td>
+
+			<td>4</td>
+		</tr>
+
+		<tr class="fil_body">
+			<td>Lionel Messi</td>
+
+			<td>4</td>
+		</tr>
+	</tbody>
+</table>
+
+<button onclick="cambiar();">cambiar </button>
+
+</body>
+</html>
+
+<script type="text/javascript">
+function cambiar(){
+	var cuerpo_tab = document.getElementsByClassName("fil_body");
+	var titulos = document.getElementsByClassName("fil");
+
+	for(var i =0; i < titulos.length; i++){
+		titulos[i].style.backgroundColor= "red";
+	}
+
+	for(var i =0; i < cuerpo_tab.length; i++){
+		cuerpo_tab[i].style.backgroundColor= "blue";
+		cuerpo_tab[i].style.fontStyle= "italic";
+		cuerpo_tab[i].style.fontWeight= "bold";
+
+
+	}
+
+
+
+
+
+
+}
+
+</script>
