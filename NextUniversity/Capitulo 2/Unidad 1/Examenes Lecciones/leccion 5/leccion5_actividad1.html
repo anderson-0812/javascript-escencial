@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+<!-- 
+Realizar un documento HTML que contenga una etiqueta H1 con id=”texto” y un menaje que diga “Hola JavaScript”. Dentro de las etiquetas del script codificar un método o sentencias de JavaScript que nos permitan cambiar el texto que tiene la etiqueta H1 por medio del id, y colocarle un nuevo texto que diga “He cambiado el Texto”. 
+-->
+
+	<h1 id="texto">Hola Javascript</h1>
+
+	<button onclick="cambairtexto();">cambiar texto</button>
+</body>
+<script type="text/javascript">
+	function cambairtexto() {
+		var h = document.getElementById('texto');
+		h.innerHTML = "He cambiado el texto";
+	}
+</script>
+</html>
