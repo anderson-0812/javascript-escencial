@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>eventListener</title>
+	<meta charset="utf-8"/>
+
+	
+</head>
+<body>
+	<button id="btn1" >Mostrar Alert</button>
+</body>
+</html>
+
+<script type="text/javascript">
+		
+	var elemnt = document.getElementById('btn1');
+	elemnt.addEventListener("click",mostrar_mensaje1);
+	elemnt.addEventListener("mouseover",mostrar_mensaje2);
+
+
+	function mostrar_mensaje1(argument){
+		alert('addEventListener llamado desde unamensaje 1');
+	}
+
+	function mostrar_mensaje2(argument){
+		alert('addEventListener llamado desde mensaje 2');
+	}
+</script>

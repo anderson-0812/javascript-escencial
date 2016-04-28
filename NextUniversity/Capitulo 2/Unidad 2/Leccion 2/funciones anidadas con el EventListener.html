@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>funciones anidadas con el EventListener</title>
+</head>
+<body>
+	<button id="btn1"> Mostrar</button>
+</body>
+<script type="text/javascript">
+	var nombre = "Juan Perez";
+	var esattura = 1.74;
+
+	document.getElementById('btn1').addEventListener('click',function(){
+		saludar(nombre,esattura);
+	});
+
+	function saludar(nom,esattura){
+		alert('Hola '+nom+' mides '+esattura+'?');
+	}
+</script>
+</html>

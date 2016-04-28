@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Navegando entre nodos</title>
+</head>
+<body>
+	<div id="miDiv">
+		<h1>Encabezado 1</h1>
+		<p id="p1">Parrafo 1</p>
+		<input type="text" id="inp"></input></div>
+	<br/>
+	<button onclick="nodoUltimo();"> Ultimo Hijo</button>
+
+	<p id="mensaje"></p>
+
+
+	<script type="text/javascript">
+
+	function nodoUltimo(){
+		var Encabezado = document.getElementsByTagName('h1')[0];
+
+		var texto ='';
+		var div = document.getElementById('miDiv');
+		var mensaje = document.getElementById('mensaje');
+		mensaje.innerHTML = 'El Ultimo nodo padre es: ' + div.lastChild.nodeName; // obtenemos el nombre del ultimo hijo de la etiqueta
+	}
+	</script>
+</body>
+</html>
+
+
+

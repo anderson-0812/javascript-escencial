@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Navegando entre nodos</title>
+</head>
+<body>
+	<div>
+		<p id="parrafo">Parrafo 1</p>
+		<p id="parrafo">Parrafo 2</p>
+		<p id="parrafo">Parrafo 3</p>
+	</div>
+
+	<button onclick="nodosHijos();">Nodos Hijos</button>
+	<p id="mensaje"></p>
+	<script type="text/javascript">
+		function nodosHijos(){
+			var texto = '';
+			var div = document.getElementsByTagName('div')[0];// recojo el nodo de posicion cero q su etiqueta se llame div 
+
+			for (var i = 0 ; i < div.childNodes.length; i++) {
+				texto += div.childNodes[i].nodeName+'<br>';
+
+			}
+
+			document.getElementById('mensaje').innerHTML = texto;
+		}
+	</script>
+</body>
+</html>
+
+
+

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+<!-- }
+	Crear un HTML que contenga un div con id “miDiv” y con texto “Mi div!!!”. La idea es agregar un EventListener de tipo “click” donde se defina solo el nombre de la función cambiarDiv en la declaración de este. La función cambiará las siguientes propiedades css del div:
+
+width con el valor 400px
+height con el valor 400px
+backgroundColor con el valor green
+fontSize con el valor xx-large
+-->
+<div id="miDiv"> Mi Div </div>
+</body>
+<script type="text/javascript">
+	
+	var elem =  document.getElementById('miDiv');
+	elem.addEventListener('click',cambiarDiv);
+
+	function cambiarDiv(argument){
+		document.getElementById('miDiv').style.backgroundColor= "green";
+		document.getElementById('miDiv').style.height= "400px";
+		document.getElementById('miDiv').style.width= "400px";
+		document.getElementById('miDiv').style.fontSize= "xx-large";
+	}
+
+</script>
+</html>

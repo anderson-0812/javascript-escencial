@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+<!-- 
+Crear un HTML que contenga un input con id “miInput”. La idea es agregar dos EventListener, uno de tipo “click” donde se defina solo el nombre de la función “cambiar1” en la declaración de este. La función cambiará las siguientes propiedades css del input:
+
+width con el valor 150px
+height con el valor 50px
+El otro EventListener es de tipo “blur” donde se definirá solo el nombre de la función “cambiar2” en la declaración de este. La función cambiará las siguientes propiedades css del input:
+
+color con el valor orange
+backgroundColor con el valor blue
+-->
+<input id="miInput"></input>
+</body>
+<script type="text/javascript">
+	
+	var elem =  document.getElementById('miInput');
+	elem.addEventListener('click',cambiar1);
+	elem.addEventListener('blur',cambiar2);
+
+
+	function cambiar1(argument){
+		document.getElementById('miInput').style.backgroundColor= "green";
+		document.getElementById('miInput').style.width= "150px";
+		document.getElementById('miInput').style.height= "50px";
+		document.getElementById('miInput').style.fontSize= "xx-large";
+	}
+
+	function cambiar2(){
+		document.getElementById('miInput').style.color = "orange";
+		document.getElementById('miInput').style.backgroundColor= "blue";
+		
+	}
+
+</script>
+</html>

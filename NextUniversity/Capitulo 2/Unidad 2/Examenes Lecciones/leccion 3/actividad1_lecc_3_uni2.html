@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<h1 id="texto1">Mi primer Texto </h1>
+	<p id="texto2"> Segundo Texto</p>
+<!-- 
+Crear un código HTML que contenga una etiqueta h1 con id=”texto1” y muestre la frase “Primer Texto”, y otra etiqueta p con id=”texto2” que muestre la frase “Segundo Texto”. Crear un script que permita cambiar el texto que tiene el elemento p por el mensaje que tiene la etiqueta h1 utilizando la propiedad childnodes y que este comando esté asignado a una variable llamada cambiartexto. 
+
+Después de esto, agregar una etiqueta h1 que muestre el mensaje “Elementos”, y agregar un párrafo que diga Nombre, con un input de tipo texto y un botón con valor aceptar dentro de un div.
+
+Se debe crear un botón que permita mostrar los tipos de elementos que se encuentran en el div.
+Se debe crear un botón que permita ver cuál es el primer elemento que se encuentra dentro del div.
+Se debe crear otro botón que permita saber cuál es el último botón que está dentro del div.
+Esto se debe mostrar en una etiqueta párrafo después de estos botones.
+-->
+	<div id="miDiv"><h1 id="text3">Elementos </h1><p id="p2">Nombre:</p><input id="input1"></input></div>
+	<button onclick="listarTiposElemento();">Ver tipo de Elementos</button>
+	<button onclick="primerElemento();">Primer Elemento</button>
+	<button onclick="ultimoElemento();">Ultimo Elemento</button>
+	<p id="mensaje"></p>
+</body>
+
+<script type="text/javascript">
+	
+	var cambiartexto = document.getElementById('texto1').childNodes[0].nodeValue;
+	var p1 = document.getElementById('texto2');
+	console.log(cambiartexto);
+	p1.innerHTML = cambiartexto;
+
+	function listarTiposElemento(){
+		var elements = document.getElementById('miDiv').childNodes;
+		var texto ='';
+		var mensaje = document.getElementById('mensaje');
+		for(var i=0; i< elements.length; i++){
+			texto += elements[i].nodeName+'<br/>';
+		}
+
+		mensaje.innerHTML = texto;
+	}
+
+
+	function primerElemento(){
+		var element = document.getElementById('miDiv').firstChild.nodeName;
+		document.getElementById('mensaje').innerHTML = element;
+
+	}
+
+	function ultimoElemento(){
+		var elemnt =document.getElementById('miDiv').lastChild.nodeName;
+		document.getElementById('mensaje').innerHTML = elemnt; 
+	}
+</script>
+</html>

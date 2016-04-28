@@ -1,0 +1,22 @@
+- son manejadores de eventos estan a la escucha de eventos 
+
+-s intaxis:
+
+	element.addEventListener(evento,function, modoPropagacion);
+
+		event = tipo de evento q escucha
+		 functiob  = funcion a realizar
+		 modoPropagacion = indoca el modo como se va a propagar ese evento hay dios tipos d epropagacion:
+		 	face de captura =  propagar el evnto po todo el documento desde el comienzo del documento 
+		 	face burbujs = propagar el evento desde los elemntos hijos hacia arriba (es totalmenbte alreves al anterior )
+		 		cpmienza desde los hijos hasta el apdre de todos 
+
+- al obj wibdows (ventana de nuestro navegador) tambie se le puede asignar eventListener
+
+- para eliminar eventListeners se usa 
+	element.eventListener(event, function);
+
+* evento resize 
+	este vento s elo asocia al obj windows y se activa cuando la ventana cambia de  dimension
+
+

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Navegando entre nodos</title>
+</head>
+<body>
+	<div id="miDiv">
+		<h1>Encabezado 1</h1>
+		<h1>Encabezado 2</h1>
+		<h1>Encabezado 3</h1>
+
+		<p id="p1">Parrafo 1</p>
+	</div>
+	<br/>
+	<button onclick="nodoPradre();"> Nodo Padre</button>
+
+	<p id="mensaje"></p>
+
+
+	<script type="text/javascript">
+	function nodoPradre(){
+		var Encabezado = document.getElementsByTagName('h1')[0];
+
+		var texto ='';
+		var mensaje = document.getElementById('mensaje');
+		mensaje.innerHTML = 'El nodo padre es: ' + Encabezado.parentNode.nodeName; // obtenemos el nombre del padre de la etiqueta
+	}
+	</script>
+</body>
+</html>
+
+
+

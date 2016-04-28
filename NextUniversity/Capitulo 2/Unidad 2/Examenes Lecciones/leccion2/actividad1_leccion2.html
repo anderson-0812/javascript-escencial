@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+<!-- Crear un HTML que contenga un encabezado h1 con id “miEnca” y con texto “Mi encabezado h1!!!”. La idea es agregar un EventListener de tipo  “click” donde se defina la función en la misma declaración de este. La función cambiará el texto del encabezado con “Encabezado h1 cambiado!!!”-->
+
+	<h1 id="miEnca"> Mi encabezado h1</h1>
+</body>
+
+<script type="text/javascript">
+	var elem = document.getElementById('miEnca');
+
+	elem.addEventListener('click',function(){
+		elem.innerHTML = 'Encabezado h1 cambiado';
+	});
+</script>
+</html>

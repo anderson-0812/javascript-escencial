@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Navegando entre nodos</title>
+</head>
+<body>
+	<div id="miDiv">
+		<h1>Encabezado 1</h1>
+		<p id="p1">Parrafo 1</p>
+		<input type="text" ></input>
+	</div>
+	<br/>
+	<button onclick="nodoHermanoAnterior();">Anterior Nodo hermano</button>
+
+	<p id="mensaje"></p>
+
+
+	<script type="text/javascript">
+	function nodoHermanoAnterior(){
+		var texto ='';
+		var parrafo = document.getElementById('p1');
+		var mensaje = document.getElementById('mensaje');
+		mensaje.innerHTML = 'Anterior Nodo hermano del elemento parrafo: '+parrafo.previousSibling.nodeName;// Se usa la funcion par sacar el hermano anterior con la funcion de sacar el nombre de la etiqueta o elemento 
+	}
+	</script>
+</body>
+</html>
+
+
+

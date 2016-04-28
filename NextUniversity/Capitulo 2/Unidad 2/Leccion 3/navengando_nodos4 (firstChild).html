@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Navegando entre nodos</title>
+</head>
+<body>
+	<div id="miDiv">
+		<h1>Encabezado 1</h1>
+		<p id="p1">Parrafo 1</p>
+		<input type="text" ></input>
+	</div>
+	<br/>
+	<button onclick="nodoPrimero();">primer Nodo hermano</button>
+
+	<p id="mensaje"></p>
+
+
+	<script type="text/javascript">
+	function nodoPrimero(){
+		var texto ='';
+		var div  = document.getElementById('miDiv');
+		var mensaje = document.getElementById('mensaje');
+		mensaje.innerHTML = 'Mi primer nodo del div: ' + div.firstChild.nodeName; // obtenemos el nombre del primer elemento hijo
+	}
+	</script>
+</body>
+</html>
+
+
+

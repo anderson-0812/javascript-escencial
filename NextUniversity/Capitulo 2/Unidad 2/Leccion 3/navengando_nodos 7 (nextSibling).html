@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Navegando entre nodos</title>
+</head>
+<body>
+	<div id="miDiv">
+		<h1>Encabezado 1</h1>
+		<p id="p1">Parrafo 1</p><input type="text" id="inp"></input></div>
+	<br/>
+	<button onclick="nodoHermanoSiguiente();"> Hermano Siguiente</button>
+
+	<p id="mensaje"></p>
+
+
+	<script type="text/javascript">
+
+	function nodoHermanoSiguiente(){
+		var Encabezado = document.getElementsByTagName('h1')[0];
+
+		var texto ='';
+		var Parrafo = document.getElementById('p1');
+		var mensaje = document.getElementById('mensaje');
+		mensaje.innerHTML = 'El Hermano de p1 es: ' + Parrafo.nextSibling.nodeName; // obtenemos el nombre del hermano de la etiqueta
+	}
+	</script>
+</body>
+</html>
+
+
+

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+<!-- 
+
+Crear un HTML que contenga un botón con id “boton1” y encabezado h1 con el id “enca1”. La idea es agregar dos EventListener, uno de tipo “click” donde se defina solo el nombre de la función mostrarMensaje1 en la declaración de este. La función cambiará el texto del encabezado con el mensaje “Se realizó un evento click!!”.
+
+El otro EventListener será de tipo mouseout donde se definirá solo el nombre de la función mostrarMensaje2 en la declaración de este. La función cambiará el texto del encabezado con el mensaje “Se realizó un evento mouseout!!”.
+-->
+
+
+<h1 id="enca1"></h1>
+<button id="btn1">Mostrar encabezado</button>
+</body>
+<script type="text/javascript">
+	
+	var elem =  document.getElementById('btn1');
+	elem.addEventListener('click',mostrarMensaje1);
+	elem.addEventListener('mouseout',mostrarMensaje2);
+
+
+	function mostrarMensaje1(argument){
+		document.getElementById('enca1').innerHTML = "Se realizo un evento click";
+	}
+
+	function mostrarMensaje2(){
+		document.getElementById('enca1').innerHTML = "Se realizo un evento mouseout";
+	}
+
+</script>
+</html>

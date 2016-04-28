@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+<!-- 
+
+Crear un HTML que se le agregue un EventListener al objeto windows de tipo resize. Definir la función en la misma declaración de este. La función creará un elemento párrafo cada vez que se cambie la dimensión de la ventana del navegador.
+-->
+
+
+</body>
+<script type="text/javascript">
+	
+	window.addEventListener('resize',function(){
+		var nodo = document.createElement('p');
+		var nodoText = document.createTextNode('Fue cambaida la dimension del navegador');
+
+		nodo.appendChild(nodoText);
+
+		document.body.appendChild(nodo);		
+
+	});
+
+</script>
+</html>
