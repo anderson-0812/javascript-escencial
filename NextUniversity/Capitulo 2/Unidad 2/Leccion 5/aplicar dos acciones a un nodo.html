@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<div>Mi primer elemento</div>
+	<div>Mi segundo elemento</div>
+	<div>Mi tercer elemento</div>
+	<div>Mi cuarto elemento</div>
+
+	<button onclick="cambiarColor();">Cambiar Divs</button>
+</body>
+</html>
+<script type="text/javascript">
+	function cambiarColor(){
+		 document.getElementsByTagName('div')[0].style.backgroundColor = 'green';
+		 document.getElementsByTagName('div')[0].innerHTML = 'Mi div Modificado!!!';
+			
+	}
+
+</script>

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<h1>Mi primer elemento H1</h1>
+	<h1>Mi segundo elemento H1</h1>
+
+
+	<input type="text" name="txt_1" value="mi primer input"></input>
+	<input type="text" name="txt_2" value="mi segundo input"></input>
+
+	<div>Mi primer elemento Div</div>
+	<div>Mi segundo elemento Div</div>
+
+	<button onclick="numeroEncabezados();">Numero de Encabezados</button>
+	<button onclick="numeroInputs();">Numero de Inputs</button>
+	<button onclick="numeroDivs();">Numero de divs</button>
+
+	<button onclick="cambiarEncabezados();">Cambair encabezados</button>
+	<button onclick="cambiarInputs();">Cambair Inputs</button>
+	<button onclick="cambiarDivs();">Cambair Divs</button>
+
+
+</body>
+</html>
+<script type="text/javascript">
+	function numeroEncabezados(){
+		var listaencabezados = document.getElementsByTagName('h1');
+		var numEncabeazdos = listaencabezados.length;
+
+		alert('El numero de encabezados que hay es: '+numEncabeazdos);
+	}
+	function numeroInputs(){
+		var listaInput = document.getElementsByTagName('input');
+		var numInput = listaInput.length;
+
+		alert('El numero de inputs es: '+numInput);
+	}
+	function numeroDivs(){
+		var listaDivs = document.getElementsByTagName('div');
+		var numDiv = listaDivs.length;
+
+		alert('El numero de Divs es: '+numDiv);
+	}
+
+
+
+	function cambiarEncabezados(){
+		document.getElementsByTagName('h1')[0].style.backgroundColor = 'pink';
+		document.getElementsByTagName('h1')[0].style.fontSize = 'x-large';
+
+		document.getElementsByTagName('h1')[1].style.backgroundColor = 'red';
+		document.getElementsByTagName('h1')[1].style.fontSize = 'xx-large';
+	}
+
+	function cambiarInputs(){
+		document.getElementsByTagName('input')[0].style.color = 'green';
+		document.getElementsByTagName('input')[0].style.fontFamily = 'verdana';
+
+		document.getElementsByTagName('input')[1].style.color = 'cyan';
+		document.getElementsByTagName('input')[1].style.fontFamily = 'Georgia';
+	}
+
+	function cambiarDivs(){
+		document.getElementsByTagName('div')[0].style.backgroundColor = 'yellow';
+		document.getElementsByTagName('div')[0].style.width= '300px';
+		document.getElementsByTagName('div')[0].style.height= '300px';
+
+
+		document.getElementsByTagName('div')[1].style.backgroundColor = 'red';
+		document.getElementsByTagName('div')[1].style.fontSize = 'xx-large';
+		document.getElementsByTagName('div')[1].style.width= '700px';
+		document.getElementsByTagName('div')[1].style.height= '700px';
+	
+	}
+
+</script>

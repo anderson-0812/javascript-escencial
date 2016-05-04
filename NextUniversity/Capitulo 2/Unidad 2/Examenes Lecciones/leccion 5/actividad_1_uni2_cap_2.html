@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<p>parrafo 1</p>
+	<p>parrafo 2</p>
+	<p>parrafo 3</p>
+	<p>parrafo 4</p>
+
+	<button onclick="cambiarColor();">Cambair Color</button>
+
+
+</body>
+</html>
+<script type="text/javascript">
+	function cambiarColor(){
+		var lista = document.getElementsByTagName('p');
+
+		for(var i=0; i< lista.length; i++){
+			lista[i].style.color = 'orange';
+		}
+	}
+
+</script>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<p>Mi primer parrafo</p>
+	<p>Mi segundo parrafo</p>
+	<p>Mi tercer parrafo</p>
+	<p>Mi cuarto parrafo</p>
+	<p>Mi quinto parrafo</p>
+	<p>Mi sexto parrafo</p>
+
+	<button onclick="numeroParrafos();">Numero de Parrafos</button>
+	<button onclick="cambiarParrafos();">Cambiar Parrafos</button>
+</body>
+</html>
+<script type="text/javascript">
+	function numeroParrafos(){
+		var listaParrafos = document.getElementsByTagName('p');
+		var numParrafos = listaParrafos.length;
+
+		alert('El numero de parrafos que hay es: '+numParrafos);
+	}
+
+	function cambiarParrafos(){
+		document.getElementsByTagName('p')[0].style.backgroundColor = 'orange';
+		document.getElementsByTagName('p')[0].style.fontSize = 'x-large';
+
+		document.getElementsByTagName('p')[1].style.backgroundColor = 'red';
+		document.getElementsByTagName('p')[1].style.fontSize = 'large';
+
+		document.getElementsByTagName('p')[2].style.backgroundColor = 'blue';
+		document.getElementsByTagName('p')[2].style.fontSize = 'small';
+
+		document.getElementsByTagName('p')[3].style.backgroundColor = 'purple';
+		document.getElementsByTagName('p')[3].style.fontSize = 'xx-large';
+
+		document.getElementsByTagName('p')[4].style.backgroundColor = 'yellow';
+		document.getElementsByTagName('p')[4].style.fontSize = 'xx-small';
+
+		document.getElementsByTagName('p')[5].style.backgroundColor = 'green';
+		document.getElementsByTagName('p')[5].style.fontSize = 'xx-small';
+	}
+
+</script>

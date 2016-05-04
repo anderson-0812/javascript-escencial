@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<p>parrafo 1</p>
+	<p>parrafo 2</p>
+	<p>parrafo 3</p>
+	<p>parrafo 4</p>
+
+	<button onclick="cambiarColor();">Cambair Color</button>
+	<button onclick="cambiarTexto();">Cambair texto</button>
+
+
+
+</body>
+</html>
+<script type="text/javascript">
+	function cambiarColor(){
+		var lista = document.getElementsByTagName('p');
+		lista[0].style.color = 'orange';
+		lista[lista.length-1].style.color = 'red';
+
+	}
+	function cambiarTexto(){
+		var lista = document.getElementsByTagName('p');
+
+		for(var i=0; i< lista.length; i++){
+			if(i != 0){
+				if(i != lista.length-1){
+					lista[i].innerHTML = 'Parrafo Modificado';
+				}
+			}
+		}
+	}
+
+</script>
