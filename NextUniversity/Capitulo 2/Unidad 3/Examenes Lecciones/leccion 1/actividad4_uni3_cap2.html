@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<!-- 
+	Crear un HTML con un botón con texto “Info Pantalla”. La idea es que cuando se haga clic sobre el botón Info Pantalla, se muestre en el HTML el valor de las siguientes propiedades del objeto screen:
+
+availHeight
+availWidth
+height
+width
+colorDepth
+	-->
+	<button onclick="infoPantalla();">Info Pantalla</button>
+
+	<p id="info_pantalla"></p>
+</body>
+
+<script type="text/javascript">
+	var ventana1;
+
+	function infoPantalla(){
+		var html ='';
+		html += 'Alto maximo permitido: '+screen.availHeight+'<br/>';
+		html += 'Ancho maximo permitido: '+screen.availWidth+'<br/>';
+		html += 'Alto pantalla: '+screen.height+'<br/>';
+		html += 'Ancho pantalla: '+screen.width+'<br/>';
+		html += 'Numero de colores en bits : '+screen.colorDepth+'<br/>';
+
+		document.getElementById('info_pantalla').innerHTML = html;
+	}
+
+</script>
+</html>

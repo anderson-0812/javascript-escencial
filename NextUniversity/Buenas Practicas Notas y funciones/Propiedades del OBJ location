@@ -1,0 +1,20 @@
+* El obj Location
+	- Guarda las URL de la pagina actual 
+	- Se puede usar como propiedad del obj window o document
+	- sintaxis basica:
+		window.location.propiedad;
+		location.propiedad;
+
+Propiedades del obj Location:
+
+* href
+	devuelve direccion URL de la pagina actual 
+* hostname
+	nos retorna el nombre del servidor del sitio
+* pathname
+	nos devuelve la ruta url de la pagina 
+* assign
+	nis sirve para cambair la URL actual por otra q se quiera definir 
+	sintaxis: location.assign('http://www.google.com');
+* protocol
+	retorna el protocolo web utilizado para la pagina

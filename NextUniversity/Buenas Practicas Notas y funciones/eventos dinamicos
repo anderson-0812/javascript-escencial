@@ -1,0 +1,2 @@
+* añadir eventos  manipuladores
+	documen.getById(id).onclick =function(){};

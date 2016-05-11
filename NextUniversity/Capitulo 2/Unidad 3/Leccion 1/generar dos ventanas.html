@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<button onclick="abrirVentana1();">Abrir primera ventana</button>
+	<button onclick="abrirVentana2();">Abrir segunda ventana</button>
+
+	<script type="text/javascript">
+		var ventana1;
+		var ventana2;
+
+		function abrirVentana1(){
+			ventana1 = window.open('','_blank','width=500, height=400');
+			ventana1.focus();
+		}
+
+		function abrirVentana2(){
+			ventana2 = window.open('','_blank','width=500,height=400');
+			var html ='';
+			html += '<h1> Mi Ventana 2 </h1>';
+			html += '<p> Contenido html Remplazado en la ventana 2  </p>';
+
+			ventana2.document.write(html); // de esta forma tb ponemos el focus ademas de que se pone el html
+		}
+	</script>
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<button onclick="abrirVentana();">Abrir Ventana</button>
+	<button onclick="moverVentana();">Mover Ventana</button>
+
+
+</body>
+
+<script type="text/javascript">
+	var ventana1;
+
+	function abrirVentana(){
+		ventana1 = window.open('','_blank','width=800,height=500');
+		ventana1.focus();
+	}
+
+	function moverVentana(){
+		ventana1.moveTo(500,400);
+	}
+</script>
+</html>

@@ -1,0 +1,9 @@
+* Cuadro de alerta
+	- alert('mensaje');
+
+* Cuadro de Confirmacion 
+	- confirm('mensaje');
+
+* Cuadro del sistema o Promt 
+	- promt('mensaje','valor por defecto');
+

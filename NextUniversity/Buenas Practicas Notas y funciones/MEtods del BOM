@@ -1,0 +1,40 @@
+					METODOS Q SE DESPRENDEN DEL OBJ WINDOW
+* .open()
+	- crea y abre una nueva  ventanas 
+	- recibe 3 parametros: 
+		- 1) el primer parametro es la URL a mostrar
+		- 2) Forma como se va a mostrar esa ventana, tiene varias formas:
+				- _blank (abre una ventana en blanco)
+				- _parent (abre una ventana en el mismo ambito de la ventana padre)
+				- _self (carga la url en la misma ventana remplazando en contenido q estamos mostrando  )
+				- _top (No remplaza el cntenido de ninguna URL)
+		- 3) Recibe una LISTA adicional de paramentros de configuracionde  la ventana como:
+				- toollbar (permite mostrar o no  la barra de herramientas )
+				- menubar (muestra o no la barra de menu )
+				- location (mostrar o no la barra de direccion)
+				- scrollbars (si va a permitir las barras de desplazamiento)
+				- status (esta relacionado con labarra de esatdos)
+				- rizable (le dejaria el usuario o no modificar el tamaño de la pantalla )
+				- width, height (darle tamaños a la ventana ) 
+				- tiop, left (permite establecer la distancia entre el borde superior e izq en px de la pantalla)
+	- para cerrar una ventana se usa el metodo .close();
+
+* .moveTo()
+	- mueve una pantalla
+	- este metodo recibe dos parametrso numericos:
+		- 1) desplazamiento Horizontal
+		- 2) desplazamiento vertical
+
+* .resizeTo()
+	- cambiar la dimension de una ventana
+	- recibe dos parametrso:
+		- 1) el ancho de la ventana
+		- 2) el alto de la ventana
+* EL OBJ screen
+	- representa la pantalla donde se ejecuta el navegador este contiene algunas propiedades como:
+		- availWidth (devuelve el ancho disponible de pantalla para el  navegador )
+		- availHeiht (devuelve el alto disponible de pantalla para el  navegador )
+		- colorDepth (devuelve el num de bits de colores q utiliozan en pantalla)
+		- heigth (devuelve el alto de la pantalla )
+		- width (devuelve el ancho de la pantalla )
+

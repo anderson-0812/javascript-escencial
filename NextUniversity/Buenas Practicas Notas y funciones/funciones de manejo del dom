@@ -1,0 +1,79 @@
+* getElementsByName(elemnt);
+	Devuelve un array con todos los elementos q tengan ese name
+
+* getElementsByTagName('p');
+	Devuelve un array con todos los elementos q tengan el nombre de la etiqueta enviada como parametro
+
+* createElement('div');
+	enviamos el tipo del  nodo q queremos crear
+
+* createTextNode('hola que hace');
+	enviamos el text que va a tener el tipo text con valor string 
+
+*appendChild(); 
+	enviamos el nodo nuevo a crear 
+		var nodo = document.createElement("p");
+		var nodoTex = document.createTextNode(persona[x]);
+		nodo.appendChild(nodoTex);
+
+		document.getElementById("personas").appendChild(nodo);
+
+* removeClind();
+	elimina el nodo del conjunto de hijos del nodo a que se aplica 
+
+* replaceChild();
+	remplaza un nodo hijo 
+
+* getNamedItem(valor);
+	obtiene el valor del ATRIBUTO especificado en el parametro 
+
+* getAttribute(nomb);
+	devuelve el valor de un atributo
+
+* setAttribute(nom,valor);
+	enviamos un atributo a un elemneto con un valor 
+
+* insertRow(0);
+	enviamos a crear una fila despues de la posicion q especificamos en el parametro para una tabla 
+
+* deleteRow(1);
+	espeficicamos que fila vamos a eliminar de una tabla 
+
+* insertCell(3);
+	insertamos una celda despues de la celda esopecificada en el apram
+
+* removeCel(3);
+	eliminamos la celda de la posicion especificada en el param
+
+*element.style.property
+	Cambia el estilo de un elemento 
+
+
+METODOS DEFINIDOS
+* document.anchors
+	Dedevulve la etiquetas de tipo a con un valor en el atributo del nombre
+
+* document.body
+	devuelve el body del ducumento
+
+
+* document.cookie
+	devuelve als cookies que tenga ese documento 
+	
+* document.forms
+	devuelve todos los formualrios del documento
+
+* document.url
+	devuelve url completa del documento 
+	
+	
+
+
+
+
+
+	
+
+
+
+
