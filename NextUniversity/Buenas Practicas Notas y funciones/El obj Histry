@@ -1,0 +1,19 @@
+El obj Histry trabaja con el historial de las paginas
+por medio de estos metodos:
+
+* back();
+	- Se encarga de cantar la pagina anterior del historial guardado
+	- sintaxis: window.history.back();
+	- si no hay historyal hacia atras no retorna nada 
+
+* forward();
+	- Cargar la pagina siguiente en una lista de paginas del historial
+	- sintaxis: window.history.forward(); 
+	- si no hemos ido al menos una vez hacia atas  no retorna nada 
+
+* go();
+	- Nos permite ir a una pagina especifica en nuestro navegador (por ejemplo si queremos ir 2 paginas hacia atras (-2)) o hacia adelante (2) en el navegador
+	- sintaxis: window.history.go(1) => una pag hacia adelante. window.history.go(-2) => va dos pag hacia atras
+	- si no hemos ido al menos una vez hacia atas  no retorna nada 
+	
+

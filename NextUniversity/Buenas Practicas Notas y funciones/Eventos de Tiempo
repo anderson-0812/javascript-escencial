@@ -1,0 +1,29 @@
+Metodos:
+
+* setInterval();
+	- Ejecuta una funcion cada cierta cantidad de mili segundos 
+	- sintaxis: 
+		window.setInterval(miFuncion(){
+
+		},milisegundos); 
+
+* clearInterval();
+	- Tiene como funcion detener la ejecucion de  setInterval(),
+	- sintaxis: 
+		window.clearInterval(variable interval);
+
+		ejemplo:
+		var  interval =  window.setInterval(miFuncion(){
+
+		},milisegundos); 
+
+		window.clearInterval(interval);
+
+* setTimeout();
+	- ejecuta la funcion una sola vez despues de haberse cumplido cierto tiempo
+	- sintaxis: 
+		setTimeout(miFuncion(){
+
+		},milisegundos);
+
+

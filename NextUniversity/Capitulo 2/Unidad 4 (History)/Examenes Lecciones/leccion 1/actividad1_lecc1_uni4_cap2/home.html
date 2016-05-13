@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+<!--
+Crear una función en JavaScript que nos permita ir dos páginas adelante del historial de navegación.
+-->
+	<h1>Home</h1>
+	<hr/>
+	<a href="pag_dos.html">Ir a pagina dos </a>
+	<hr/>
+
+	<a href="pag_tres.html">Ir a pagina tres </a>
+	<hr/>
+	
+	<a href="pag_cuatro.html">Ir a pagina cuatro </a>
+	<hr/>
+
+	<button onclick="Siguiente();">Siguiente</button>
+	<hr/>
+
+	<button onclick="avanzar_dos_pag();">Avanzar dos paginas</button>
+	<hr/>
+
+
+	<script type="text/javascript">
+		function Siguiente(){
+			window.history.forward();
+		}
+
+		function avanzar_dos_pag(){
+			window.history.go(2);
+		}
+	</script>
+</body>
+</html>

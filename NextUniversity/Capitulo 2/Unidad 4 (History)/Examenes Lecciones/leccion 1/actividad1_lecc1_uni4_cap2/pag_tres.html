@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<h2>Pagina tres</h2>
+	<hr/>
+	<a href="home.html">Ir a Home </a>
+	<hr/>
+	
+	<a href="pag_dos.html">Ir a pagina dos </a>
+	<hr/>
+	
+	<a href="pag_cuatro.html">Ir a pagina cuatro </a>
+	<hr/>
+	
+	<button onclick="atras();">Atras</button>
+	<hr/>
+	
+	<button onclick="siguiente();">Sigiente </button>
+	<hr/>
+
+	<button onclick="regresar_dos_pag()();">regresar dos paginas</button>
+	<hr/>
+
+	<script type="text/javascript">
+		function atras(){
+			window.history.back();
+		}
+
+		function regresar_dos_pag(){
+			window.history.go(-2);
+		}
+
+		function siguiente() {
+			window.history.forward();
+		}
+	</script>
+
+</body>
+</html>
