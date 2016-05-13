@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8"/>
+	<title>Reloj</title>
+	<style type="text/css">
+	#mi_reloj{
+		background-color: black;
+		font-size: xx-large;
+		font-family: "Courier";
+		color: #04FF00;
+		width: 250px;
+		border: 2px solid #000;
+		padding: 5px 10px ;
+		text-align: center;
+
+	}
+	</style>
+
+</head>
+<body>
+	<div id="mi_reloj">
+		00:00:00
+	</div>
+	<br/>
+
+	<button onclick="iniciar_reloj();">Iniciar Reloj</button>
+	<button onclick="parar_reloj();">Detener Reloj</button>
+
+	<script type="text/javascript">
+		var funcionReloj;
+
+		function iniciar_reloj(){
+			var reloj = new Date();
+			var horas = reloj.getHours();
+			var minutos = reloj.getMinutes();
+			var segundos = reloj.getSeconds();
+
+			if(horas < 10){
+				horas = '0' + horas;
+			}
+			if(minutos < 10){
+				minutos = '0' + minutos;
+			}
+			if(segundos < 10){
+				segundos = '0' + segundos;
+			}
+
+			document.getElementById('mi_reloj').innerHTML = horas + ':' + minutos + ':' + segundos;
+			// console.log(horas + ':' + minutos + ':' + segundos);
+			funcionReloj = setTimeout(iniciar_reloj,1000);
+		}
+
+		function parar_reloj(){
+			clearInterval(funcionReloj);
+		}
+	</script>
+</body>
+</html>
