@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body onload="navegador();">
+<!--
+Crear una página HTML que cuando se cargue la página muestre una etiqueta h1 con el mensaje “Información del Navegador” y una etiqueta p con id="mensaje". 
+
+Crear un script con una función que se llame navegador y tenga el comando de JavaScript para mostrar información referente al navegador con las siguientes propiedades:
+
+appName  
+
+appCodeName
+
+appVersion 
+
+language
+
+platform
+
+product 
+
+onLine
+
+javaEnabled()
+
+userAgent
+
+cookieEnabled
+
+El valor de estos atributos se debe mostrar en la etiqueta párrafo precedido de lo que significa, por ejemplo:
+
+Nombre: Netscape
+-->
+	<h1>Informacion del navegador</h1>
+	<p id="mensaje"></p>
+
+	<script type="text/javascript">
+		function navegador(){
+			var msj = '';
+
+			msj += '<br/><br/>Propiedad appName (nombre oficial del navegador): '+navigator.appName;
+			msj += '<br/><br/>Propiedad appCodeName (nombre del navegadorq estas usando): '+navigator.appCodeName;
+			msj += '<br/><br/>Propiedad appVersion: '+navigator.appVersion;
+			msj += '<br/><br/>Propiedad language (Idioma del navegador): '+navigator.language;
+			msj += '<br/><br/>Propiedad platform (nombre de la plataforma que usa el navegador): '+navigator.platform;
+			msj += '<br/><br/>Propiedad product (Motor del navegador): '+navigator.product;
+			msj += '<br/><br/>Propiedad onLine (verifica si estamos con internet o no): '+navigator.onLine;
+			msj += '<br/><br/>Propiedad javaEnabled (verifica si esta activado JavaScript en el navegador): '+navigator.javaEnabled;
+			msj += '<br/><br/>Propiedad userAgent (contiene informacion del cabezado del navegador enviado al servidor): '+navigator.userAgent;
+			msj += '<br/><br/>Propiedad cookieEnabled (verifica si estan activadas las cookies): '+navigator.cookieEnabled;
+
+			document.getElementById('mensaje').innerHTML = msj;
+		}
+	</script>
+
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<h2>Navegador de BOM</h2>
+	<button onclick="mostrar_propiedades();">Mostrar Propiedades</button>
+	<p id="mensaje"></p>
+	
+	<script type="text/javascript">
+		function mostrar_propiedades(){
+			var mensaje ='';
+			mensaje += 'Cookies Habilitadas:<br/>'+navigator.cookieEnabled+'<br/>';
+			mensaje += 'Plataforma <br/>'+navigator.platform+'<br/>';
+			mensaje += 'Motor del Navegador: <br/>'+navigator.product+'<br/>';
+			mensaje += 'Tipos de Mime soportados: <br/>';
+
+			for(var i =0; i < navigator.mimeTypes.length; i++){
+				mensaje += '-'+navigator.mimeTypes[i].type+'<br/>';
+			}
+
+			mensaje += '<br/>Plugis:<br/><br/>';
+			for(var j =0; j < navigator.plugins.length; j++){
+				mensaje += navigator.plugins[j].name+'<br/>'
+			}
+
+			document.getElementById('mensaje').innerHTML = mensaje;
+
+		}	
+	</script>
+</body>
+</html>

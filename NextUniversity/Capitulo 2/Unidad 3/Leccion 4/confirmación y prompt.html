@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<meta charset="utf-8"/>
+</head>
+<body onload="confirmar();">
+
+<p id="mensaje"></p>
+<script type="text/javascript">
+	function confirmar(){
+		if(confirm('Permite realizar una serie de preguntas?') == true){
+			preguntas();
+		}else{
+
+		}
+	}
+
+	function preguntas(){
+		var nombre = prompt('Cuales son tus Nobres?');
+		var apellidos = prompt('Cuales son tus  apellido?');
+		var edad = prompt('Cuantos años tienes?');
+		var ciudad = prompt('De que ciudad eres?');
+		var Residencia = prompt('Cual es tu direccion?');
+		var estado = prompt('Estado civil');
+		var profesion = prompt('Cual es tu profesion?');
+		var universidad = prompt('Cual es tu universidad?');
+
+		if(nombre != null){
+			document.getElementById('mensaje').innerHTML = 'Usted se llama '+nombre+' '+apellidos
+			+' tiene '+edad+' años, '+' vive en la ciudd de '+ciudad+' y  su direccion es, '+Residencia+' es '+estado
+			+' ademas de esto es profesional y posee un titulo de '+profesion+' de '+universidad+'. es ud muy amable al proporcianarnos esta informacion. Gracias :)';
+		}
+
+	}
+</script>
+</body>
+</html>

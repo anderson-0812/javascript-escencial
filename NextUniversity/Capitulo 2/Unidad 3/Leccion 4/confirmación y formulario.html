@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<meta charset="utf-8"/>
+</head>
+<body onload="confirmar();">
+
+<h1>Registro de informacion</h1>
+<fieldset>
+	<legend>Formulario del registro de informacion</legend>
+	<dl>
+		<dd><label for="nombre">Nombre:</label></dd>
+		<dd><input type='text' id="nombres"></input></dd>
+
+		<dd><label for="apellido">Apellidos:</label></dd>
+		<dd><input type='text' id="apellidos"></input></dd>
+
+		<dd><label for="sexo">Sexo:</label></dd>
+		<dd><input type='text' id="sexo"></input></dd>
+
+		<dd><label for="edad">Edad:</label></dd>
+		<dd><input type='text' id="edad"></input></dd>
+
+		<dd><label for="fecha">Fecha de Nacimiento:</label></dd>
+		<dd><input type='date' id="fecha"></input></dd>
+
+		<dd><label for="lugar">Lugar de Nacimiento:</label></dd>
+		<dd><input type='text' id="lugar"></input></dd>
+
+		<dd><input type="submit" onclick="datos();" value="Registrar"></input></dd>
+
+	</dl>
+</fieldset>
+
+<script type="text/javascript">
+	function confirmar(){
+		if(confirm('Desea Ingresar la informacion?') == true ){
+
+		}else{
+			window.close();
+		}
+	}
+
+	function datos(){
+		var d1 = document.getElementById('nombres').value;
+		var d2 = document.getElementById('apellidos').value;
+		var d3 = document.getElementById('sexo').value;
+		var d4 = document.getElementById('edad').value;
+		var d5 = document.getElementById('fecha').value;
+		var d6 = document.getElementById('lugar').value;
+
+		alert('Usuario Registrado');
+		alert('Su nombre es '+d1+' '+d2+' tiene sexo '+d3+' y tiene '+d4+' años '+' Ud nacio el '+d5+' en '+d6+'.');
+	}
+</script>
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+<!--
+Crear una página HTML en donde se defina un botón con texto “Mostrar Tipos MIME”. Al hacer clic sobre el, mostrar en pantalla los tipos MIME que soporta el navegador, pero solo los tipos MIME que sean los siguientes tipos:
+
+application/x-shockwave-flash
+application/java-deployment-toolkit
+application/pdf
+-->
+<h2>Tipos de mimes</h2>
+<p id="mensaje"></p>
+<button ondblclick="mostrarMimes();">Mostrar mimes</button>
+
+<script type="text/javascript">
+	function mostrarMimes(){
+		var msj = '';
+		var mimes_permitidos = ['application/x-shockwave-flash','application/java-deployment-toolkit','application/pdf']
+
+		for(var i =0; i < navigator.mimeTypes.length; i++){
+			for(var j=0; j < mimes_permitidos.length; j++){
+				if(navigator.mimeTypes[i].type == mimes_permitidos[j]){
+					msj += '-'+navigator.mimeTypes[i].type;
+				}
+			}
+		}
+		document.getElementById('mensaje').innerHTML = msj;
+		
+	}
+
+</script>
+</body>
+</html>

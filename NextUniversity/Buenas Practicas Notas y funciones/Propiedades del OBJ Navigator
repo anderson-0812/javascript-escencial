@@ -1,0 +1,44 @@
+Este Objeto permite obtener propiedaddes del navegador mismo 
+
+* appCodeName 
+	- representa el nombre del navegador q esten usando
+
+* appName
+	- representa el nombre oficial del navegador
+
+* appMinorVersion
+
+* appVersion
+	- muestra la version del navegador que estamos usando
+
+* broswerLanguage
+
+* cookieEnable
+
+* cpuClass
+
+* javaEnable
+	- devuelve un booleano (1,0) para saver si javascript esta habilitado en el navegador
+
+* language
+	- devuleve el idioma en el que el usuario tiene su navegador
+
+* mimeTypes
+
+* onLine
+
+* plataform
+	- es el sistema en el cual se ejecuta el navegador 
+
+* oscpu
+
+* plugins
+	- devuelve un array con los plugins instalados en el navegador
+
+
+Sintaxis:
+	* navigator.appName
+
+	* navigator.CookieEnabled
+
+	* navigator.product

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<meta charset="utf-8"/>
+</head>
+<body onload="confirmar();">
+<!--
+Crear un archivo HTML que contenga y realice lo siguiente:
+
+Debe tener una etiqueta h1 como título que diga “Suma de Números”, un pequeño formulario con dos input de texto, y un botón que tenga como valor sumar.
+
+Este botón debe permitir sumar dos números que digite el usuario y mostrar el resultado a través de una alerta.
+
+Además, cuando se cargue la página se debe mostrar un mensaje con un cuadro de diálogo preguntando si “Desea sumar números?”. Si se hace clic en la opción Aceptar debe mostrar un cuadro prompt donde pide digitar un número y luego el segundo número.
+
+Cuando se digiten los números en el cuadro prompt se debe mostrar un mensaje en una etiqueta p al final del formulario con el resultado de la suma de los números.
+-->
+
+<h1>Respuesta</h1>
+<p id="respuesta"></p>
+
+<script type="text/javascript">
+	function confirmar(){
+		var opcion = confirm('Desea suamr numeros?');
+
+		if(opcion == true){
+			sumar_numeros();
+		}else{
+
+		}
+	}
+
+	function sumar_numeros(){
+		var num1 = parseFloat(prompt('Escriba el numero 1'));
+		var num2 = parseFloat(prompt('Escriba el numero 2'));
+		var res = 0;
+
+		var p_res = document.getElementById('respuesta');
+		if(isNaN(num1) || isNaN(num2)){
+			alert('No a ingresado datos ');
+		}else{
+			res = num1 + num2;
+			p_res.innerHTML = res;
+		}
+
+	}
+</script>
+</body>
+</html>

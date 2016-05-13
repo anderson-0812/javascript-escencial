@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<meta charset="utf8"/>
+</head>
+<body onload="confirmar();">
+<p id="mensaje"></p>
+<script type="text/javascript">
+	function confirmar(){
+		if(confirm('Desea Ingresar?') == true){
+			preguntas();
+		}else{
+			window.close();
+		}
+	}
+
+	function preguntas(){
+		var nombre = prompt('Hola como te llamas?');
+		alert('Bienvenido '+nombre);
+	}
+</script>
+</body>
+</html>
