@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>COnteo de 10 en 10</title>
+</head>
+<body>
+<!--
+Crear un documento HTML que contenga una etiqueta párrafo <p> con  un id “numero”. Este elemento párrafo mostrará el incremento en 10 de  una variable de tipo numérica que se inicializará en cero cada 2 segundos. Esta acción la ejecutará un botón que tenga como texto “Iniciar Conteo”. Cuando el conteo llegue a 150, se detendrá el conteo  y mostrará un mensaje “Conteo terminado!!”
+-->
+<style type="text/css">
+	#miDiv{
+		background-color: black;
+		color: #04FF00;
+		width: 250px;
+		border: 2px solid #000;
+		padding: 5px 10px ;
+		text-align: center;
+	}
+</style>
+
+<script type="text/javascript">
+	var funcionIniciarConte;
+	function iniciarConteo(){
+		var numero = parseInt(document.getElementById('numero').innerHTML);
+
+		if(numero<150){
+			document.getElementById('numero').innerHTML = numero +10;
+
+			funcionIniciarConte = setTimeout(iniciarConteo,2000);
+		}else{
+			detenerConteo();
+		}
+
+	}
+
+	function detenerConteo(){
+		alert('Conteo Terminado');
+		clearInterval(funcionIniciarConte);
+	}
+</script>
+
+<div id="miDiv">
+	<p id="numero">0</p>
+</div>
+
+<hr/>
+<button onclick="iniciarConteo();">Iniciar Conteo</button>
+</body>
+</html>

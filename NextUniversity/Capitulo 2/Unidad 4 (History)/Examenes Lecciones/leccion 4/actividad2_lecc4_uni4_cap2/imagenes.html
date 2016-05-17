@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+<!--
+Crear un documento HTML que contenga un elemento img con su respectiva imagen. Luego crear dos botones: el primero con texto “comenzar” y el segundo con texto “terminar”. La idea es que al hacer clic sobre el botón “comenzar” se ejecute una función de tiempo que cambie la imagen del elemento img cada 2 segundos. Y cuando se haga clic en el botón “terminar” se detenga el cambio de imagen.
+
+Nota: mostrar por los menos 4 imágenes.
+-->
+
+<h2>Imagenes temporales</h2>
+<hr/>
+<img id="imagenes" src="img/Desert.jpg"  style="width: 200px; height: 200px">
+
+<button onclick="comenzar();"> Comenzar</button>
+<button onclick="terminar();"> Terminar</button>
+
+<script type="text/javascript">
+	var funcionCOmenzar;
+	var inicio =0;
+
+	function comenzar(){
+		var lista = ['Koala.jpg','Desert.jpg','imagen.png','lado  obscuro.jpg'];
+
+		if(inicio < lista.length){
+			document.getElementById('imagenes').src='img/'+lista[inicio];
+		}else{
+			inicio =0;
+			document.getElementById('imagenes').src='img/'+lista[inicio];
+
+		}
+
+		inicio ++;
+
+		funcionCOmenzar = setTimeout(comenzar,2000);
+	}
+
+
+	function terminar(){
+		clearInterval(funcionCOmenzar);
+	}
+</script>
+
+</body>
+</html>
