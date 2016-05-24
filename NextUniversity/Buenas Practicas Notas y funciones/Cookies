@@ -1,0 +1,58 @@
+* Las cookies 
+	Son datos que estan almacenados en archivos pequeños en el navegador por ejemplo algunas teclasque el usuario ha digitado contraseñas. 
+	Cuando un servidor envia una pagina a nuestro navegador y despues esta conexion se cierradespues de haber realizado la operacion el servidor se olvida de todo lo relacionadocon el usuario
+	Las cookies resuelven este problema, datos de un form , movimientos del usuario en el navegador, preferencias, busquedas de items etc 
+
+* las cookies se guardan como variables 
+	ejemplo: document.cookie = "univerdad = NextUniversity";
+
+	- con fecha de eliminacion
+	 document.cookie = "univerdad = NextUniversity; expires Thu, 04 Sep 2014 11:15:00 UTC; path=/";
+
+* Las cookies e almacenan en la pagina actual donde esta el usuario trabajando
+
+* Leer las cookies 
+	var cokie = document.cookie; => devuelve todas las cadenas de cookies creadas en esa pagina 
+
+* Cambair valor deuna cookie
+	document.cookie = "universidad = NextU; expires Thu, 04 Sep 2014 11:15:00 UTC path=/";
+
+* Eliminar la cookie
+	document.cookie = "universidad =; expires = Mon, 01 Sep 2014 11:15:00 UTC"; 
+
+
+* Obtener cookies 
+	function obtenerCookies(nombre){
+		var nuevoNombre = nombre +"=";
+		var verificar = document.cookie.split(';');
+
+		// verificamos la longitud de las cookies para reviar una a una 
+		for(var i=0; i < verificar.length; i++){
+			var v = verificar[i];
+
+			// realizamosla comparacion con lo que estamosbuscando ahsta encontrarla 
+			//sila encontramosreturnomos 
+			while(v.charAt(0) == ' '){
+				v = v.substring(1);
+			}
+			// sino retornamos un valor diferente con su longitud 
+			if(v.indexOf(nuevoNombre) != -1){
+				return v.substring(nuevoNombre.length,v.length);
+			}
+		}
+		return "";
+	}
+
+* verificar una cookie 
+	function verificarCookie(){
+		var usuario = obtenerCookies("edad");
+
+		if(usuario != ""){
+			document.getElementById('mensaje').innerHTML = "Laedad que ingreso es "+usuario;
+		}else{
+			usuario = prompt("Ingrese su edad ");
+			if(usuario != "" && usuario != null ){
+				setCookie("edad",usuario,30);
+			}
+		}
+	}
