@@ -48,6 +48,9 @@
 *element.style.property
 	Cambia el estilo de un elemento 
 
+*nodeName
+	Trae el nombre del nodo ejemplo: Encabezado.parentNode.nodeName
+
 
 METODOS DEFINIDOS
 * document.anchors

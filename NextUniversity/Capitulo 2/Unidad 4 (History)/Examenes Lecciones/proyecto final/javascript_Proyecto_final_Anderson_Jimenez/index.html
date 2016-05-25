@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8"/>
+	<title>Registro de Notas de Estudiantes</title>
+</head>
+<body>
+<div id="contenedor_registro">
+	<fieldset>
+		<legend><h2>Registro de Estudiante</h2></legend>
+
+		<dl>
+			<form id="registro_estudiantes">
+				<dd><label for="codigo">Codigo:</label></dd>
+				<dd><input type="text" name="codigo" id="codigo"></dd>
+
+				<dd><label for="nombre">Nombre:</label></dd>
+				<dd><input type="text" name="nombre" id="nombre"></dd>
+
+				<dd><label for="nota">Nota:</label></dd>
+				<dd><input type="text" name="nota" id="nota" onkeyup="validar_numero(this);"></dd>
+
+				<hr/>
+				<dd>
+					<input type="button" name="registrarEstudiante" id="registrarEstudiante" value="Registrar Estudiante">
+					<input type="button" name="mostrarPromedio" id="mostrarPromedio" value="Mostrar Promedio">
+					<input type="button" name="notaMayor" id="notaMayor" value="Mostrar Nota Mayor">
+					<input type="button" name="notaMenor" id="notaMenor" value="Mostrar Nota Menor">
+
+				</dd>
+			</form>
+		</dl>
+	</fieldset>
+</div>
+
+<hr/>
+<div id="contenedor_lista">
+
+<table id="lista_notas" style="width:100%;">
+	<caption><h2>Listado de Estudiantes</h2></caption>
+	<thead>
+		<th>Codigo</th>
+		<th>Nombre</th>
+		<th>Nota</th>
+	</thead>
+	<tbody>
+		
+	</tbody>
+</table>
+	
+</div>
+
+</body>
+</html>
+<!--  llamo al script aqui xq al lalmarlo desde el header me daba error sopongo debiado a que buscaba un elemento que aun no se cargaba en el dom -->
+
+<script type="text/javascript" src="js/funciones.js"></script>
