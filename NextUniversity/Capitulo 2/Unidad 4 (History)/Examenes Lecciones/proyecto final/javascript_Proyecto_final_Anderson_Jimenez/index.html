@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
+	<link rel="stylesheet" type="text/css" href="css/estilos.css">
 	<meta charset="UTF-8"/>
 	<title>Registro de Notas de Estudiantes</title>
 </head>
@@ -37,20 +38,20 @@ Nota: Agregar los eventos clic a través del EventListener.
 		<dl>
 			<form id="registro_estudiantes">
 				<dd><label for="codigo">Codigo:</label></dd>
-				<dd><input type="text" name="codigo" id="codigo"></dd>
+				<dd><input type="text" name="codigo" id="codigo" class="camp_text"></dd>
 
 				<dd><label for="nombre">Nombre:</label></dd>
-				<dd><input type="text" name="nombre" id="nombre"></dd>
+				<dd><input type="text" name="nombre" id="nombre" class="camp_text"></dd>
 
 				<dd><label for="nota">Nota:</label></dd>
-				<dd><input type="text" name="nota" id="nota" onkeyup="validar_numero(this);"></dd>
+				<dd><input type="text" name="nota" id="nota" onkeyup="validar_numero(this);" class="camp_text"></dd>
 
 				<hr/>
 				<dd>
-					<input type="button" name="registrarEstudiante" id="registrarEstudiante" value="Registrar Estudiante">
-					<input type="button" name="mostrarPromedio" id="mostrarPromedio" value="Mostrar Promedio">
-					<input type="button" name="notaMayor" id="notaMayor" value="Mostrar Nota Mayor">
-					<input type="button" name="notaMenor" id="notaMenor" value="Mostrar Nota Menor">
+					<input type="button" class="botones" name="registrarEstudiante" id="registrarEstudiante" value="Registrar Estudiante">
+					<input type="button" class="botones" name="mostrarPromedio" id="mostrarPromedio" value="Mostrar Promedio">
+					<input type="button" class="botones" name="notaMayor" id="notaMayor" value="Mostrar Nota Mayor">
+					<input type="button" class="botones" name="notaMenor" id="notaMenor" value="Mostrar Nota Menor">
 
 				</dd>
 			</form>

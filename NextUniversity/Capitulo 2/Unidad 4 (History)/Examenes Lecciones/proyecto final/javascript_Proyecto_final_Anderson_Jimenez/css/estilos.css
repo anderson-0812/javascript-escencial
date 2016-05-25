@@ -1,0 +1,49 @@
+body{
+	background-color: #F0F0FA;
+}
+#contenedor_registro{
+	background:#E1E2F2;
+	border-radius: 15px;
+	font-family: helvetica; 
+	text-align: center;
+
+}
+#contenedor_registro h2{
+	color: #57575E;
+}
+#contenedor_lista{
+	background:#E1E2F2;
+	border-radius: 15px;
+	font-family: helvetica; 
+	text-align: center;
+
+}
+#contenedor_lista h2{
+	color: #57575E;
+}
+#lista_notas thead{
+	color: #3F3F47;
+}
+#lista_notas tbody{
+	color: #696A7A;
+}
+#lista_notas tbody tr td{
+	padding: 10px 0 10px 0;
+
+}
+.botones{
+	background-color: #b2ffff;
+	border:0 0 0 0;
+	border-radius: 10px;
+	color: #35363B;
+	height: 50px;
+	padding: 0 20px 0 20px;
+}
+.botones:hover {
+	background-color: #3439BA;
+	color: white;
+
+}
+.camp_text {
+	width: 40%;
+}

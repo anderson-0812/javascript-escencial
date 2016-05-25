@@ -85,6 +85,9 @@ function llenar_tabla(codigo,nombre,nota){
 		// console.log(tabla_tbody);
 
 		var nodo_tr = document.createElement('tr');
+		//nodo_tr.setAttribute("class", "tr_tabla");
+		//nodo_tr.setAttribute("style", "padding: 20px !important;");
+
 
 		// Creo los nodos de td
 		var nodo_td_codigo = document.createElement('td');
