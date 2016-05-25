@@ -28,6 +28,8 @@ function registrar_estudiante(){
 
 		llenar_tabla(codigo,nombre,nota);
 
+		document.getElementById('codigo').focus();
+
 	}
 
 }
