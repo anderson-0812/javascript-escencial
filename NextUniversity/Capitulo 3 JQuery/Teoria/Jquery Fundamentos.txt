@@ -1,0 +1,13 @@
+Jquery 
+
+* ventajas:
+	- menos codigo
+	- mas compatibilidad con navegadores 
+	- nimaciones etx etc
+
+* Unicas desventajas:
+	- numerosas versiones en poco tiempo
+	- mala implementacion  de Jquery como framework
+	
+* la version de produccion se utilizadesdela web en linea , esta comprimida y minimizada
+* la version de desarrollo en local debido a que esta sin comprimir y mas ligible 
