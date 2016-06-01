@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+<script type="text/javascript">
+	var persona = 
+	{
+		nombre: "Juan perez",
+		saludar: function(){
+			console.log("Hola me llamo "+ persona.nombre);
+		},
+
+		init: function(config){
+			persona.config = config;
+		},
+
+		leerConfig: function(){
+			console.log(persona.config);
+		}
+	}
+
+	console.log(persona.nombre === "Juan perez");
+
+	persona.saludar();
+
+	// instanciamos el objetoncon otro nombre otra persona
+	persona.init({
+		nombre: "Maria Roman"
+	})
+
+	persona.leerConfig();
+
+
+</script>
+</body>
+</html>

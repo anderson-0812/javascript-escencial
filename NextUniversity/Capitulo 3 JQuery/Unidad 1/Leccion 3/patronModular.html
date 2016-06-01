@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+<h1>Patron Modular</h1>
+<script type="text/javascript">
+// Cuando pongo una funcion dentro de (functiion(){}()) y la termino con otro aprentecis esa funcion de autoinvoca y es privada
+	var objeto = (function(){
+			var propiedadPrivada = "valor privado";
+			var propiedadPublica = "valor publico";
+
+			var cambiarPrivada = function(){
+				propiedadPrivada= "Valor muy privado";
+			};
+
+			var mostrarPrivada = function(){
+				console.log(propiedadPrivada);
+				cambiarPrivada();
+			};
+
+			return {
+				propiedadPublica: propiedadPublica,
+				mostrarPrivada: mostrarPrivada 
+			};
+		}
+	)();
+
+	console.log(objeto.propiedadPublica);
+
+	objeto.mostrarPrivada();
+</script>
+
+</body>
+</html>
