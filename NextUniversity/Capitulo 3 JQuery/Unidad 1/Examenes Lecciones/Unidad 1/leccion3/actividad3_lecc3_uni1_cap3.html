@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+</head>
+<body>
+
+
+<!--
+La idea es que al hacer clic sobre el botón Registrar Empleado, se almacene temporalmente en un objeto literal los campos del formulario y se limpien los campos. Las propiedades del objeto serán las mismas que están en el formulario. Por su parte al hacer clic sobre el botón Mostar Empleado se imprimirá en el navegador los datos del empleado.
+-->
+<fieldset>
+    <legend><h2>Datos de un empelado</h2></legend>
+    <dl>
+        <form id="form_empleado">
+            <dd><label for="codigo">Codigo:</label></dd>
+            <dd><input type="text" name="codigo" id="codigo"></dd>
+
+            <dd><label for="nombre">Nombre:</label></dd>
+            <dd><input type="text" name="nombre" id="nombre"></dd>
+
+            <dd><label for="direccion">Direccion:</label></dd>
+            <dd><input type="text" name="direccion" id="direccion"></dd>
+
+            <dd><label for="telefono">Telefono:</label></dd>
+            <dd><input type="text" name="telefono" id="telefono"></dd>
+
+            <dd><label for="email">E-mail:</label></dd>
+            <dd><input type="text" name="email" id="email"></dd>
+
+            <dd>
+                <input type="button" id="registrar" value="Guardar Dato" onclick="registrar_empelado();" style="margin-left: 3px;">
+                <input type="button" id="mostrarDatos" value="Mostrar Empelado" onclick="mostrarDatos_empleado();" style="margin-left: 3px;">
+        
+            </dd>
+        </form>
+
+    </dl>
+</fieldset>
+
+<p id="msj"></p>
+
+<script type="text/javascript">
+    var empleado = {
+        codigo:null,
+        nombre:null,
+        direccion:null,
+        telefono:null,
+        email:null,
+
+        init:function(propiedades){
+            empleado.codigo = propiedades.codigo;
+            empleado.nombre = propiedades.nombre;
+            empleado.direccion= propiedades.direccion;
+            empleado.telefono= propiedades.telefono;
+            empleado.email= propiedades.email;
+
+            empleado.propiedades = propiedades;
+
+        },
+        mostrarDatos: function(){
+            var msj='';
+
+                msj += "Codigo: "+ empleado.propiedades.codigo + "<br>";
+                msj += "Nombre: "+ empleado.propiedades.nombre + "<br>";
+                msj += "Direccion: "+ empleado.propiedades.direccion + "<br>";
+                msj += "Telefono: "+ empleado.propiedades.telefono + "<br>";
+                msj += "E-mail: "+ empleado.propiedades.email + "<br>";
+
+                return msj;
+
+
+        }
+        
+    };
+
+    function registrar_empelado(){
+        var codigo = document.getElementById('codigo').value;
+        var nombre = document.getElementById('nombre').value;
+        var direccion = document.getElementById('direccion').value;
+        var telefono = document.getElementById('telefono').value;
+        var email = document.getElementById('email').value;
+
+        var propiedades = {
+            codigo:codigo,
+            nombre:nombre,
+            direccion:direccion,
+            telefono:telefono,
+            email:email
+        };
+
+        empleado.init(propiedades);
+        alert("registrado");
+    }
+
+
+    function mostrarDatos_empleado(){
+        var mensaje = empleado.mostrarDatos();
+
+         document.getElementById('msj').innerHTML=mensaje;
+    }
+
+
+</script>
+</body>
+</html>

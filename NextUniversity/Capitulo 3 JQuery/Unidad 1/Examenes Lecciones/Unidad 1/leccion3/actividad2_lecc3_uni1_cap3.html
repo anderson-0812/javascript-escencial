@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+
+
+<!--
+Crear un documento HTML que contenga un script en el cual se defina un objeto utilizando el patrón modular; llamarlo producto e incluir las siguientes propiedades y métodos:
+
+4 propiedades llamadas código, nombre, precio y cantidad inicializadas con los siguientes valores:
+código : "001"
+nombre : "Camisa Roja"
+precio : 35000
+cantidad : 8
+Un método llamado mostrarCodigo, el cual mostrará en la consola web del navegador el valor de la propiedad código.
+Un método llamado mostrarNombre, el cual mostrará en la consola web del navegador el valor de la propiedad nombre.
+Un método llamado mostrarPrecio el cual mostrará en la consola web del navegador el valor de la propiedad precio.
+Un método llamado mostrarTotal el cual mostrará en la consola web del navegador el resultado de la multiplicación del valor de la propiedad precio por el valor de la propiedad cantidad.
+Implementar cada uno de los métodos del objeto.
+-->
+
+<script type="text/javascript">
+	var producto = (function(){
+		var codigo = "001";
+		var nombre = "Camisa Roja";
+		var precio = 35000;
+		cantidad = 8;
+
+		var mostrarCodigo= function(){
+			console.log("Codigo producto: "+ codigo);
+		};
+
+		var mostrarNombre = function(){
+			console.log("Nombre delproducto: "+nombre);
+		};
+
+		var mostrarPrecio = function(){
+			console.log("Precio del producto: "+precio);
+		};
+
+		var mostrarTotal = function(){
+			console.log("Total del producto: "+parseFloat(precio) * parseFloat(cantidad));
+		};
+
+
+		return {
+			mostrarCodigo:mostrarCodigo,
+			mostrarNombre:mostrarNombre,
+			mostrarPrecio:mostrarPrecio,
+			mostrarTotal:mostrarTotal
+		};
+
+	})();
+
+	producto.mostrarCodigo();
+	producto.mostrarNombre();
+	producto.mostrarPrecio();
+	producto.mostrarTotal();
+
+
+</script>
+</body>
+</html>

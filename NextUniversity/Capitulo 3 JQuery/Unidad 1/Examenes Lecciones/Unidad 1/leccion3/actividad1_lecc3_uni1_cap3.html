@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+
+
+<!--
+Crear un documento HTML que contenga un script en el cual se defina un objeto literal llamado estudiante con las siguientes propiedades y métodos:
+
+3 propiedades llamadas id, nombre y edad. Inicializadas con el valor null.
+Un método llamando init, el cual recibirá un objeto con las propiedades respectivas para cambiar las variables nulas por valores reales.
+Un método llamado mostrarId, el cual mostrará en la consola web del navegador el valor de la propiedad id.
+Un método llamado mostrarNombre, el cual mostrará en la consola web del navegador el valor de la propiedad nombre.
+Un método llamado mostrarEdad, el cual mostrará en la consola web del navegador el valor de la propiedad edad.
+Implementar cada uno de los métodos del objeto literal creado.
+-->
+<fieldset>
+	<legend><h2>Datos estudiante</h2></legend>
+	<dl>
+		<dd><label for="id">Id:</label></dd>
+		<dd><input type="text" name="id" id="id"></dd>
+
+		<dd><label for="nombre">Nombre:</label></dd>
+		<dd><input type="text" name="nombre" id="nombre"></dd>
+
+		<dd><label for="edad">Edad:</label></dd>
+		<dd><input type="text" name="edad" id="edad"></dd>
+
+		<dd>
+			<input type="button" id="registrar" value="Guardar Dato" onclick="registrar();" style="margin-left: 3px;">
+			<input type="button" id="mostrarId" value="Mostrar Id" onclick="mostrarId();" style="margin-left: 3px;">
+			<input type="button" id="mostrarNombre" value="Mostrar Nombre" onclick="mostrarNombre();" style="margin-left: 3px;">
+			<input type="button" id="mostrarEdad" value="Mostrar Edad" onclick="mostrarEdad();" style="margin-left: 3px;">
+		
+		</dd>
+
+
+	</dl>
+</fieldset>
+
+<script type="text/javascript">
+	var estudiante = {
+		id:null,
+		nombre:null,
+		edad:null,
+		init:function(propiedades){
+			estudiante.id = propiedades.id;
+			estudiante.nombre = propiedades.nombre;
+			estudiante.edad= propiedades.edad;
+		},
+		mostrarId: function(){
+			console.log("Id de estudiante: "+ estudiante.id);
+		},
+		mostrarNombre: function(){
+			console.log("Nombre del estudiante: "+estudiante.nombre);
+		},
+		mostrarEdad: function(){
+			console.log("Edad del estudiante: "+ estudiante.edad);
+		}
+	};
+
+	function registrar(){
+		var id = document.getElementById('id').value;
+		var nombre = document.getElementById('nombre').value;
+		var edad = document.getElementById('edad').value;
+
+		var propiedades = {
+			id:id,
+			nombre:nombre,
+			edad:edad
+		};
+
+		estudiante.init(propiedades);
+		alert("registrado");
+
+
+	}
+
+	function mostrarId(){
+		estudiante.mostrarId();
+	}
+
+	function mostrarNombre(){
+		estudiante.mostrarNombre();
+	}
+
+	function mostrarEdad(){
+		estudiante.mostrarEdad();
+	}
+
+
+</script>
+</body>
+</html>
