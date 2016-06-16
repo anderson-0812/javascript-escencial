@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<script type="text/javascript" src="jquery-1.12.4.js"></script>
+	<title></title>
+	<script type="text/javascript">
+		
+	$(document).ready(function(){
+
+		$("#btn1").click(function(){
+			$("#miDiv1").html("<b>Mi primer div modificado!!</b>");
+			$("#miDiv2").html("<b>Mi segundo div modificado!!</b>");
+
+		});
+
+		$("#btn2").click(function(){
+			$("#miDiv1").css("background","orange");
+			$("#miDiv2").css("background","purple");
+
+		});
+
+		$("#btn3").click(function(){
+			$("#miDiv1").width("300px");
+			$("#miDiv1").height("300px");
+
+			$("#miDiv2").width("300px");
+			$("#miDiv2").height("300px");
+
+		});
+
+		$("#btn4").click(function(){
+			$("#miDiv1").addClass("miEstilo");
+			$("#miDiv2").addClass("miEstilo");
+		});
+
+		$("#btn5").click(function(){
+			$("#miDiv1").removeClass("miEstilo");
+			$("#miDiv2").removeClass("miEstilo");
+		});
+	});
+
+	</script>
+	
+</head>
+<body>
+
+<!-- 
+Al hacer clic en el botón Modificar textos se modificará el texto del primer div con “<b>Mi primer div modificado!!</b>” y el texto del segundo div con “<b>Mi segundo div modificado!!</b>”.
+Al hacer clic sobre el botón Modificar css se cambiará el color de fondo del primer div a orange y del segundo div a purple.
+Al hacer clic sobre el botón Modificar dimension se cambiará el ancho a 300px y el alto a 300px, tanto para el primer div como para el segundo div.
+Al hacer clic sobre el botón Agregar mi estilo se agregará la clase css “miEstilo” tanto al primer div como al segundo div.
+Al hacer clic sobre el botón Remover mi estilo se eliminará la clase css “miEstilo” tanto al primer div como al segundo div.
+-->
+	<div id="miDiv1">Mi div 1</div>
+	<div id="miDiv2">Mi div 2</div>
+	<button id="btn1">Modificar text</button>
+	<button id="btn2">Modificar css</button>
+	<button id="btn3">Modificar dimensiones</button>
+	<button id="btn4">Agregar mi estilo</button>
+	<button id="btn5">Remover mi estilo</button>
+
+<style type="text/css">
+	.miEstilo{
+		font-size: large;
+		color: white;
+	}
+</style>
+</body>
+</html>

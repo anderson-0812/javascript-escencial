@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script type="text/javascript" src="jquery-1.12.4.js"></script>
+	<title></title>
+
+	<script type="text/javascript">
+		$(document).ready(function(){
+
+			$("#btn1").click(function(){
+
+				var p1 = $('p').get(0);
+				$(p1).html("<b>Mi primer Parrafo Modificado </b>");
+
+				var p2 = $('p').get(1);
+				$(p2).html("<b>Mi Segundo parrafo Modificado </b>");				
+			});
+
+			$("#btn2").click(function(){
+				$('p').css("backgroundColor","green");
+				$('#miDiv').css("backgroundColor","red");
+
+			});
+
+			$("#btn3").click(function(){
+				$("#miDiv").width("200px");
+				$("#miDiv").height("200px");
+
+			});
+
+			$("#btn4").click(function(){
+				var p1 = $("p");
+				p1.addClass('parra');
+			});
+
+			$("#btn5").click(function(){
+				var p1 = $('p');
+				p1.removeClass("parra");
+			});
+		});
+	</script>
+
+	<style type="text/css">
+		.parra{
+			font-size: large;
+			color: yellow;
+		}
+	</style>
+</head>
+<body>
+
+	<div id="miDiv">
+		<p id="p1">Mi primer Parrafo</p>
+		<p id="p2">Mi segundo Parrafo</p>
+	</div>
+
+	<button id="btn1">Modificar Texto</button>
+	<button id="btn2">Modificar css</button>
+	<button id="btn3">Modificar dimension</button>
+	<button id="btn4">Agreagr mi estilo</button>
+	<button id="btn5">Remover mi estilo</button>
+	
+</body>
+</html>

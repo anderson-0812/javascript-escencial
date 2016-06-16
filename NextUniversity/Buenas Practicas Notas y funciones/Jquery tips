@@ -1,6 +1,0 @@
-para evitar conflictos con otras librerias JS 
-	
-	escribimos antes del codigoa  ejecutar 
-	<script>
-		var $conflict = jQuery.noConflict();
-	</script>

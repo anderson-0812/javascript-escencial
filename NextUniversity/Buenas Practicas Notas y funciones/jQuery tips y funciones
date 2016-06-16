@@ -1,0 +1,104 @@
+* para evitar conflictos con otras librerias JS 
+	
+	escribimos antes del codigoa  ejecutar 
+	<script>
+		var $conflict = jQuery.noConflict();
+	</script>ob
+
+* .html(); Obtener o establecer contenido HTML
+
+* .text(); Obtener o establecer el contedido del texto
+
+* .attr(); Obtener o establecer el valor del atributo proporcionado 
+
+* .width(); Obtener o establecer la anchura en px
+
+* .Height();  Obtener o establecer la altura en px
+
+* .position(); Obtener un objeto con informacion de posicion para el primer elemento en la seleccion
+
+* .val(); Obtener el valor o establecer el valor de un elemento 
+
+* Insertar un NuevoElemento DOM
+	var elemento = document.getElementById('miElem');
+	var nuevoElem = document.createElement("form");
+	$(elemento).afetr(nuevoElem);
+
+* seleccionar todos los elementos del mismo tipo
+	var p = $("p");
+
+* Obtener un elemento del aray de etiquetas
+	$('p').get(0); // va el indice
+	$('p')[0];
+
+`* Propiedades css
+	$('p').css("background-color:","#ffffff"): 
+
+* Varias propiedaes css
+	$('p').css({background: "red", fontSize: "40px"}): 
+
+* Añadir una clase a elemntos 
+	var p1 = $('p');
+	p1.addClass('miClase');
+
+* Remover  una clase a elemntos 
+	var p1 = $('p');
+	p1.removeClass('miClase');
+
+* Ancho elemento
+	$("midiv").width('130px');
+
+* Alto elemnto
+	$("miDiv").height("120px");
+
+* Elimina espacios en blanco al comienzo y finald e una cadena
+	$.trim("     Hola jhjj      "); // resultado Hola jhjj
+
+* recorrer una rray de objetos
+	$.each(array,function(ind, val){
+		codigo lo q deseas
+	});
+
+* Verifica si un elemento esta en una rreglo  si esta devuelve el indice caso contrario -1
+	$.inArray();  
+
+	var array = ['a','b','c','d'];
+	if($.inArray('b',array) !== -1){
+		alert("Encontrado " + $.inArray('b',array));
+	}
+
+* Permite remplazar lpos valores de las propiedades de un obj con las de otro, los propiedades del mismo nombre se remplazan 
+	con elvalor del segundo obj y las q no existen se agregan 
+
+	$.extend();
+
+	var p1 = {nombre: "hola", apellido: "aja", barco: "si"};
+	var p2 = {nombre: "holasss", apellidoss: "aja"};
+	var p3 = $.extend(p1,p2);
+	console.log(p3) =>  {nombre: "holasss", apellidoss: "aja", barco: "si"};
+
+* realiza una funcion cuando pasamos el cursor por encima del elemento 
+	$("btn1").mouseenter(function(){
+		alert("Hola");
+	});
+
+* cuando el mouse sale de la covertura de un elemento 
+	$("btn1").mouseleave(function(){
+		alert("Hola");
+	});
+
+* Para cuando un ele,ento pierda el foco
+	$(elemento).blur(function(){
+		$(this).css("background","#fffff");
+	});
+
+* igual que el click pero usandolo dos veces 
+	dbclick(function(){
+
+	});
+
+
+
+
+
+

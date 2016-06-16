@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script type="text/javascript" src="jquery-1.12.4.js"></script>
+	<title></title>
+
+	<script type="text/javascript">
+		$(document).ready(function(){
+
+			$("#btn1").click(function(){
+				var id_enca = $("#miEnca").attr("id");
+				var id_input = $("#miInput").attr("id");
+				var id_tabla = $("#miTabla").attr("id");
+				var msj = "<h1>IDS</h1>";
+				msj += id_enca+"<br/>";
+				msj += id_input+"<br/>";
+				msj += id_tabla+"<br/>";
+
+				$("#mensaje").html(msj);
+			});
+
+			$("#btn2").click(function(){
+				$("#miInput").attr("size","100");
+				$("#miInput").attr("placeholder","Ha cambiado el placeholder");
+
+			});
+
+			$("#btn3").click(function(){
+				$("#miEnca").attr("align","center");
+				$("#miEnca").attr("style","color:red;");
+
+
+			});
+
+
+			$("#btn4").click(function(){
+				$("#miTabla").attr("border","5");
+
+			});
+
+		});
+	</script>
+</head>
+<body>
+<!-- 
+Los atributos del input son :
+
+id: miInput
+size:50
+placeholder: Digite un numero!!
+Los atributos del  h1 son:
+
+id: miEnca
+Los atributos de la tabla son :
+
+Id: miTabla
+border:1
+cellspacing: 5
+Al hacer clic sobre el botón Mostrar Ids se mostrará en la pantalla del navegador los respectivos ids de elementos de la interfaz. El botón Cambiar Input tendrá el evento clic que permitirá cambiar el atributo size del input al valor de 100 y el atributo placeholder a “Ha cambiado el placeholder!!”. El botón Cambiar Encabezado cambiará el atributo align a center. Por último el botón Cambiar Tabla cambiará el atributo border a 5 y el atributo cellspacing a 15.
+-->
+
+<fieldset>
+	<legend><h1 id="miEnca">Luchar para Vivir o Vivir para Luchar</h1></legend>
+	<dl>
+		<dd><input type="text" id="miInput" name="miInput" size="50" placeholder="Digite un numero"></dd>
+		<dd>
+			<table id="miTabla" border="1" cellspacing="5">
+				<tr>
+					<td>Rojo</td>
+					<td>Verde</td>
+				</tr>
+
+				<tr>
+					<td>Azul</td>
+					<td>Naranja</td>
+				</tr>
+			</table>
+			<button id="btn1">Mostrar Ids</button>
+			<button id="btn2">Cambiar Inputs</button>
+			<button id="btn3">Cambiar Encabezado</button>
+			<button id="btn4">Cambiar Tabla</button>
+
+		</dd>
+
+		<p id="mensaje"></p>
+	</dl>
+</fieldset>
+</body>
+</html>

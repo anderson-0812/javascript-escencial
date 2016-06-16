@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<script type="text/javascript" src="jquery-1.12.4.js"></script>
+	<title></title>
+
+	<script type="text/javascript">
+		$(document).ready(function(){
+
+			var animales = ["Oso","Tigre","Aguila"];
+
+			var vehiculo1 = {
+				placa: "WER-454",
+				marca: "Toyota",
+				modelo: "2006"
+			};
+
+			var vehiculo2 ={
+				placa: "HSJ-098",
+				marca: "Mazda",
+				modelo: "2009"
+			};
+
+			$("#btn1").click(function(){
+				var msj = '';
+				$.each(animales,function(ind, valor){
+					msj += "Animal de posicion #"+ind+" "+valor+"<br>" ;
+				});
+
+				$("#p1").html(msj);
+			});
+
+			$("#btn2").click(function(){
+				var msj = '';
+				$.each(vehiculo1,function(propiedad, valor){
+					msj += "Propiedad: "+propiedad+" Valor: "+valor+"<br>";
+				});
+
+				$("#p2").html(msj);
+			});
+
+			$("#btn3").click(function(){
+
+				if($.inArray("Juan",animales) !== -1){
+					$("#p3").html("Tigre existe en el arreglo");
+				}else{
+					$("#p3").html("Tigre no existe en el arreglo");
+
+				}
+			});
+
+			$("#btn4").click(function(){
+
+				var array3 = $.extend(vehiculo1,vehiculo2);
+				var msj = "Propiedades del la union de los dos obj de vehiculos <br>";
+				$.each(array3,function(ind, val){
+					msj += "Propiedad: "+ind+" valor: "+val+"<br>";
+				});
+
+				$("#p4").html(msj);
+			});
+		});
+	</script>
+</head>
+<body>
+
+<!-- 
+Al hacer clic sobre el botón Mostrar Arreglo Animales se recorrerá el arreglo animales con el método $.each y se mostrarán los elementos en párrafo con id “p1”
+Al hacer clic sobre el botón Mostrar Objeto Vehículo 1 se recorrerá el objeto vehiculo1 con el método $.each y mostrará las propiedades en el párrafo con id “p2”
+Al hacer clic sobre el botón Existe Tigre? se verificará con el método $.inArray si el elemento “Tigre” está en el arreglo animales. Si está mostrar el mensaje “Tigre existe en el arreglo animales!!” en el párrafo  con id “p3”; sino está mostrar el mensaje “Tigre no existe en el arreglo animales!!”
+Al hacer clic sobre el botón Cambiar Propiedades se utilizará el método $.extend para cambiar las propiedades del objeto vechiculo1 por las propiedades del objeto vehiculo2, y se recorrerá el nuevo objeto con el  método $.each y se mostrarán sus propiedades en el párrafo con id “p4”.
+-->
+
+	<p id="p1">Arreglo Animales</p>
+	<p id="p2">Objeto vehiculo1</p>
+	<p id="p3">Esta el tigre?</p>
+	<p id="p4">Nuevo Objeto vehiculo</p>
+	<p id="p5">Nuevo Objeto vehiculo</p>
+
+	<hr/>
+	<button id="btn1">Mostrar Arreglo Animales</button>
+	<button id="btn2">Mostrar Objeto Vehículo 1</button>
+	<button id="btn3">Existe tigre?</button>
+	<button id="btn4">Cambair Propiedades</button>
+
+</body>
+</html>
