@@ -97,6 +97,40 @@
 
 	});
 
+* Eventos de concatenacion o union 
+	es elmetodo .on
+
+	- Enlaza cualquier evento  activado en los elementos seleccionados
+	- realiza multiples eventos a unsolo manejador de eventos 
+	- realiza multiples eventos a un elemento seleccionado 
+		$("h1").on(
+			{
+				mouseenter:function(){
+					console.log("Hola");
+				},
+				click: function(){
+					alert("Clickx	");
+				}
+			}
+		);
+	- usa detalles sobre el evento  
+		$("#div").on("click",function(event){
+			console.log("asd");
+			console.dir(event);
+		});
+	- Pasar datos al controlador para eventospersonalizados
+		$("p").on("click",{
+			obj:"action"
+		},la funcion(event){
+			console.log("Datos del evento:"+
+			event.data.obj + "(que deberoa ser 'accion')");
+		});
+
+	- Union de eventos a los elementos no existentes
+		$("ul").on("click","li",function(){
+			console.log("Se hizo click enlaetiqueta ul y era un li ");
+		});
+
 
 
 

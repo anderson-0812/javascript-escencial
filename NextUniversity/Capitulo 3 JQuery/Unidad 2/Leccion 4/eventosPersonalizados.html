@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script type="text/javascript" src="jquery-1.12.4.js"></script>
+	<title></title>
+</head>
+<body>
+	<p id="mensaje"></p>
+
+	<script type="text/javascript">
+
+	// creamos Un evento propio llamado fruta 
+		$(document).ready(function(){
+			$(document).on("Frutas",{
+				fruta:"fresa"
+			},function(event,arg1,arg2){
+				$("#mensaje").html(event.data.fruta+"<br/>"+arg1+"<br/>"+arg2);
+			});
+
+			$(document).trigger("Frutas",['Manzana','Pera']);
+		});
+	</script>
+</body>
+</html>

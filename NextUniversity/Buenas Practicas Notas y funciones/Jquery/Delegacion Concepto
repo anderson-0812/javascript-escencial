@@ -1,0 +1,14 @@
+* Delegacion Concepto
+	Agregar eventos ya creados  a nuevos elementos 
+	Sintaxis
+
+	$(nodo_padre).delegate(nodo_hijo,evento,function(){
+
+	});
+
+* Desvincular eventos
+	Agregamos la funcion undelegate
+	Sintaxis
+	$(nodo_padre).undelegate(nodo_hijo,evento,function(){
+
+	});

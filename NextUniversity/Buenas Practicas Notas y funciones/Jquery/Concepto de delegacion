@@ -1,0 +1,9 @@
+* page x - Page y
+	Posicion del Cursor del mouse en pantalla 
+
+	Ejemplo :
+	$(document).ready(function(){
+		$(document).mousemove(function(event){
+			$("#parrafo").text("la posicion delmouse es: X => "+event.pageX+" Y=> "+event.pageY);
+		});
+	});

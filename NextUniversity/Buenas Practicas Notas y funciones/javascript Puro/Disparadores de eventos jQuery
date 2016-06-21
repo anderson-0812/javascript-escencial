@@ -1,0 +1,19 @@
+* Proporciona una manera de activar los controladores de eventos unicos  a un elemento soin ninguna interaccion del usuario
+ a traves del metodo .trigger();
+
+
+$("#miBtn").trigger("click"); =>  Lo que hace es q no va a cambiar la pagina actual ni simula el evento, solo notifica a otra 									parte mi codigoque ese evento sucedio 
+$("#miBtn").simulate("click"); => Para simular elevento usamos este metodo
+
+* El sistema de manejo de eventos de jQuery es una capa en laparte superior de los acontecimientos delnavegador
+* el trigger lo podemos usar pa ra imitar los eventos q suceden en un navegador (como click)
+
+
+* DIFERENCIAS DE TRIGGER y TRIGGERHANDLER
+
+	- El triggerHandler() solo  activa el evento el el primer elemento de un objeto jQuery
+	- .triggerHandler() no puede ser encadenado
+	- .triggerHandler() no hara cambiar el comportamiento predeterminado del evento
+	- Los eventos activados por .triggerHandler(), estos servicios se disparan en un solo elemento 
+	- El .trigger Se usa para notificar a otras secciones de codigo que un evento especifico de la pag se a realizado
+	

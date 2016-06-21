@@ -1,0 +1,13 @@
+* eventos personalizados
+
+	por medio de los metodos .on y .trigger	
+
+	los eventos personalizados en vez de centarrse en un elemento que desencadena una accion`, loq ue hacen es que ponen la referencia en ele lementoa  ser modificado 
+
+* crear los eventos 
+	- Para crear usamos el .on("Nuevo evento",funcion de control delevento);
+		- Toma un tipo de evento y una funciond e evento que queremos aplicar comoa rgumento 
+	- Para agregar argumentos o parametros usamos .trigger
+		- Tomaun tipo de evento comoa rgumento. Ademas tb puede tener una matriz de valores (opcional)
+			.trigger("tipo de evento",matriz de valores ['sadas','asdas']);
+
