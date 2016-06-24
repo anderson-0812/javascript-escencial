@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<script type="text/javascript" src="jquery-1.12.4.js"></script>
+	<meta charset="utf-8">
+	<title></title>
+
+	<script type="text/javascript">
+		$(document).ready(function(){
+			var clientes =[];
+
+			$("#btn1").click(function(){
+				registrarCliente();
+				// disparamos un evento perzonalizado o creado
+				$(document).trigger("descuento");
+			});
+
+			// creamos el evento personalizado
+			$(document).on("descuento",function(event,par1,par2){
+				var total_compra = parseFloat($("#cjtxt3").val());
+				var nombre = $("#cjtxt2").val();
+
+				if(total_compra > 50000){
+					alert("Te ganaste un bono de 10000 pesos");
+				}
+
+				limpiar_campos();
+				listar_clientes();
+			});
+
+			function registrarCliente(){
+				var id = $("#cjtxt1").val();
+				var nombre = $("#cjtxt2").val();
+				var total_compra = parseFloat($("#cjtxt3").val());
+
+				var cliente = {
+					id: id,
+					nombre: nombre,
+					total_compra: total_compra
+				};
+				clientes.push(cliente);
+				alert("Cliente/n Registrado");
+			}
+
+			function listar_clientes(){
+				var lista = "<h1>Clientes<h1/><br/>";
+				var id = $("#cjtxt1").val();
+				var nombre = $("#cjtxt2").val();
+				var total_compra = parseFloat($("#cjtxt3").val());
+
+				for(var i =0; i < clientes.length; i++){
+					lista += "<b>Id:</b>" + clientes[i].id+"-"+"<b>Nombre:</b>"+clientes[i].nombre+"-"+"<b>Total Compra:</b>"+
+					clientes[i].total_compra+"<br/>";
+				}
+
+				$("#clientes").html(lista);
+			}
+
+			function limpiar_campos(){
+				$("#cjtxt1").val("");
+				$("#cjtxt2").val("");
+				$("#cjtxt3").val("");
+
+			}
+		});
+	</script>
+</head>
+<body>
+	<h1>Datos del Cliente</h1>
+	<label for="cjtxt1">Id</label>
+	<input type="text" name="cjtxt1" id="cjtxt1">
+	<br/>
+	<br/>
+	<label for="cjtxt2">Nombre</label>
+	<input type="text" name="cjtxt2" id="cjtxt2">
+	<br/>
+	<br/>
+	<label for="cjtxt3">Total Compra</label>
+	<input type="text" name="cjtxt3" id="cjtxt3">
+	<br/>
+	<br/>
+	<input type="button" name="btn1" id="btn1" value="Registrar Cliente"> 
+	<p id="clientes"></p>
+	
+</body>
+</html>

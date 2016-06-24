@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<script type="text/javascript" src="jquery-1.12.4.js"></script>
+	<title></title>
+
+	<script type="text/javascript">
+		$(document).ready(function(){
+			$(document).on("marcas",{
+				marca:"Ford"
+			},function(event,param1, param2){
+				$("#mensaje").html(event.data.marca+"<br>"+param1+"<br>"+param2+"<br>");
+			});
+
+			$(document).trigger("marcas",["Toyota","Chevrolet"]);
+		});
+	</script>
+</head>
+<body>
+<!-- 
+Crear una función jQuery que implemente los métodos On y Trigger. Crear una etiqueta párrafo con id="mensaje" y asignarle como resultado las siguientes marcas de carro:
+
+Ford
+Toyota
+Chevrolet
+Tomar como guía el ejemplo de la lección.
+-->
+
+<p id="mensaje" ></p>
+</body>
+</html>
