@@ -14,10 +14,10 @@ $(document).ready(function(){
 	});
 
 	$("#start").click(function(){
-		$("#caja2").animate({"width":"+=200px"},1000);// segundo parametro es intervalo de tiempo
+		$("#caja2").animate({"width":"2000px"},10000);// segundo parametro es intervalo de tiempo
 	});
 
 	$("#stop").click(function(){
-		$("caja2").stop();
+		$("#caja2").stop();
 	});
 });
