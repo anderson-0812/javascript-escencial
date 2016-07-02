@@ -23,3 +23,11 @@
 	$("#stop").click(function(){
 		$("#caja2").stop();
 	});
+
+- fadeIn()
+	anima la opacidad de los elementos en el html los muestra 
+
+	$("div").fadeIn(4000,function(){
+			$("label").fadeIn(1000);
+			$("p").fadeOut(10); // los oculta con un cierto tiempo 
+		});
