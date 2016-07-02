@@ -1,0 +1,28 @@
+body{
+	background: #FFFBF1;
+}
+div{
+	background: #334D4D;
+	font-weight: bold;
+	font-size: 15px;
+	color: #FFFFFF;
+	width: 20%;
+	height: 2%;
+	text-align: center;
+	margin: 10px 0 0 30px;
+	border-radius: 5px;
+}
+
+p{
+	padding: 20px 0 0 0;
+}
+
+button{
+	width: 80px;
+	height: 30px;
+	border-radius: 10px;
+	background: #B3C54D;
+	margin: 10px 0 0 30px;
+	font-weight: bold;
+	font-size: 15px;
+}
