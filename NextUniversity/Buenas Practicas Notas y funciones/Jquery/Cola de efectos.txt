@@ -1,0 +1,29 @@
+Es de laleccion dos de la unidad de jQuery 
+* Es una estructura de datos que almacenaefectos 
+* Los efectos a lamcenados son llamados por los metodos respectivos 
+* jQuery tiene una cola de efectos por defectollamada fx 
+*  El orden de fx es: el primero queseinvoa seráel priemro en se rejecutado
+* Cada elemento tienesu propia cola de efectos disponibles 
+
+Ejemplo: 
+var miDiv = $("#Midiv");
+miDiv.hide();
+miDiv.show();
+miDiv.fadeIn(1000);
+
+
+***** METODOS
+	* queue()
+		puede o nor ecibir parametros 
+		 tiene dos formas:
+		 1 forma sin parametros:
+		 	- devuelve una lista con las funciones de efectos almacenados en la cola fx 
+		 2 Forma con parametros
+		 	- recibe dos
+		 	- parametro 1 rs el nombre d ela cola 
+		 	- funcion creada por nosotros mismos 
+		 	elemento.queue(nombreCola, funcion);
+
+	* dequeue()
+		permite continuar con als llamdas a funciones que estan en la cola del fx 
+		elemento.dequeue()
