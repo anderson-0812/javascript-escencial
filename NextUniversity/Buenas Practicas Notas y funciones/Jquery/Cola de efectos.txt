@@ -25,5 +25,5 @@ miDiv.fadeIn(1000);
 		 	elemento.queue(nombreCola, funcion);
 
 	* dequeue()
-		permite continuar con als llamdas a funciones que estan en la cola del fx 
+		permite continuar con als llamdas a funciones que estan en la cola del fx del elemento
 		elemento.dequeue()
