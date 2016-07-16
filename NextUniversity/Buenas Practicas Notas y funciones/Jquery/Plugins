@@ -1,0 +1,12 @@
+http://plugins.jquery.com/
+
+Se encuentran todos los plugins rgistrados y gratis 
+
+* Plugin son componentes que estan disponibles para lso dev q nos permiten amplear las funcionalidades que tiene elframework jquery para una mejor experiencia de usuario
+
+* Sirver =n paaejecutar atres mas complejas especificas, pero pensados para ser utilizados ene le futuro, sin porblemas de compatibilidad y en cualquier lugar 
+
+* Es una funcion q  se le añade a un obj de jquery 
+y este es el qnosva a devolver la funciond e jquery con un selector especifico para despues de ejecutado respnada a los nuevos metodos 
+
+* Una vez elegido el plugin, debemos descargarlo descomprimirlo y poner la referencia para poder manipularlo en alsfunciones y obj jquery 

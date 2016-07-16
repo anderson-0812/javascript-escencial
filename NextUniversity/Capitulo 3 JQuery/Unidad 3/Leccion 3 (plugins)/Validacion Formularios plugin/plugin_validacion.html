@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Plugin Validacion con jQuery </title>
+	<script src="jquery-1.12.4.js"></script>
+	<script src="jquery.validate.js"></script>
+
+	<script type="text/javascript">
+		$.validator.setDefaults({
+			submitHandler: function(){
+				alert("Inicio de sesion Exitosa");
+				$("#usuario").val("");
+				$("#password").val("");
+			}
+		});
+
+		$(document).ready(function(){
+			var validator = $("#miForm").validate({
+				errorPlacement: function(error, element){
+					$(element).closest("form")
+					.find("label[for='"+element.attr("id")+"']")
+					.append(error);
+				},
+				errorElement: "span",
+				messages:{
+					usuario: {
+						required: "(Por favor ingrese su nombre de usuario)",
+						minlength: "(Debe tener minimo 3 caracteres)"
+					},
+					password : {
+						required: "(Por favor ingrese su contrasenia)",
+						minlength: "(Debe tener minimo 5 y un maximo de 12 caracteres)",
+						maxlength: "(Debe tener minimo 5 y un maximo de 12 caracteres.)"
+					}
+				}
+			});
+		});
+	</script>
+
+	<style type="text/css">
+		.miForm fieldset p label span.error{
+			color: red;
+		}
+		form.miForm{
+			width: 30em;
+			background-color: #40FF80;
+
+		}
+		form.miForm legend,
+		form.miForm label
+		{	
+			color: #1711C4;
+		}
+
+		form.miForm fieldset{
+			border: 1px solid #999;
+			border-radius: 8px;
+			border-color: #1711C4;
+			box-shadow: 0 0 10px #999; 
+		}
+		form.miForm label{
+			width: auto;
+			display: block;
+			float: none;
+		}
+
+	</style>
+
+</head>
+<body>
+	<h1>Plugin de validation con jQuery</h1>
+	<div id="miDiv">
+		<form id="miForm" method="get" class="miForm" action="">
+			<fieldset>
+				<legend>Iniciar Sesion</legend>
+				<dl>
+					<p> 
+						<label for="usuario">Nombre Usuario: </label>
+						<input type="text" id="usuario" name="usuario" required minlength="3">
+					</p>
+
+					<p>
+						<label for="password">Contrasenia</label>
+						<input type="password" id="password" name="password" maxlength="12" minlength="5" required>
+					</p>
+
+					<p>
+						<input class="submit"  type="submit" value="Iniciar">
+					</p>
+				</dl>
+			</fieldset>
+					
+		</form>
+	</div>
+</body>
+</html>
