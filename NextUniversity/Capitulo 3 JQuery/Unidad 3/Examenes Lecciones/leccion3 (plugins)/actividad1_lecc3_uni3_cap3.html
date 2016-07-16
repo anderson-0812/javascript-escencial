@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Actividad 1 de leccion3 plugins validacion </title>
+	<script type="text/javascript" src="jquery-1.12.4.js"></script>
+	<script type="text/javascript" src="jquery.validate.js"> </script>
+
+	<style type="text/css">
+		#miDiv{
+			margin-left: 400px;
+			text-align: center;
+			width: 500px;
+			background-color: #ffa500;
+		}
+		#miDiv form fieldset dd label span.error{
+			color: red;
+		}
+
+		#miDiv form dd label{
+			color: #7442a6;
+		}
+		#miDiv form dd input {
+			margin-bottom: 2em;
+		}
+	</style>
+
+	<script type="text/javascript">
+		$.validator.setDefaults({
+			submitHandler: function(){
+				alert("Registro Exitoso");
+				$(".datos").val("");
+			}
+		});
+
+		$(document).ready(function(){
+			var validator = $("#miForm").validate({
+				errorPlacement: function(error,element){
+					$(element).closest("form")
+					.find("label[for='"+element.attr("id")+"']")
+					.append(error);
+				},
+				errorElement:"span",
+				messages:
+				{
+					usuario: {
+						required: "(Por favor ingrese su usuario )"
+					},
+					contrasenia: {
+						required: "(Por favor ingrese su password)"
+					},
+					edad:{
+						required: "(Por favor ingrese su edad)"
+					},
+					lug_nacimiento: {
+						required: "(Por favor ingrese su lugar de nacimiento)"
+					}
+
+				}
+			});
+		});
+	</script>
+
+</head>
+<body>
+<!-- 
+Un label “Nombre de Usuario” con una caja de texto 
+Un label ”Contraseña” con una caja de texto
+Un label ”Edad” con una caja de texto
+Un label ”Lugar de Nacimiento” con una caja de texto
+Un botón que diga ”Enviar”
+-->
+
+<div id="miDiv">
+	<form method="get" action="" id="miForm">
+		<fieldset>
+			<legend>Plugin de Validacion para registro de usuarios</legend>
+			<dl>
+				<dd><label for="usuario">Nombre de usuario: </label></dd>
+				<dd><input type="text" class="datos" id="usuario" name="usuario" required="true"></dd>
+
+				<dd><label for="contrasenia">Contrasenia: </label></dd>
+				<dd><input type="password" class="datos" id="contrasenia" name="contrasenia" required="true"></dd>
+
+				<dd><label for="edad">Edad: </label></dd>
+				<dd><input type="text" class="datos" id="edad" name="edad" class="positive" required="true"></dd>
+
+				<dd><label for="lug_nacimiento">Lugar de Nacimiento: </label></dd>
+				<dd><input type="text" class="datos" id="lug_nacimiento" name="lug_nacimiento" required="true"></dd>
+
+				<dd><label for="lug_nacimiento">Lugar de Nacimiento: </label></dd>
+				<dd><input type="text" class="datos" id="lug_nacimiento" name="lug_nacimiento" required="true"></dd>
+
+				<dd><center><input type="submit" id="lug_nacimiento" value="Enviar"></center></dd>
+
+
+			</dl>
+		</fieldset>
+	</form>
+</div>
+</body>
+</html>
