@@ -1,0 +1,52 @@
+* Metodo data()
+	- almacena los datos en un elemento elemento.data(nombre del dato, valor del dato);
+	- recuperar un dato almacenado elemento.data(nombre del dato);
+
+* Metodo grep()
+	- Permite filtrar elementos de un arreglo segun una condicion
+	- sintaxis $.grep(arreglo, function(valor, index),invertir);
+	- 1er parametro arreglo, 
+		2do es la funcion encargada de recorrer el arreglo y hacer el filtro que recibe dos parametros:
+			valor y el indice
+		3er (opcional )es opcional que permite invertir el resultado de la condicion  
+
+	ejemplo: 
+	var filtro;
+	var arr = [4,5,6,1,03,9,8,2,7];
+
+	filtro = $.grep(arr, function(value, i){
+		return (value > 4);
+	});
+
+* Metodo isEmptyObject()
+	- Verifica si un objeto esta vacio
+	- recibe de parametro al obj
+	- si esta vacio return true
+	- ejemplo:
+	$. isEmptyObject({}); // return true
+	$. isEmptyObject({"nombre": "Jose"}); // return false
+
+* Metodo isNumeric()
+	- verifica si un valor es numerico
+	$.isNumeric(4.63500); // return true
+	$.isNumeric("hola"); // return false
+
+* Metodo merge()
+	- combinar los elementos de dos arreglos 
+	- el primer arreglo es al cual se le va ainsertar lso elementosdel segundoa rreglo 
+	- elsegundoarreglo es el q copia sus elementos alprimer arreglo
+	var arr1 = [1,3,5,6,5,];
+	var arr2 = [1,3,5,6,5,];
+
+	$.merge(arr1,arr2);
+
+* Metodo $.parseJSON();
+	- Convierte un string que sea json a formato json
+	$.parseJSON('{"nombre":"Juan"}');
+
+* 
+
+
+
+
+

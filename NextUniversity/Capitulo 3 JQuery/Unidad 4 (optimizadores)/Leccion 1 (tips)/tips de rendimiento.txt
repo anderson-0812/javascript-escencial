@@ -1,0 +1,9 @@
+* No usar mas de una vez la palabra reservada var caundo usemos varias variables
+* No usar el metodo css a menos que sea necesario en luygar de eso usar 
+	$(
+	'<style type="text/css">
+		a.estilo{color: #FFFF}
+	</style> '
+	);
+
+* No hacer codigos redundantes 

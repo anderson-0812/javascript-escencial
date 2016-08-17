@@ -10,3 +10,37 @@ Se encuentran todos los plugins rgistrados y gratis
 y este es el qnosva a devolver la funciond e jquery con un selector especifico para despues de ejecutado respnada a los nuevos metodos 
 
 * Una vez elegido el plugin, debemos descargarlo descomprimirlo y poner la referencia para poder manipularlo en alsfunciones y obj jquery 
+
+******************************** CREAR PLUGINS ********************************
+
+Significa agregar nuevas funciones a jQuery
+
+* Sintaxis:
+- Forma1:
+	// el signo pesos indioca que pasamos como parametro a la funcion el obj jQuery
+	(function($){
+		// van lasacciones de la funcion
+	})(jQuery);
+- Forma 2:
+	// con la propiedad fn le decimos que vamos a agregar una funcion a jqueryncomo nuevos metodos 
+	jQuery.fnnombre_plugin = function(){
+		// van lasacciones de la funcion
+	};
+
+- Ejemplo:
+	jQuery.fn.plugin_hide = function(){
+		this.each(function(){
+			elemento = $(this);
+			elemento.hide(1000);
+		});
+	};
+
+	$(document).ready(function(){
+		$("#eliminar).click(function(){
+			$("#parrafo).plugin_hide();
+		});
+	});
+
+	HTML
+	<p id="parrafo">Hola</p>
+	<button id="eliminar">Eliminar</button>

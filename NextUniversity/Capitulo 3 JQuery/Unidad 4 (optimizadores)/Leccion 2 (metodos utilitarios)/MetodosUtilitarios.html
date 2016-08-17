@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<script type="text/javascript" src="jquery.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function(){
+			var arreglo1 = [4,5,6,1,0,3];
+			arreglo2 = [9,8,2,7];
+			jsonstring = '{"nombre":"Juan","apellido":"Perez"}';
+
+			$("#btn1").click(function(){
+				var elemento1 = "Elementos de arreglo1<br>";
+				var elemento2 = "Elementos de arreglo2<br>";
+
+				var parrafo1 = $("#p1");
+				var parrafo2 = $("#p2");
+
+				$.each(arreglo1, function(i,val){
+					elemento1 += val + "<br>";
+				});
+
+				$.each(arreglo2, function(i,val){
+					elemento2 += val + "<br>";
+				});
+
+				$(parrafo1).html(elemento1);
+				$(parrafo2).html(elemento2);
+
+			});
+
+			$("#btn2").click(function(){
+				var elemento3 = "Elemntos del array1 y array2<br>";
+				$.merge(arreglo1,arreglo2);
+				var parrafo3 = $("#p3");
+
+				$.each(arreglo1,function(i,val){
+					elemento3 += val +"<br>";
+				});
+
+				$(parrafo3).html(elemento3);
+			});
+
+			$("#btn3").click(function(){
+				var elemento4 = "Filtrar los elementos del areglo combinado que sean > a 4<br>";
+				var parrafo4 = $("#p4");
+
+				var filtro = $.grep(arreglo1,function(val,i){
+					return (val > 4);
+				})
+
+				elemento4 += filtro;
+				$(parrafo4).html(elemento4);
+			});
+
+			$("#btn4").click(function(){
+				var elemento5 = "propiedades del objeto <br>";
+				var parrafo5 = $("#p5");
+
+				var objs = $.parseJSON(jsonstring);
+
+				$.each(objs,function(propiedad, valor){
+					elemento5 += propiedad +":"+ valor + "<br>";
+				});
+
+				if($.isEmptyObject(objs)){
+					elemento5 += "Es un objeto vacio";
+				}else{
+					elemento5 += "NO es un objeto";
+				}
+
+				$(parrafo5).html(elemento5);
+			});
+		});
+	</script>
+</head>
+<body>
+	<button id="btn1">Mostrar Arreglos</button>
+	<button id="btn2">Combinar Arreglos</button>
+	<button id="btn3">Filtrar elementos > a 4</button>
+	<button id="btn4">Combertir a JSON</button>
+
+	<p id="p1"></p>
+	<p id="p2"></p>
+	<p id="p3"></p>
+	<p id="p4"></p>
+	<p id="p5"></p>
+
+</body>
+</html>
