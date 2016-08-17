@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<script type="text/javascript" src="jquery.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function(){
+			var array1 = [3,1,7,4,9,0];
+			var array2 = [2,6,5,8];
+
+			var datos= '[{"nombre":"carlos","apellido":"vergara"}]';
+
+			$("#btn1").click(function(){
+				var elemento = "Elementos de array1<br>";
+					elemento2= "Elementos de array2<br>";
+					elementos ='';
+				$.each(array1,function(i,value){
+					elemento += value + "<br>";
+				});
+
+				$.each(array2,function(i,value){
+					elemento2 += value + "<br>";
+				});
+
+				elementos = elemento + elemento2;
+				$("#p1").html(elementos);
+
+			});
+			$("#btn2").click(function(){
+				var elemento = 'Arrays Combinados <br>';
+				$.merge(array1,array2);
+				$.each(array1,function(i,value){
+					elemento += value + "<br>";
+				});
+				
+				$("#p2").html(elemento);
+			});
+			$("#btn3").click(function(){
+				var filtro = $.grep(array1,function(value,i){
+					return (value > 4);
+				});
+
+				$("#p3").html("Elementos Filtrados mayores a 4 <br>" + filtro);
+			});
+			$("#btn4").click(function(){
+				var dato_json = $.parseJSON(datos);
+				var elemento = 'Elementos JSON <br>';
+				$.each(dato_json,function(i,value){
+					elemento += "Nombre:"+ value.nombre + " Apellido: " + value.apellido + "<br>";
+				});
+
+				$("#p4").html(elemento);
+			});
+
+		});
+	</script>
+	<title></title>
+</head>
+<body>
+	<button id="btn1">Mostrar Arreglos</button>
+	<button id="btn2">Combinar Arreglos</button>
+	<button id="btn3">Filtrar Elementos</button>
+	<button id="btn4">Convertir JSON</button>
+
+	<p id="p1"></p>
+	<p id="p2"></p>
+	<p id="p3"></p>
+	<p id="p4"></p>
+
+</body>
+</html>
