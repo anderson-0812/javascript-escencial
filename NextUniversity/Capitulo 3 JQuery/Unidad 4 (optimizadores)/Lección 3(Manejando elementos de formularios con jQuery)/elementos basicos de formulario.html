@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script type="text/javascript" src ="jquery.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function(){
+			$("#agregarcarro").click(function(event){
+				event.preventDefault();
+				var nombre_carro = $("#nombre").val();
+				var valor_carro = $("#valor").val();
+
+				$("<option/>").attr("value",valor_carro).text(nombre_carro + "$"+valor_carro).appendTo("#carros");
+			});
+
+			$("#quitarcarro").click(function(event){
+				event.preventDefault();
+				var $select = $("#carros");
+
+				$("option:selected",$select).remove();
+			});
+		});
+	</script>
+	<title></title>
+</head>
+<body>
+
+<fieldset>
+	<legend>Vender carros</legend>
+	<dl>
+		<form>
+			<dd><h3 for="carros">CARROS</h3></dd>
+			<dd>
+				<select id="carros" multiple="multiple">
+				</select>
+			</dd>
+
+			<dd><button id="quitarcarro">Borrar carro seleccionado </button></dd>
+
+			<dd><p for="nombre">Nombre del carro: </p></dd>
+			<dd><input type="text" id="nombre"></dd>
+
+			<dd><p for="valor">Precio del carro:</p></dd>
+			<dd><input type="text" id="valor"></dd>
+
+			<dd><button id="agregarcarro">Agregar carro a la lista</button></dd>
+		</form>
+	</dl>
+	
+</fieldset>
+</body>
+</html>
