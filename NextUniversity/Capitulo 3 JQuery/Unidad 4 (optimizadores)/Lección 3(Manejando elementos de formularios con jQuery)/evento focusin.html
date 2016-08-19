@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<script type="text/javascript" src="jquery.js"></script>
+	<style type="text/css">
+		span{
+			display: none;
+		}
+	</style>
+	<script type="text/javascript">
+		$(document).ready(function(){
+			$("p").focusin(function(){
+				$(this).find("span").css({"display":"inline","color":"red"}).fadeOut(20000);
+			});
+
+			$("button").click(function(){
+				alert("Informacion guarda");
+			});
+		});
+	</script>
+	<title></title>
+</head>
+<body>
+	<h1>Formulario</h1>
+	<p>Nombre:<input type="text" id=""><span>Ingrese su nombre</span></p>
+	<p>Apellidos:<input type="text" id=""><span>Ingrese su apellidos</span></p>
+	<p>Edad:<input type="text" id=""><span>Ingrese su edad</span></p>
+	<p>Ciudad:<input type="text" id=""><span>Ingrese su ciudad</span></p>
+	<p>Fecha de Nacimiento:<input type="date" id=""><span>Escoja  Fecha de Nacimiento</span></p>
+
+	<button>Enviar</button>
+</body>
+</html>
