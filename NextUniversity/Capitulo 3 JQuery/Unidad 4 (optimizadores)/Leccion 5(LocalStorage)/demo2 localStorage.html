@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title></title>
+	<script type="text/javascript" src="jquery.js"></script>
+	<script type="text/javascript">
+		function editar_nota(id){
+
+			var nota;
+
+			for (var i = 0; i < localStorage.length; i++) {
+				var clave = localStorage.key(i);
+
+				if(clave == id){
+					nota = $.parseJSON(localStorage.getItem(clave));
+					$("#id").val(nota.id);
+					$("#titulo").val(nota.titulo);
+					$("#descripcion").val(nota.descripcion);
+
+				}
+			}
+		}
+
+		function eliminar_nota(id){
+			localStorage.removeItem(id);
+			listar_notas();
+		}
+
+		function listar_notas(){
+			var tabla = "";
+			var p1 = $("#p1");
+
+			tabla += "<table border ='1'>";
+				tabla += "<tr>";
+					tabla += "<th>ID</th>";
+					tabla += "<th>Titulo</th>";
+					tabla += "<th>Descripcion</th>";
+					tabla += "<th>Editar</th>";
+					tabla += "<th>Eliminar</th>";
+				tabla += "</tr>";
+
+				for (var i = 0; i < localStorage.length; i++) {
+					var clave = localStorage.key(i);
+					var nota = $.parseJSON(localStorage.getItem(clave));
+
+					tabla += "<tr>";
+						tabla += "<td>"+nota.id+"</td>";
+						tabla += "<td>"+nota.titulo+"</td>"; 
+						tabla += "<td>"+nota.descripcion+"</td>"; 
+						tabla += "<td>"+'<button id="btn_editar" onclick="editar_nota(\''+nota.id+'\');">Editar</button>'+"</td>"; 
+						tabla += "<td>"+'<button id="btn_eliminar" onclick="eliminar_nota(\''+nota.id+'\');">Eliminar</button>'+"</td>"; 
+					tabla += "</tr>";
+				}
+
+				tabla += "</table>";
+
+				$(p1).html(tabla);
+
+		}
+
+		$(document).ready(function(){
+		
+
+			var cont;
+			if(localStorage.length > 0){
+				cont = localStorage.length +1;
+			}else{
+				cont = 1;
+			}
+			$("#id").val(cont);
+
+			$("#btn1").click(function(){
+				var id = $("#id").val();
+				var titulo = $("#titulo").val();
+				var descripcion = $("#descripcion").val();
+				 var nota = {
+				 	id:id,
+				 	titulo:titulo,
+				 	descripcion:descripcion
+				 };
+
+				 localStorage.setItem(id,JSON.stringify(nota));
+				 cont = localStorage.length + 1;
+
+				 listar_notas();
+				 restablecer();
+
+			});
+
+			$("#btn2").click(function(){
+				restablecer();
+			});
+
+			function restablecer(){
+				$("#id").val(cont);
+				$("#titulo").val("");
+				$("#descripcion").val("");
+
+			}
+			listar_notas();
+
+		});
+	</script>
+</head>
+<body>
+	<h1> Mis Notas </h1>
+
+	<form>
+		ID:
+		<br/>
+		<input type="text" name="id" id="id" disabled="">
+		<br/>
+
+		Titulo:
+		<br/>
+		<input type="text" name="titulo" id="titulo" >
+		<br/>
+		
+		Descripcion:
+		<br/>
+		<textarea rows="4" cols="50" id="descripcion"></textarea>
+		<br>
+
+		
+	</form>
+	<button id="btn1">Guardar</button>
+		<button id="btn2">Restablecer</button>
+		<br/>
+
+		<p id="p1"></p>
+</body>
+</html>

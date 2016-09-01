@@ -1,0 +1,9 @@
+.nombres, .apellidos, .telefono, .email{
+	width: 5%;
+	float: left;
+}
+
+#nombres, #apellidos, #telefono, #email{
+	width: 150px;
+}
+

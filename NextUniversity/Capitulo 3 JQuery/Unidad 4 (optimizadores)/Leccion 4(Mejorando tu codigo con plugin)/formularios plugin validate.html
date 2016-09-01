@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Problema, validacion con plugin</title>
+
+	<link href="style.css" rel="stylesheet" type="text/css" >
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script type="text/javascript" src="http://ajax.aspnetcdn.com/ajax/jquery.validate/1.13.0/jquery.validate.js"></script>
+
+	<script type="text/javascript">
+		$(document).ready(function(){
+			$("#form").validate();
+		});
+	</script>
+</head>
+<body>
+<fieldset>
+	<legend>Formulario con plugin de validacion</legend>
+	<dl>
+		<form id="form" method="post">
+			<dd><h4>Ingrese sus datos </h4></dd>
+
+			<dd><label for="nombres" class="nombres">Nombres: </label></dd>
+			<dd><input type="text" id="nombres" name="nombres" class="required"></dd>
+
+			<dd><label for="apellidos" class="apellidos">Apellidos: </label></dd>
+			<dd><input type="text" id="apellidos" name="apellidos" class="required"></dd>
+
+			<dd><label for="telefono" class="telefono">Telefono: </label></dd>
+			<dd><input type="text" id="telefono" name="telefono" ></dd>
+
+			<dd><label for="email" class="email">Email: </label></dd>
+			<dd><input type="text" id="email" name="email" class="required email"></dd>
+
+			<br/><br/>
+			<dd><input type="submit" id="enviar" value="Enviar"></dd>
+		</form>
+
+	</dl>
+</fieldset>
+</body>
+</html>

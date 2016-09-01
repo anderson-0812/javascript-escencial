@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+	<meta charset="utf-8">
+	<title></title>
+
+	<script type="text/javascript" src="jquery.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function(){
+			$("#fru").change(function(){
+				var fru = "Seleccionados: ";
+
+				$("#fru option:selected").each(function(){
+					fru += $(this).text()+" - ";
+				});
+
+				$(".fts").text(fru);
+			}).change();
+
+			$("#pcs").change(function(){
+				var pcs = "Seleccionados: ";
+
+				$("#pcs option:selected").each(function(){
+					pcs += $(this).text()+" - ";
+				});
+
+				$(".pcs").text(pcs);
+			}).change();
+		});
+	</script>
+
+	<style type="text/css">
+		.fts{
+			color: blue;
+			font-size: 25px;
+		}
+		.pcs{
+			color: green;
+			font-size: 25px;
+		}
+
+		select{
+			height: 115px;
+		}
+	</style>
+
+</head>
+<body>
+	<h1>Frutas</h1>
+	<select name="frutas" id="fru" multiple="multiple">
+		<option>Kiwi</option>
+		<option>Mango</option>
+		<option>Fresa</option>
+		<option>Papaya</option>
+		<option>Pinia</option>
+		<option>Melon</option>
+		<option>Sandia</option>
+		<option>Uva</option>
+		<option>Mora</option>
+		<option>Mispero</option>
+		<option>Melocoton</option>
+		<option>Nuez</option>
+		<option>Pistacocho</option>
+		<option>Manzana</option>
+		<option>Ciruela</option>
+		<option>Arandano</option>
+		<option>Limon</option>
+		<option>Mandarina</option>
+		<option>Pomelo</option>
+		<option>Tomate de arbol</option>
+	</select>
+
+	<div class="fts"></div>
+
+	<h1>Computadoras</h1>
+	<select name="pc" id="pcs" multiple="multiple">
+		<option>Mac</option>
+		<option>Samsung</option>
+		<option>HP</option>
+		<option>Toshiba</option>
+		<option>Acer</option>
+		<option>Sony</option>
+		<option>Dell</option>
+		<option>Lenovo</option>
+		<option>Asus</option>
+		<option>Compaq</option>
+	</select>
+
+	<div class="pcs"></div>
+
+</body>
+</html>

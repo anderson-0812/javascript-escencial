@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+	<script type="text/javascript" src="jquery.js"></script>
+
+	<script type="text/javascript">
+	function editar_vehiculo(id){
+		var vehiculo;
+
+			for (var i = 0; i < localStorage.length; i++) {
+				var clave = localStorage.key(i);
+				console.log("id "+id);
+				console.log("clave "+clave);
+
+				//if(clave == "vehiculo"){
+					
+
+						if(clave == id){
+							vehiculo = $.parseJSON(localStorage.getItem(clave));
+							console.log(vehiculo);
+							console.log("entro " + vehiculo.placa);
+							$("#placa").val(vehiculo.placa);
+							$("#marca").val(vehiculo.marca);
+							$("#modelo").val(vehiculo.modelo);
+						}
+					
+				//}
+				
+			}
+	}
+
+	function eliminar_vehiculo(id){
+		localStorage.removeItem(id);
+		listar_vehiculo();
+	}
+
+	function listar_vehiculo(){
+		var tabla = "";
+			var p1 = $("#p1");
+
+			tabla += "<table border ='1'>";
+				tabla += "<tr>";
+					tabla += "<th>Placa</th>";
+					tabla += "<th>Marca</th>";
+					tabla += "<th>Modelo</th>";
+					tabla += "<th>Editar</th>";
+					tabla += "<th>Eliminar</th>";
+				tabla += "</tr>";
+
+				for (var i = 0; i < localStorage.length; i++) {
+					var clave = localStorage.key(i);
+					var vehiculo = $.parseJSON(localStorage.getItem(clave));
+
+					tabla += "<tr>";
+						tabla += "<td>"+vehiculo.placa+"</td>";
+						tabla += "<td>"+vehiculo.marca+"</td>"; 
+						tabla += "<td>"+vehiculo.modelo+"</td>"; 
+						tabla += "<td>"+'<button id="btn_editar" onclick="editar_vehiculo(\''+vehiculo.placa+'\');">Editar</button>'+"</td>"; 
+						tabla += "<td>"+'<button id="btn_eliminar" onclick="eliminar_vehiculo(\''+vehiculo.placa+'\');">Eliminar</button>'+"</td>"; 
+					tabla += "</tr>";
+				}
+
+				tabla += "</table>";
+
+				$(p1).html(tabla);
+
+	}
+		$(document).ready(function(){
+			listar_vehiculo();
+			$("#btn_reg").click(function(){
+				var placa = $("#placa").val();
+				var marca = $("#marca").val();
+				var modelo = $("#modelo").val();
+
+				var vehiculo = {
+					placa: placa,
+					marca: marca,
+					modelo: modelo
+				};
+
+
+
+				localStorage.setItem(placa,JSON.stringify(vehiculo));
+				listar_vehiculo();
+
+			});
+
+			
+		});
+	</script>
+	<title>Registro de vehiculo localStorage</title>
+</head>
+<body>
+	<h1>Registro de Vehiculos</h1>
+	<form>
+		<label>Placa:</label>
+		<br/>
+		<input type="text" id="placa">
+		<br/>
+
+		<label>Marca:</label>
+		<br/>
+		<input type="text" id="marca">
+		<br/>
+
+		<label>Modelo:</label>
+		<br/>
+		<input type="text" id="modelo">
+		<br/>
+
+	</form>
+		<button id="btn_reg">Registrar</button>
+
+		<p id="p1"></p>
+</body>
+</html>

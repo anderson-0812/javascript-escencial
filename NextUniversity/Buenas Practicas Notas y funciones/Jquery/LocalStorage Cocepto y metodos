@@ -1,0 +1,36 @@
+* localStorage
+	- permite guardar datos en el navegador
+	- Guarda datos de tipo cadena o texto (pero podemos gaurdar json usando el metodo JSON.stringify()) 
+	- Se pueden borrar via metodos establecidos o borrando el historial 
+
+
+METODOS
+
+* localStorage.setItem()
+	- Guarda un dato con su clave y valor  setItem(clave, valor);
+	- setItem("Nombre", "Anderson");
+
+* Metodo JSON.stringify()
+	- var obj = [{
+		"nombre":"pedro",
+		"apellido":"jaramillo"
+	}];
+
+	localStorage.setItem('obj',JSON.stringify(obj));
+
+* localStorage.getItem()
+	- Obtiene el vslor de un dato
+	- recibe un aprametro (el nombre del dato)
+	-  var valor = localStorage.getItem('obj');
+
+* localStorage.length();
+	- Sacamos el numerode datos gaurdados en el localStorage
+
+* localStorage.key()
+	- recibe solo el indice del dato gaurdado en el localStorage y devuelve la clave del mismo
+	- var calve = localStorage.key(0);
+
+* localStorage.removeitem()
+	- elimina un dato del localStorage
+	- recibe la clave del dato a aeliminar
+	- localStorage.removeitem("obj");

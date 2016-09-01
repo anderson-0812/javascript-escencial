@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+	<script type="text/javascript" src="jquery.js"></script>
+
+	<script type="text/javascript">
+	function listar_estudiantes(){
+		for (var i =  0; i < localStorage.length; i++) {
+			var clave = localStorage.key(i);
+			if(clave == "estudiante"){
+				var estudiante = localStorage.getItem(clave);
+				estudiante = $.parseJSON(estudiante);
+				registro = "<tr>";
+					registro += "<td>"+estudiante.codigo+"</td>";
+					registro += "<td>"+estudiante.nombre+"</td>";
+					registro += "<td>"+estudiante.apellido+"</td>";
+				registro += "</tr>";
+
+				$("#t1").append(registro);
+			}
+
+		}
+	}
+		$(document).ready(function(){
+			listar_estudiantes();
+			$("#btn_reg").click(function(){
+				var codigo = $("#codigo").val();
+				var nombre = $("#nombre").val();
+				var apellido = $("#apellido").val();
+
+				var estudiante = {
+					codigo: codigo,
+					nombre: nombre,
+					apellido: apellido
+				};
+
+				localStorage.setItem("estudiante",JSON.stringify(estudiante));
+				listar_estudiantes();
+
+			});
+
+			
+		});
+	</script>
+	<title>Registro de estudiantes localStorage</title>
+</head>
+<body>
+	<h1>Registro de estudiantes</h1>
+	<form>
+		<label>Codigo:</label>
+		<br/>
+		<input type="text" id="codigo">
+		<br/>
+
+		<label>Nombre:</label>
+		<br/>
+		<input type="text" id="nombre">
+		<br/>
+
+		<label>Apellido:</label>
+		<br/>
+		<input type="text" id="apellido">
+		<br/>
+
+	</form>
+		<button id="btn_reg">Registrar</button>
+
+		<table id="t1" border="1">
+			<tr>
+				<th>Codigo</th>
+				<th>Nombre</th>
+				<th>Apellido</th>
+			</tr>
+		</table>
+</body>
+</html>
