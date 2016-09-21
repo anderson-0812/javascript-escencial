@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<link rel="stylesheet" type="text/css" href="jquery-ui.css">
+	<script type="text/javascript" src="jquery.js"></script>
+	<script type="text/javascript" src="jquery-ui.js"></script>
+
+	<script type="text/javascript">
+		$(document).ready(function(){
+			$("#fecha").datepicker();
+		});
+	</script>
+</head>
+<body>
+<fieldset>
+	<legend><h1>Datos</h1></legend>
+	<dl>
+		<dd><label for="nombre">Nombre:</label></dd>
+		<dd><input type="text" name="nombre" id="nombre"></dd>
+
+		<dd><label for="apellidos">Apellidos:</label></dd>
+		<dd><input type="text" name="apellidos" id="apellidos"></dd>
+
+		<dd><label for="fecha">Fecha Nacimiento:</label></dd>
+		<dd><input type="text" name="fecha" id="fecha"></dd>
+
+	</dl>
+</fieldset>
+</body>
+</html>

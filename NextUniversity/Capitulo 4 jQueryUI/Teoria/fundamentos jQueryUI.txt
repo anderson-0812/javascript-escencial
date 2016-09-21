@@ -1,0 +1,43 @@
+jQueryUI => User Interface
+
+se divide en 4 partes:
+- Nucleo
+- Interaciones
+- Widgets
+- Efectos
+
+* Nucleo: contiene las funciones basicas para el resto de los demas componentes 
+
+* Interacciones: Son las q nos permiten dar comportamientos complejos a los elementos del sitio como:
+	- draggable: hace q elelemento se pueda arrastrar
+	- droppable: q permite q el elemento responda a comportamientos arrastables
+	- resizable: permite cambniar el tamaño del elemento
+	- selectable: selecciona una lista de elementos
+	- sortable: nos permite ordenar
+	- zeseable: permite seleccionar su tamaño
+
+* Widgets:
+	- accordion: que ess un menu con efecto expandible o efecto acordion
+	- autocomplete: ayuda al usuario la informacion q deben ingresar en los campos
+	- button: ya se lo conoce
+	- dialog: ventana con contenido
+	- slider: es un elemento para elegir en un rango de valores especificos 
+	- tabas son las pestañas q se encuentran en la parte superio de la pantalla pero las podemos colocar en cualquier parte
+	- datepicker: es un seleccionador de fechas estilo calendario q nos permite garantizar q el user digite la fecha en el formato q se necesita 
+	- progressbar: es una barra de proceso apra indicar el avance 
+
+* efectos
+	- core
+	- blind
+	- bounce
+	- clip
+	- drop
+	- explode (una explocion)
+	- fade (transparencia)
+	- fold 
+	- highlight (resaltado)
+	- pulsate (hace como si fuera bombillo prendiendose y apagandose )
+	- sacale 
+	- shake  (se mueve )
+	- slide 
+	- transfer 
