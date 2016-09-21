@@ -1,5 +1,5 @@
 * Interacciones: Son las q nos permiten dar comportamientos complejos a los elementos del sitio como:
-	- draggable: hace q elelemento se pueda arrastrar
+	- draggable: hace q elelemento se pueda arrastrar $("#mip").draggable(tienen varias opciones de confguracion https://api.jqueryui.com/draggable/);
 	- droppable: q permite q el elemento responda a comportamientos arrastables
 	- resizable: permite cambniar el tamaño del elemento
 	- selectable: selecciona una lista de elementos
@@ -32,3 +32,4 @@
 	- shake  (se mueve )
 	- slide 
 	- transfer 
+ 

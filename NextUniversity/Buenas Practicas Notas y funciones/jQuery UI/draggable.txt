@@ -1,0 +1,75 @@
+* dragabble
+	- cursor: define eltipo de figura que tendra el cursor cuando se este arrastrando 
+		$("#midiv").dragabble({
+			cursor:'pointer' 
+		});  
+
+		Elcursor  puede ser algunod e estos:
+			default, help, nw-resize, pointer, crosshair, e-resize, hand, text, w-resize, wait, se-resize, move, n-resize, sw-resize
+
+	- delay: permite retrasar en milisegundos laacciond e arreastrar	
+		$("#midiv").dragabble({
+			delay: 800 
+		});  
+
+	- distance: nos permite delimitar la distancia en PX en la acciond e arrastrar
+		$("#midiv").dragabble({
+			distance: 50 
+		});  
+
+	- grid: define un grupo derejillas q no se ven en el html pero sobre estas se reliza la acciond e rrastre el ancho y alto se definen en vectores
+		$("#midiv").dragabble({
+			grid:[400,100] // ancho y alto  
+		});  
+
+	- create: este es un evento q se activa cuando se le agrega la funcionalidad de arrastara a un elemnto 
+	  tiene dos formas de implementarse: 
+	   	$("#midiv").dragabble({
+			create: function(event, ui){
+				$("#mensaje").html("hola");
+			}  
+		});  
+
+		2da forma
+		agregandoun event listener 
+		$("#midiv").on('dragcreate',function(event,ui){
+				$("#mensaje").html("hola");
+		});  
+
+	- start: se inicia cuando comienza lafuncionalidad de arrastrar 
+		$("#midiv").dragabble({
+			start: function(event, ui){
+				$("#mensaje").html("hola start");
+			}  
+		});  
+		2da forma
+		agregandoun event listener 
+		$("#midiv").on('dragstart',function(event,ui){
+				$("#mensaje").html("hola start");
+		});  
+
+	- drag: este se dispara cuando estamos arrastrando el elemento por medio del mouse
+		$("#midiv").dragabble({
+			drag: function(event, ui){
+				$("#mensaje").html("hola drag");
+			}  
+		});  
+		2da forma
+		agregandoun event listener 
+		$("#midiv").on('drag',function(event,ui){
+				$("#mensaje").html("hola drag");
+		}); 
+
+	- stop: se dispara cuando se detienel el evento de arrastrar 
+		$("#midiv").dragabble({
+			stop: function(event, ui){
+				$("#mensaje").html("hola stop");
+			}  
+		});  
+		2da forma
+		agregandoun event listener 
+		$("#midiv").on('stop',function(event,ui){
+				$("#mensaje").html("hola stop");
+		}); 
+
+		NOTA: los parametros: elprimero event => representa el evento del navegador, y el segundo ui =>es el obj q da la informacion de ese elemento con la funcionalidad de arrastrar 
