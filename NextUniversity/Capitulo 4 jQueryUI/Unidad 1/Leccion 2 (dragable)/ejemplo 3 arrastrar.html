@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<script type="text/javascript" src="jquery.js"></script>
+	<script type="text/javascript" src="jquery-ui.js"></script>
+	<style type="text/css">
+		#miDiv1{
+			position: absolute;
+			top: 40%;
+			left: 40%;
+			width: 300px;
+			height: 300px;
+			margin-left: -400px;
+			margin-top: -100px;
+			border:1px solid #808080;
+			padding: 10px;
+			background-color: #FF9D3A; 
+		}
+
+		#miDiv2{
+			width: 300px;
+			height: 300px;
+			padding: 10px;
+			background-color: #3AFF5E;			
+		}
+	</style>
+
+	<script type="text/javascript">
+		$(document).ready(function(){
+			// esta linea de contaiment: 'document',  para q sea en el documento donde se haga el movimiento
+
+			$("#miDiv1").draggable({
+				cursor:"move",
+				containment : "document",
+				helper: miCopia
+			});
+			// cambiamos el signo del cursosr por la funcionq  estamos ejecutando
+			function miCopia(event){
+				return "<div id='miDiv2'>Un clon modificado </div>";
+			}
+		});
+	</script>
+
+</head>
+<body>
+	<h1>Ejemplo funcionalidad arrastrar de jQuery UI</h1>
+	<div id="miDiv1">Mi Div1</div>
+</body>
+</html>
