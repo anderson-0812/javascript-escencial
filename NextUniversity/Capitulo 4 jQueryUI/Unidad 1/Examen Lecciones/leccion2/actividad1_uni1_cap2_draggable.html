@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<style type="text/css">
+		#miEncabezado{
+			position: absolute;
+			top: 200px;
+			left: 300px;
+			width: 300px;
+			height: 100px;
+			background-color: black;
+			color: white;
+		}
+	</style>
+
+	<script type="text/javascript" src="jquery.js"></script>
+	<script type="text/javascript" src="jquery-ui.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function(){
+			var mensaje = "";
+			$("#miEncabezado").draggable({
+				create:$("#mensaje").html(mensaje += "Evento Create!! <br>")
+			});
+
+			/*$("#miEncabezado").on("dragcreate",function(event,ui){
+				$("#mensaje").html(mensaje += "Evento Create!! <br>");
+			});*/
+
+			$("#miEncabezado").on("drag",function(event,ui){
+				$("#mensaje").html(mensaje += "Evento Drag!! <br>");
+			});
+
+
+			$("#miEncabezado").on("dragstop",function(event,ui){
+				$("#mensaje").html(mensaje += "Evento Stop!! <br>");
+			});
+		});
+	</script>
+
+</head>
+<body>
+	<h1 id="miEncabezado">Mi encabezado</h1>
+	<div id="mensaje"></div>
+</body>
+</html>
