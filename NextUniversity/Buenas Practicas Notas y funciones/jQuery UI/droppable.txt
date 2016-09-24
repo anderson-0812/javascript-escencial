@@ -1,0 +1,15 @@
+* droppable
+	nos permite ejecutar una funcion cuando soltamos el elemento q estamos arrastrando mediante la propiedad o plugin draggble 
+	$(element).droppable();
+
+	para q funcione debe esatr presente el draggbable();
+	y se debe soltar el elemnto arrastrado deontro del elemento q tiene la funciond e droppable
+
+	OPCIONES:
+	- tolerance:
+
+	- accept:
+
+	- out:
+
+	- disable: 

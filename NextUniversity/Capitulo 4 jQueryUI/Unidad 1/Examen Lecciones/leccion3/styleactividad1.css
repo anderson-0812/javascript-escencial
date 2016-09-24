@@ -1,0 +1,19 @@
+h4{
+	margin: 40% 0 0 0;
+}
+#arrastrar{
+	background: red;
+	border-radius: 100px;
+	height: 200px;
+	position: absolute;
+	text-align: center;
+	width: 200px;
+}
+#soltar{
+	position: absolute;
+	border: 10px solid blue;
+	border-radius: 110px;
+	left: 500px;
+	height: 200px;
+	width: 200px;
+}
