@@ -1,0 +1,37 @@
+http://api.jqueryui.com/resizable/#entry-examples
+* resizable o tamaño variable
+	- Usamos para cambair el tamaño de cualquier elemento del DOM en nuenstro sitio 
+	- Sintaxis: $(selector).resizable(options);
+				$(selector).resizable({option1: valor1, option2: valor2});
+				$(selector).resizable(action,params);
+
+	- Opciones:
+		- alseResize
+		- animate
+		- animateDuration
+		- animateEasing
+		- aspectRatio
+		- autoHide
+		- cancel
+		- containment
+		- delay
+		- distance
+		- ghost
+		- grid
+		- handles
+		- helper
+		- maxHeight
+		- maxWidth
+		- minHeight
+		- minWidth
+
+	- Acciones: 
+		- destroy
+		- disable
+		- enable
+		- option(optionName)
+		- option()
+		- option(optionName,value)
+		- option(option)
+		- widget()
+
