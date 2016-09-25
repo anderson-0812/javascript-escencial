@@ -1,0 +1,16 @@
+selectable y sortable
+
+* seloctable => http://api.jqueryui.com/selectable/
+	- podemos seleccionar uno o dos o varios elementosdel sitio 
+	- Los elementos en su gran mayoria seran listas y contenedores 
+	- es recomendable q vaya de la mano con diseño css para identificar elementos seleccionados
+	- sintaxis:
+		$(element).selectable();
+	- se puede usar eventos, metodos y opciones  
+
+* sortable => http://api.jqueryui.com/sortable/
+	- ordenar los elementos de una lista en nuestro sitio haciendo click sostenido y cambaindo laposicion de los elemntos de la lista 
+	- sintaxis:
+		$(element).sortable();
+	- se puede usar eventos, metodos y opciones  
+	- siempre se debe hacer unrefresh dela lista al momento de alterar el orden
