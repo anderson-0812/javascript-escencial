@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Actividad uno selectable</title>
+	<style type="text/css">
+		#lenguajes .ui-selecting{
+			background: #AFEEEE;
+			width: 100px;
+		}
+		#lenguajes .ui-selected{
+			background: blue;
+			color: white;
+			width: 100px;
+		}
+	</style>
+	<script type="text/javascript" src="external/jquery/jquery.js"></script>
+	<script type="text/javascript" src="jquery-ui.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function(){
+			$("#lenguajes").selectable();
+		});
+	</script>
+</head>
+<body>
+	<h2>Que lenguaje de programacio queires aprender?</h2>
+	<ul id="lenguajes">
+		<li>Javascript</li>
+		<li>PHP</li>
+		<li>Java</li>
+		<li>Python</li>
+
+	</ul>
+</body>
+</html>

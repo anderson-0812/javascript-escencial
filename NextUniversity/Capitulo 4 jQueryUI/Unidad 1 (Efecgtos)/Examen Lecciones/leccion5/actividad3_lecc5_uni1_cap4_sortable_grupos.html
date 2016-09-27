@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Sortable grupos </title>
+
+	<style type="text/css">
+		.contenedor{
+			width: 30%;
+		}
+		.contenedor_ul li{
+			background: red;
+			border: 0.5px solid gray;
+			color: white;
+			padding: 0.5em;
+			list-style: none; 
+			margin-bottom: 0.5em;
+		}
+		.mensajes{
+			float: right;
+		}
+	</style>
+
+	<script type="text/javascript" src="external/jquery/jquery.js"></script>
+	<script type="text/javascript" src="jquery-ui.js"></script>
+	<script type="text/javascript" >
+		$(document).ready(function(){
+			var mensaje = "";
+			$("#frutas").sortable({
+				start: function(event,ui){
+					$("#mensaje").html(mensaje +=" Evento start desde lista frutas!!! <br>");
+				},
+				receive: function(event,ui){
+					$("#mensaje").html(mensaje +=" Evento receive desde lista frutas!!! <br>");
+				},
+				stop: function(event,ui){
+					$("#mensaje").html(mensaje +=" Evento stop desde lista frutas!!! <br>");
+				}
+			});
+
+			$("#carros").sortable({
+				start: function(event,ui){
+					$("#mensaje").html(mensaje +=" Evento start desde lista carros!!! <br>");
+				},
+				receive: function(event,ui){
+					$("#mensaje").html(mensaje +=" Evento receive desde lista carros!!! <br>");
+				},
+				stop: function(event,ui){
+					$("#mensaje").html(mensaje +=" Evento stop desde lista carros!!! <br>");
+				}
+			});
+
+			$("#frutas_carros").sortable({
+				start: function(event,ui){
+					$("#mensaje").html(mensaje +=" Evento start desde lista de frutas y carros!!! <br>");
+				},
+				receive: function(event,ui){
+					$("#mensaje").html(mensaje +=" Evento receive desde lista de frutas y carros!!! <br>");
+				},
+				stop: function(event,ui){
+					$("#mensaje").html(mensaje +=" Evento stop desde lista de frutas y carros!!! <br>");
+				}
+			});
+
+			$("#frutas").sortable({
+				connectWith: "#frutas, #carros, #frutas_carros"
+			});
+
+			$("#carros").sortable({
+				connectWith: "#frutas, #carros, #frutas_carros"
+			});
+
+			$("#frutas_carros").sortable({
+				connectWith: "#frutas, #carros, #frutas_carros"
+			});
+
+		});
+	</script>
+</head>
+<body>
+	<h1>Frutas</h1>
+	<div id="contenedor_frutas" class="contenedor">
+		<ul id="frutas" class="contenedor_ul">
+			<li>Manzada</li>
+		</ul>
+	</div>
+
+	<h1>Carros</h1>
+	<div id="contenedor_carros" class="contenedor">
+		<ul id="carros" class="contenedor_ul">
+			<li>Toyota</li>
+		</ul>
+	</div>
+
+
+	<h1>Elementos</h1>
+	<div id="contenedor_carros" class="contenedor">
+		<ul id="frutas_carros" class="contenedor_ul">
+			<li>Maracuya</li>
+			<li>Chevrolet</li>
+			<li>Fresa</li>
+			<li>Uva</li>
+			<li>Hyundai</li>
+			<li>Renault</li>
+			<li>Mitsubishi</li>
+			<li>Ford</li>
+			<li>Mora</li>
+			<li>Jeep</li>
+			<li>Kia</li>
+			<li>Nissan</li>
+			<li>Tamarindo</li>
+			<li>Guayaba</li>
+			<li>Gunabana</li>
+			<li>Sapote</li>
+		</ul>
+	</div>
+
+	<div class="mensajes">
+		<p id="mensaje"></p>
+	</div>
+</body>
+</html>
