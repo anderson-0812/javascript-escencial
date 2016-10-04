@@ -1,0 +1,19 @@
+* autocompletado
+	- Ayuda al usuario para q digite menos y realice busquedas espeficas en un campo 
+	- Tiene 3 partes de laimplementacion
+
+		1. definir elcampo
+			<input type="text" id="caja1"/>
+
+		2. crear arrgloq va a contener los valores que se mostraran cada vezq el usuario digite algun caracter po cadena de texto
+			avr valores = [
+				"camerun",
+				"coracia",
+				"Ecuador"
+			]; 
+
+		3. Invocaciondelmetodo autocomplete 
+			$("#caja1").autocomplete({
+				source: valores
+			});
+	

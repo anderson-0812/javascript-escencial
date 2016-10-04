@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Acordion</title>
+
+	<link rel="stylesheet" type="text/css" href="jquery-ui.css">
+	<script type="text/javascript" src="external/jquery/jquery.js"></script>
+	<script type="text/javascript" src="jquery-ui.js"></script>
+
+	<script type="text/javascript">
+		$(document).ready(function(){
+			$(function(){
+				var icon = {
+					header: "ui-icon-circle-arrow-e",
+					activeHeader: "ui-icon-circle-arrow-s"
+				};
+
+				$("#mi_acordion").accordion({
+					collapsible: true, // hace elacordion retraible q se encoja y expanda
+					icons: icon, // cambiamos los iconos de la cabecera del acordion
+					header: "div h3" // 
+				})
+				// lo ahcemos ordenable 
+				.sortable({
+					axis: "y", // en el eje y (vertical)
+					handble: "h3",  // del div me va a dejar mover el h3
+					stop: function(event, ui){
+						// reacomodo los divs
+						ui.item.children("h3").triggerHandler("focusout");
+						$(this).accordion("refresh");
+					}
+				});
+
+				// 
+			})
+		});
+	</script>
+
+	<style type="text/css">
+		#container{
+			height: 260px;
+			padding: 10px;
+			width: 450px;
+
+		}
+	</style>
+</head>
+<body>
+	<h2>Programacion Web</h2>
+	<div id="container">
+		<div id="mi_acordion">
+			<div name="html">
+				<h3>HTML</h3>
+				<div>
+					Es un lenguaje utilizado para el desarrollo de paginas web. <br>
+					Podemos utilizar cualquier editor de texto apra editar o manipular el contenido 
+					de un documento html
+				</div>
+			</div>
+
+			<div name="javascript">
+				<h3>Javascript</h3>
+				<div>
+					Es un lenguaje qe nos permite crear pequeños programas que se inserttan en lapagina web <br>
+					javascrip nos permite crear efectos dinamicos para nuestars paginas web 
+				</div>
+			</div>
+
+			<div name="jquery">
+				<h3>jQuery</h3>
+				<div>
+					Son librerias o ficheros de javascript, que nos facilita ejecutar tareas en paginas web <br>
+					jQuery nos permite implementar procesos ya listos para usar, facilitandonos la solucion de 	tareas 		basicas  
+				</div>
+			</div>
+
+		</div>	
+	</div>
+	
+
+</body>
+</html>

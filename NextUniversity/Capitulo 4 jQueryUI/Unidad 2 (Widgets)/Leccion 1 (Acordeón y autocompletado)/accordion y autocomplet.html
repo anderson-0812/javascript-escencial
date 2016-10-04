@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Widget Acordeon y Autocompletar</title>
+
+	<link rel="stylesheet" type="text/css" href="jquery-ui.css">
+	<script type="text/javascript" src="external/jquery/jquery.js"></script>
+	<script type="text/javascript" src="jquery-ui.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function(){
+			$("#miAccordion").accordion();
+
+			var valores = ["Camerun","Colombia","Croacia","Chipre"];
+
+			$("#cajatxt1").autocomplete({
+				source: valores
+			});
+		});
+	</script>
+</head>
+<body>
+	<h1>Accordion</h1>
+	<div id="miAccordion">
+		<h1>Seccion1</h1>
+		<div>Contenido1</div>
+
+		<h1>Seccion2</h1>
+		<div>Contenido2</div>
+
+		<h1>Seccion3</h1>
+		<div>Contenido3</div>
+	</div>
+
+	<h1>Aucomplete</h1>
+	<input type="text" id="cajatxt1">
+</body>
+</html>

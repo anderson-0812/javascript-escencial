@@ -1,0 +1,51 @@
+* Acordeon => http://api.jqueryui.com/accordion/
+	-  Es una seccion expandible delsitio con un + o - dependiendo si esta abierta o cerrada
+	- su funcion es mostrar organizadamente varias secciones con su respectivo contenido, donde cada seccion cuenta con lafunciond eexpandirse o contraerse
+	- la implementacion tiene dos partes: 
+		1. Estructura HTML
+			<div id="miAcordeon">
+				<h1>Seccion1</h1>
+				<div>Contenido1</div>
+
+				<h1>Seccion2</h1>
+				<div>Contenido2</div>
+
+				<h1>Seccion3</h1>
+				<div>Contenido3</div>
+			</div>
+		2. llamada delmetodo acordeon
+			$("#miAcordeon").accordion();
+
+	- Esta funcion contiene varios opciones, metodos y eventos
+
+	- opciones:
+		- header:
+		Nos permite definir el tipo de elemento que tendra como titulo elencabezado 
+			$("#miAcordeon").accordion({
+				"header": "h4"
+			});
+
+		- fillspace:
+		Nos ayuda a a justar la altura donde se definio el widget accordion, 
+		el valor puede ser true o false
+			$("#miAcordeon").accordion({
+				"fillspace": "true"
+			});
+
+		- active:
+		Nos permite definir la seccion dela ccordionq estara activa
+		Los valores van por indices desde cero en adelante
+			$("#miAcordeon").accordion({
+				"active": "0"
+			});
+
+		- collapsible:
+		permite q el acordion se pueda abrir y cerrar 
+
+		- icons
+			cambia los iconos por defectodel acordion ejemplo:
+			icons: 
+				{
+					header: "ui-icon-circle-arrow-e",
+					activeHeader: "ui-icon-circle-arrow-s"
+				}
