@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Actividad 1 autocompletado </title>
+	<link rel="stylesheet" type="text/css" href="jquery-ui.css">
+	<script type="text/javascript" src="external/jquery/jquery.js"></script>
+	<script type="text/javascript" src="jquery-ui.js"></script>
+
+	<script type="text/javascript">
+		$(document).ready(function(){
+			var equipos = ["Barcelona","Real Madrid","Arsenal","Chelsea"];
+			var equipos_seleccionados = "";
+
+			$("#cajatxt1").autocomplete({
+				source: equipos,
+				change: function(event,ui){
+					console.log(ui.item.value);
+					equipos_seleccionados += ui.item.value+ "<br>";
+					$("#mensaje").html(equipos_seleccionados);
+				}
+			});
+		});
+	</script>
+</head>
+<body>
+	<h1>Equipos de futbol</h1>
+
+	<label>Nombre equipo: </label><br/>
+	<input type="text" id="cajatxt1">
+	<p id="mensaje"></p>
+
+</body>
+</html>
