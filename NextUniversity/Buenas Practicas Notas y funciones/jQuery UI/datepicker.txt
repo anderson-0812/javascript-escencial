@@ -11,3 +11,9 @@ http://api.jqueryui.com/datepicker/
 * metodos 
 
 * opciones 
+	- showOtherMonths: muestra las fechas de otros meses tanto anteriores como posteriores
+	$(element).datepicker({
+		showOtherMonths: true,// muestra las fechas de otros meses tanto anteriores como posteriores
+		selectOtherMonths:true
+	});
+	
