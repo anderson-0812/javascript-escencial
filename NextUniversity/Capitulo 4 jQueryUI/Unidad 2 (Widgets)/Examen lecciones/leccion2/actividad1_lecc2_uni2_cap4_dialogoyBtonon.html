@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Actividad 1 dialogo y boton</title>
+	<meta charset="utf-8">
+
+	<link rel="stylesheet" type="text/css" href="jquery-ui.css">
+	<script type="text/javascript" src="external/jquery/jquery.js"></script>
+	<script type="text/javascript" src="jquery-ui.js"></script>
+
+	<script type="text/javascript">
+		$(function(){
+			$("#dialogo").dialog({
+				autoOpen: false
+			});
+
+			$("#boton").button().click(function(event){
+				$("#dialogo").dialog("open");
+			});
+		})
+	</script>
+</head>
+<body>
+<div id="dialogo">
+	<p>
+		El párrafo es la exposición coherente y por escrito de una idea completa. Es unidad de pensamiento y sentimiento, forma la unidad de expresión en el lenguaje escrito. Dicha unidad está integrada por dos elementos: el enunciado principal y los enunciados secundarios, los cuales complementan al principal
+
+		URL del artículo: http://www.ejemplode.com/12-clases_de_espanol/362-ejemplo_de_parrafo.html
+		Fuente: Párrafo
+	</p>
+</div>
+
+<button id="boton">Mostrar dialogo</button>
+</body>
+</html>

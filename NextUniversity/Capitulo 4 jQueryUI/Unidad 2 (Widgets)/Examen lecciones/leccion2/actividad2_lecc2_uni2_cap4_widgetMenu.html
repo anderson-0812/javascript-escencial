@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Actividad2 widget menu</title>
+
+	<link rel="stylesheet" type="text/css" href="jquery-ui.css">
+	<script type="text/javascript" src="external/jquery/jquery.js"></script>
+	<script type="text/javascript" src="jquery-ui.js"></script>
+
+	<script type="text/javascript">
+		$(document).ready(function(){
+			$("#menu").menu();
+		});
+	</script>
+
+	<style type="text/css">
+		#menu{
+			width: 40%;
+			background-color: #ECC9AE;
+		}
+	</style>
+</head>
+<body>
+	<ul id="menu">
+		<li>Carro</li>
+		<li>Bus</li>
+		<li>Motos
+			<ul>
+				<li>Custom</li>
+				<li>Naked</li>
+				<li>Sport</li>
+			</ul>
+		</li>
+		<li>Camion</li>
+
+	</ul>
+</body>
+</html>

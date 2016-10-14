@@ -1,0 +1,18 @@
+* Button():
+	- transforma cualquier elemento html en un boton 
+	- Sintaxis:
+		- $(selector).button(opciones);
+		- $(selector).button("action",parametros);
+
+* Opciones:
+	- disable:
+		desactoiva el boton poniendo laopcion entrue 
+
+	- incons:
+		especifica que uno o dos botones se van  mostrar en el boton
+
+	- label:
+		especifica el texto q se mostrara en el boton y omite laetiqueta value natural
+
+	text:
+		esta opcion especifica si eltexto se va a mostrar en elboton

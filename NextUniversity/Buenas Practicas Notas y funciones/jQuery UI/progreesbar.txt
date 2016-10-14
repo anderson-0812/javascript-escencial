@@ -1,0 +1,6 @@
+http://api.jqueryui.com/progressbar/
+
+* progressbar
+	- Nos muesntar el final de una tarea q esta en proceso 
+	- Sintaxis:
+		$(elemento).progressbar();

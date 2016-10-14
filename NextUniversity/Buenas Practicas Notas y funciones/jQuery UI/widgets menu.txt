@@ -1,0 +1,18 @@
+* menu()
+	- ofrece la opcion de crear un menu en nuestro sitio
+	- se crea los elemntos de una lista 
+	- sintaxis:
+		- $(selector).menu(opciones);
+		- $(selector).menu("action",parametros);
+
+* Opciones:
+	- disable:
+		si es true deshabilita el menu, por defectosu valor es false
+	- icons: 
+		establece los iconos para los submenus 
+	- menus:
+		es un selector para los elementos, que sirve como contenedor delmenu
+	- position: 
+		establece laposicion de submenus en relacion con el elementodelmenu principal 
+	- role:
+		esta opcion se usa para personalizar los roles 

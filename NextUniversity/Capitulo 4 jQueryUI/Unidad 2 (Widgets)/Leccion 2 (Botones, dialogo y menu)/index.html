@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Dialogo menu boton	</title>
+	<link rel="stylesheet" type="text/css" href="jquery-ui.css">
+	<script type="text/javascript" src="external/jquery/jquery.js"></script>
+	<script type="text/javascript" src="jquery-ui.js"></script>
+
+	<script type="text/javascript">
+		$(function(){
+			$("#dialog").dialog({
+				autoOpen: false
+			});
+
+
+			$("#boton").button().click(function(event){
+				$("#dialog").dialog("open");
+			});
+		});
+
+	</script>
+</head>
+<body>	
+	<div id="dialog" title="Dialogo Barra">
+		<p>
+			Es una vemntana q se posiciona en una parte de nuestra pagina. Cuenta con una barra titulo y un espacio de contenido. Podemos moverla, cambiar su tamaño y cerrarla mediante elicono xdefecto "X" que posee 
+		</p>
+	</div>
+
+	<button id="boton">Mostrar Dialogo</button>
+</body>
+</html>

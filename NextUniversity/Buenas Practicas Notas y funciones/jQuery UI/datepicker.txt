@@ -1,0 +1,13 @@
+http://api.jqueryui.com/datepicker/
+
+* datepicker
+	- nos permite trabajar con als fechas de undoc HTML
+	- Al trabajar con fechas lo hace a  tarves de calendarios simples operzonalizados 
+	- Sintaxis:
+		$(element).datepicker()
+
+* eventos
+
+* metodos 
+
+* opciones 

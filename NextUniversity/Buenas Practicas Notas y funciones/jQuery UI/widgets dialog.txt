@@ -1,0 +1,26 @@
+* dialog()
+	- transforma el codigo escrito en html para mostrar en un cuadrodedialogo (una ventana modal)
+	- Sintaxis:
+		- $(selector).dialog(opciones);
+		- $(selector).dialog("action",parametros);
+
+* Opciones:
+	- appendTo
+	- autoOpen 
+	- buttons
+	- closeOnEscape (cierre cuando hacemos clicken la tecla escape)
+	- closeText
+	- dialogClass
+	- draggable (arrastrable)
+	- height
+	- hide
+	- maxHeight
+	- maxWidth
+	- minHeight
+	- minWidth
+	- modal
+	- position
+	- resizable
+	- show
+	- title
+	- width
