@@ -1,0 +1,15 @@
+* selectmenu()
+	transforma el element select x uno personalizado 
+
+* sintaxis:
+	$(elment).selectmenu(opcines);
+	$(elment).selectmenu('accion',parametro); //la segunda es accion
+
+* option
+	- appendto
+		añado un elemento al selectmenu
+	- disable
+	- icons
+	- position
+		identifica laposicion en relacion con el elemento asociado
+	- width

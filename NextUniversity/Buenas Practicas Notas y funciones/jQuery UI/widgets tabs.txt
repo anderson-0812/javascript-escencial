@@ -1,0 +1,29 @@
+* tabs()
+	- permiten cambiar elcontenido a tarvez d e pestañas
+	- ayuda a reducir espacio en la  interfaz de usuario
+
+* Tiene dos partes
+	-1 parte :
+		`construir la estructura html q va a representar ese widget
+		ejemplo:
+		<div id="miTab">
+			<ul>
+				<li>Tab1</li>
+				<li>Tab1</li>
+				<li>Tab3</li>
+			</ul>
+
+			<div id="tab1">
+				Mi tab1
+			</div>
+			<div id="tab2">
+				Mi tab2
+			</div>
+			<div id="tab3">
+				Mi tab3
+			</div>
+		</div> 
+
+* sintaxis:
+	$(elment).tabs();
+

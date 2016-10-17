@@ -1,0 +1,9 @@
+* tolltip()
+	- Tiene como funcion mostrar mensajes adicionales de un elemento 
+	- Se muestra el mensaje cuando el cursos se posiciona sobre el elemento 
+
+* Consta de dos aprtes
+	- 1 parte
+		<input type="text" title="MEnsaje tooltip">
+	- 2da parte
+		$(document).tooltip();

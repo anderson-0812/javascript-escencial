@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Slider</title>
+
+	<link rel="stylesheet" type="text/css" href="jquery-ui.css">
+	<script type="text/javascript" src="external/jquery/jquery.js"></script>
+	<script type="text/javascript" src="jquery-ui.js"></script>
+
+	<script type="text/javascript">
+		$(document).ready(function(){
+
+			$("#rango").slider({
+				range: true,
+				min: 1,
+				max: 100,
+				slide: function(event, ui){
+					// damos lops valores al slider
+					$("#valores").val(ui.values[0] + " - " + ui.values[1]);
+				}
+			});
+			// 
+			$("#valores").val($("#rango").slider("values",1));
+
+			$("#carros").selectmenu();
+		});
+	</script>
+
+	<style type="text/css">
+		select, #rango{
+			width: 250px;
+		}
+	</style>
+</head>
+<body>
+
+	
+	<h2>Slider</h2>
+	<div id="rango"></div>
+	Rango de Valores: <input type="text" id="valores">
+
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>spinner</title>
+
+	<link rel="stylesheet" type="text/css" href="jquery-ui.css">
+	<script type="text/javascript" src="external/jquery/jquery.js"></script>
+	<script type="text/javascript" src="jquery-ui.js"></script>
+
+	<script type="text/javascript">
+		$(document).ready(function(){
+			$("#numeros").spinner({
+				max:50
+			});// agrega las flechas 
+
+			
+		});
+	</script>
+
+</head>
+<body>
+	<h2>Spinner</h2>
+	<!-- a partir del value sacamos el rango maximo entre las flechas !-->
+	<input type="text" id="numeros" value="50">
+	<br/>
+	
+	
+	<br/>
+</body>
+</html>

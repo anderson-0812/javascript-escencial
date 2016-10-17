@@ -1,0 +1,18 @@
+* slider()
+	deslizamos el control y seleccionar el valor q queremos dentro de rangos 
+
+* sintaxis:
+	$(elment).slider(opcines);
+	$(elment).slider('accion',parametro); //la segunda es accion
+
+* option
+	- disable
+	- max
+	- min
+	- orientation
+	- range
+		rango de valores dentro de los cuales puedo mover 
+	- step
+		el valor inicial
+	- value 
+	- values

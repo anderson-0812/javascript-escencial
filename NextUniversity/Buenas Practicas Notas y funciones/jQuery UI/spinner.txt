@@ -1,0 +1,24 @@
+
+*spinner()
+	- agrega dos flechas en un cuadro de texto q permite subir o bajar el valor numerico
+
+* sintaxis:
+	$(elment).spinner(opcines);
+	$(elment).spinner('accion',parametro); //la segunda es accion
+
+* Opciones:
+	- culture
+		establece la cultur a usar para analizar q formato y valor
+	- disable
+		desactiva el spinner
+	- icons
+	- incremental
+		controla el numero de pasos dados en el spinner 
+	- max
+	- min
+	- numberFormat
+	- page
+		indica el tamaño del paso q damos en lso botones eje ir de dos en dos 
+	- step 
+		indica el tamaño del paso q damos en lso botones eje ir de dos en dos 
+	
