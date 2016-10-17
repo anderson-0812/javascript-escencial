@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Tabs con ordenamiento</title>
+	<link rel="stylesheet" type="text/css" href="jquery-ui.css">
+	<script type="text/javascript" src="external/jquery/jquery.js"></script>
+	<script type="text/javascript" src="jquery-ui.js"></script>
+
+	<script type="text/javascript">
+		$(document).ready(function(){
+			// Capturamos los tabs en una variable
+			var tab = $("#tab").tabs({
+				event:"mouseover" // cambia de pestania cuando paso el mouse por arriba 
+			});
+			// por medio de la variable asignamos el widget sortable 
+			tab.find(".ui-tabs-nav").sortable({
+				axis:"x",// esto ayuda a decirle q ordene de forma horizontal osea eje x 
+				stop:function(even,ui){
+					tab.tabs("refresh"); //actualizamos los tabs cuando termine de ordenarse
+				}
+			});
+		});
+	</script>
+</head>
+<body>
+	<div id="tab">
+		<ul>
+			<li><a href="#html">HTML</a></li>
+			<li><a href="#javascript">Javascript</a></li>
+			<li><a href="#jquery">jQuery</a></li>
+		</ul>
+
+		<div id="html">
+			<p>
+				Es un lenguaje de estructuracion semantica
+			</p>
+		</div>
+
+		<br/>
+		<div id="javascript">
+			<p>
+				Es un lenguaje de parte cliente y parte servidor q ayuda a sitios mas dinamicos y mejora la experiencia del usuario al estar interactuando con elsitio
+			</p>
+		</div>
+
+		<br/>
+		<div id="jquery">
+			<p>
+				Es una libreria de javascript q mejora la compatibilidad del uso entre navegadores a demas de que simplifica el trabajo del desarrolaldor debiado a aq tiene funciones ya definidas 
+			</p>
+		</div>
+
+	</div>
+</body>
+</html>
