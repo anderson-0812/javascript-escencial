@@ -1,0 +1,17 @@
+* animate()
+	- realiza animaciones sobre un elemento 
+	- cambiando las propiedades css
+	- solosoporta algunas propiedades css: 
+		- backgroundColor
+		- borderTopColor
+		- borderBottomColor
+		- borderLeftColor
+		- borderRightColor
+		- color
+		- outlineColor => cambia elcolor del contorno de todoel elemento 
+
+* sintaxis:
+	$("#miDiv").animate({
+		color:"blue",
+		backgroundColor: "green"
+	});

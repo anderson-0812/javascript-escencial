@@ -1,0 +1,25 @@
+* Efectos AddClass
+	* Parametros: recibe  4 
+	- primer parametro nombre de la clase 
+	- Segundo parametro el tiempo en milisegundos de duracion de la aniumacion 
+	- Tercer Parametro es una funcion easing (es tipo string es la encargada de ejecutar la animacion)
+	- Cuarto parametro es una funcion despues de que se termine la animacion (es opcional)
+
+	* Sintaxis:
+		$(element).addClass("miEstilo",3000,"easeOutExto",function(){});
+
+
+* Efecto RemoveClass
+	* Puede recibir 4 parametros 
+
+	* Sintaxis:
+		$(element).removeClass("miEstilo",3000,"easeOutExto",function(){});
+
+
+* efectos deltercer parametro 
+	- "easeOutExto"
+	- "easeInOutQuint"
+	- "easeInCubic"
+	- "easeOutBack"
+	- "easeOutElastic"
+	- "easeInOutBounce"
