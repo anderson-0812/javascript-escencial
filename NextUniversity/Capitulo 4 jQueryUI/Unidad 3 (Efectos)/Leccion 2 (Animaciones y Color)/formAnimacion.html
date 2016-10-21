@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Formulario Animado</title>
+	<link rel="stylesheet" type="text/css" href="jquery-ui.css">
+	<script type="text/javascript" src="external/jquery/jquery.js"></script>
+	<script type="text/javascript" src="jquery-ui.js"></script>
+
+	<script type="text/javascript">
+		$(document).ready(function(){
+			$("#nombre").blur(function(){
+				if($("#nombre").val().trim().length == 0){
+					$("#nombre").animate({
+						outlineColor: "black",
+						backgroundColor: "red"
+					});
+				}else{
+					$("#nombre").animate({
+						outlineColor: "black",
+						backgroundColor: "white"
+					});
+				}
+			});
+
+			$("#apellido").blur(function(){
+				if($("#apellido").val().trim().length == 0){
+					$("#apellido").animate({
+						outlineColor: "black",
+						backgroundColor: "red"
+					});
+				}else{
+					$("#apellido").animate({
+						outlineColor: "black",
+						backgroundColor: "white"
+					});
+				}
+			});
+
+
+			$("#btn1").click(function(){
+				alert("Datos enviados exitosamente");
+				$(".campos").val('');
+			});
+		});
+	</script>
+
+</head>
+<body>
+	<fieldset>
+		<form>
+			<legend>Formulario</legend>
+			<dl>
+				<dd>
+					<label for="nombre">Nombre:</label>
+				</dd>
+				<dd>
+					<input type="text" id="nombre" class="campos">
+				</dd>
+
+				<dd>
+					<label for="apellido">Apellido:</label>
+				</dd>
+				<dd>
+					<input type="text" id="apellido" class="campos">
+				</dd>
+
+			</dl>
+		</form>
+		<button id="btn1">Enviar</button>
+	</fieldset>
+</body>
+</html>
