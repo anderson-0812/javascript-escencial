@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<link rel="stylesheet" type="text/css" href="jquery-ui.css">
+	<script type="text/javascript" src="external/jquery/jquery.js"></script>
+	<script type="text/javascript" src="jquery-ui.js"></script>
+
+	<script type="text/javascript">
+		$(document).ready(function(){
+			$("#miDiv").click(function(){
+				$("#miDiv").animate({
+					outlineColor: "blue",
+					backgroundColor: "yellow"
+				});
+			});
+		});
+	</script>
+
+	<style type="text/css">
+		#miDiv{
+			height: 500px;
+			outline-color: red;
+			outline-style: solid;
+			width: 500px;
+		}
+	</style>
+</head>
+<body>
+	<select id="miDivSelect">
+		
+	</select>
+	<div id="miDiv">
+		Mi Div 
+	</div>
+</body>
+</html>

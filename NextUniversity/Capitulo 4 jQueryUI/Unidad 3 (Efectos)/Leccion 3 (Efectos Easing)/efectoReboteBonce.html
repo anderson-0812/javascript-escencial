@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>easing con el Bounce o efecto de rebote </title>
+	<link rel="stylesheet" type="text/css" href="jquery-ui.css">
+	<script type="text/javascript" src="external/jquery/jquery.js"></script>
+	<script type="text/javascript" src="jquery-ui.js"></script>
+
+	<script type="text/javascript">
+		$(document).ready(function(){
+			$("#btn1").click(function(){
+				var distancia = parseInt($("#miInput").val()); // distancia del rebote
+				$("#miDiv").effect("bounce",{
+					distance: distancia // la distancia en pixeles en al q rebotara el elemento
+				},3000,function(){
+					$(this).show();
+				});
+
+			});
+		});
+	</script>
+
+	<style type="text/css">
+		.miEstilo1{
+			background: purple;
+			color: white;
+			font-size: 20px;
+			height: 200px;
+			width: 200px;
+		}
+
+		#miInput{
+			width: 100px;
+		}
+	</style>
+</head>
+<body>
+	<h1>Efecto Bounce o rebote </h1>
+	<input type="text" id="miInput" value="20" min="1">
+	<br/>
+	<button id="btn1">Bounce</button>
+	<br/>
+	<br/>
+
+	<div id="miDiv" class="miEstilo1">
+		Mi Div1 !!!
+	</div>
+
+</body>
+</html>

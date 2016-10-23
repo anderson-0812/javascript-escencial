@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="us">
+
+<head>
+    <meta charset="utf-8">
+    <title>jQuery UI Example Page</title>
+    <link href="jquery-ui.css" rel="stylesheet">
+
+    <script src="external/jquery/jquery.js"></script>
+    <script src="jquery-ui.js"></script>
+
+
+    <style type="text/css">
+     
+     #miDiv{
+
+    outline-color:red;  
+    outline-style:solid;
+    width: 500px;
+    height: 500px;
+
+
+     }
+
+
+    </style>
+
+    <script type="text/javascript">
+
+    $(document).ready(function() {
+
+
+        $("#miDiv").click(function() {
+
+
+            $("#miDiv").animate({
+                outlineColor: "blue",
+                backgroundColor: "yellow"
+            });
+
+        });
+
+        
+    })
+    </script>
+
+</head>
+
+<body>
+
+  <div id="miDiv">
+      
+      Mi div!!!
+  </div>
+
+
+</body>
+
+</html>
