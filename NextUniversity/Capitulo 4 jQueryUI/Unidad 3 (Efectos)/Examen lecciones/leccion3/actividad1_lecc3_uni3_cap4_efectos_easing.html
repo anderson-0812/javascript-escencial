@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Actividad 1 leccion 3 </title>
+	<script type="text/javascript" src="external/jquery/jquery.js"> </script>
+	<script type="text/javascript" src="jquery-ui.js"> </script>
+
+	<script type="text/javascript">
+		$(document).ready(function(){
+			var efecto = $("#efectos").val();
+
+			$("#efectos").change(function(){
+				efecto = $(this).val();
+			});
+			var option = {};
+			$("#btn1").click(function(){
+				
+
+				$("#miDiv").addClass("miEstilo2",2000,efecto);
+			});
+
+			$("#btn2").click(function(){
+				
+
+				$("#miDiv").removeClass("miEstilo2",2000,efecto);
+			});
+		});
+	</script>
+
+	<style type="text/css">
+		.miEstilo1{
+			background-color: blue;
+			height: 100px;
+			width: 100px;
+		}
+		.miEstilo2{
+			background-color: orange;
+			height: 300px;
+			width: 300px;
+		}
+	</style>
+</head>
+<body>
+	<div id="miDiv" class="miEstilo1">
+		<select id="efectos">
+			<option value="">Seleccione una opción.</option>
+			<option value="easeInCubic">easeInCubic</option>
+			<option value="easeInQuint">easeInQuint</option>
+			<option value="easeInElastic">easeInElasti</option>
+		</select>
+	</div>
+
+	<br/>
+	<button id="btn1">Agregar Clase</button>
+	<button id="btn2">Remover Clase</button>
+</body>
+</html>

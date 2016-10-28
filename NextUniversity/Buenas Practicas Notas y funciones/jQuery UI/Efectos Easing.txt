@@ -1,10 +1,10 @@
 * Efectos Easing => http://jqueryui.com/easing/
 	- son funciones matematicas q cambian la velocidad de animacion entre un punto y otro
-	- elnucleo de jquery icluyte dos funciones
+	- el nucleo de jquery icluyte dos funciones
 
 *  Funciones:
 	- linear:
-		hace que el progresod e la animacion se realice a un ritmo constante
+		hace que el progreso de la animacion se realice a un ritmo constante
 	- swing:
 		hace q se ejecute una animacion a velocidad lenta al principio y final de la animacion 
 
